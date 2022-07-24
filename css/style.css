@@ -754,6 +754,7 @@ html {
 }
 
 .texture-12 {
+    display: none;
     position: absolute;
     left: 0px;
     top: 90%;
