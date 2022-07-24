@@ -748,6 +748,7 @@ html {
 }
 
 .texture-11 {
+    display: none;
     position: absolute;
     right: 30px;
     top: 20%;
