@@ -65,6 +65,12 @@ if ($term_model_item === 'budynki-drewniane') {
     $images = carbon_get_the_post_meta('code_catalog_photo');
 }
 
+if ($catId === 14 || $catId === 26 || $catId === 27) {
+    $showClassCalc = 'show-calc';
+} else {
+    $showClassCalc = '';
+}
+
 ?>
 <section class="slider-info">
     <div class="container">
@@ -252,9 +258,8 @@ if ($term_model_item === 'budynki-drewniane') {
     </div>
 </section>
 
-<section class="calculator <?php if ($catId === 14 || $catId === 26 || $catId === 27) {
-    echo 'show-calc';
-} ?>">
+
+<section class="calculator <?= $showClassCalc ?>">
     <h2 style="text-align: center;">ZŁOŻ ZAMÓWIENIE</h2>
     <div class="container">
         <div class="calculator__block">
