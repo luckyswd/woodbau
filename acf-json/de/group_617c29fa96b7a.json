@@ -342,6 +342,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "catalog"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "categories:postrojki-iz-brusa"
             }
         ]
     ],
@@ -353,5 +358,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1638989620
+    "modified": 1659865072
 }

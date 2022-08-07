@@ -195,7 +195,7 @@
             {
                 "param": "post_taxonomy",
                 "operator": "==",
-                "value": "categories:postrojki-iz-brusa-ru"
+                "value": "categories:postrojki-iz-brusa"
             }
         ]
     ],
@@ -207,5 +207,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1659812677
+    "modified": 1659865055
 }
