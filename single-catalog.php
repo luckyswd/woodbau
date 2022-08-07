@@ -66,10 +66,16 @@ $price = get_field('price');
 $characteristics = get_field('characteristics');
 $services = get_field('services');
 
-if ($term_model_item === 'budynki-drewniane') {
+if ($term_model_item === 'postrojki-iz-brusa') {
     $images = get_field('gallery');
 } else {
     $images = carbon_get_the_post_meta('code_catalog_photo');
+}
+
+if ($catId === 14 || $catId === 26 || $catId === 27) {
+    $showClassCalc = 'show-calc';
+} else {
+    $showClassCalc = '';
 }
 
 ?>
@@ -84,7 +90,7 @@ if ($term_model_item === 'budynki-drewniane') {
                     <div class="swiper-wrapper">
                         <?php if (!empty($images)) : ?>
                             <?php foreach ($images as $image) {
-                                if ($term_model_item === 'budynki-drewniane') {
+                                if ($term_model_item === 'postrojki-iz-brusa') {
                                     $image = $image['url'];
                                 } else {
                                     $image = $image['code_catalog_photo_item'];
@@ -106,7 +112,7 @@ if ($term_model_item === 'budynki-drewniane') {
                     <div class="swiper-wrapper">
                         <?php if (!empty($images)) : ?>
                             <?php foreach ($images as $image) {
-                                if ($term_model_item === 'budynki-drewniane') {
+                                if ($term_model_item === 'postrojki-iz-brusa') {
                                     $image = $image['url'];
                                 } else {
                                     $image = $image['code_catalog_photo_item'];
@@ -123,7 +129,7 @@ if ($term_model_item === 'budynki-drewniane') {
             </div>
             <div class="slider-info__right">
                 <h1><?= the_title() ?></h1>
-                <?php if ($term_model_item === 'budynki-drewniane') : ?>
+                <?php if ($term_model_item === 'postrojki-iz-brusa') : ?>
                     <?php if (!empty($price)) : ?>
                         <h2 class="slider-info__right-price"><span><?= $price ?></span> zł</h2>
                     <?php endif; ?>
@@ -217,7 +223,7 @@ if ($term_model_item === 'budynki-drewniane') {
 
             </div>
         </div>
-        <?php if ($term_model_item === 'budynki-drewniane') : ?>
+        <?php if ($term_model_item === 'postrojki-iz-brusa') : ?>
             <div class="slider-info-tabs">
                 <?php if (!empty($characteristics)) : ?>
                     <h4 class="slider-info-tab-characteristics js-active-item" data-class="slider-info-characteristics">
@@ -256,9 +262,7 @@ if ($term_model_item === 'budynki-drewniane') {
 </section>
 
 
-<section class="calculator <? if ($catId === 14 || $catId === 26 || $catId === 27) {
-    echo 'show-calc';
-} ?>">
+<section class="calculator <?=$showClassCalc?>">
     <h2 style="text-align: center;">
 
         <?php if (ICL_LANGUAGE_CODE == 'pl') {

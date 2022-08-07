@@ -130,7 +130,7 @@ $term_id = get_queried_object()->term_id;
                 </div>
             </div>
         </div>
-        <?php if($_SERVER['REQUEST_URI'] !== '/categories/budynki-drewniane/') : ?>
+        <?php if($_SERVER['REQUEST_URI'] !== '/categories/postrojki-iz-brusa/') : ?>
         <div class="row">
             <?php $post_catalog = new WP_Query(array('tax_query' => array(array('taxonomy' => 'categories', 'field' => 'slug', 'terms' => $term_url)), 'posts_per_page' => '99')); //ищем по типу поста?>
 
@@ -165,7 +165,7 @@ $term_id = get_queried_object()->term_id;
                         [
                             'taxonomy' => 'categories',
                             'field' => 'slug',
-                            'terms' => 'budynki-drewniane'
+                            'terms' => 'postrojki-iz-brusa'
                         ],
                     ]
                 ]

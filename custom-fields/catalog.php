@@ -4,7 +4,7 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 Container::make( 'post_meta', 'Дополнительные параметры')
-    ->show_on_category(['barbecue', 'domki-kempingowe', 'drewniane-akcesoria-do-sauny', 'easycube', 'sauny', 'stoly-debowe', 'szklarnie', 'tandiry-i-kociolki', 'thermo-drewno'])
+    ->show_on_category(['bannye-aksessuary-iz-dereva', 'barbekyu', 'kemping-domiki', 'xaberkub', 'teplicy', 'bani', 'tandyry-i-kazany', 'pilomaterialy', 'stoly-iz-duba'])
     ->add_fields(array(
 
         Field::make( 'complex', 'code_catalog_photo', 'Фото' )
