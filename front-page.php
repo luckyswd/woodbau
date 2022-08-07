@@ -2,7 +2,6 @@
 /*
 Template Name: Шаблон главной страницы
 */
-
 get_header();
 $page_id = get_the_ID();
 $advantages = get_field('сard_advantage', $page_id);
