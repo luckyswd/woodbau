@@ -1,0 +1,201 @@
+/*Mac & Desc*/
+@media (min-width: 1367px) and (max-width: 1680px) {
+
+}
+@media (min-width: 1200px) and (max-width: 1366px) {
+
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+/*mibile*/
+@media (min-width: 300px) and (max-width: 767px) {
+    .header-index #banner h1{
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .header-index:before {
+        display: none;
+    }
+    .block-head span {
+        display: none;
+    }
+    #owl-project-slider.owl-carousel .owl-stage-outer, #owl-category-slider.owl-carousel .owl-stage-outer {
+        overflow: hidden;
+    }
+    .banner-slider .owl-stage-outer {
+        overflow: hidden !important;
+    }
+    .texture-01, .texture-02, .texture-03, .texture-04, .texture-09, .texture-11, .texture-12, .texture-product-2, .texture-product {
+        display: none;
+    }
+    .block-head h3 {
+        font-size: 30px;
+        line-height: 32px;
+    }
+    .banner-slider .owl-nav .owl-next {
+        right: 0;
+    }
+    .banner-slider .owl-nav .owl-next span {
+        font-size: 60px;
+    }
+    .banner-slider-item:after {
+        display: none;
+    }
+    .top-text {
+        display: none;
+    }
+    .top-soc {
+        text-align: center;
+    }
+    .top-lang {
+        display: none;
+    }
+    .top-phone {
+        text-align: center;
+    }
+    .top-phone a {
+        text-align: center;
+        display: block;
+    }
+    .btn-call {
+        text-align: center;
+    }
+    nav {
+        display: none;
+    }
+    #banner h1 {
+        font-size: 27px;
+        line-height: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .banner-ade {
+        text-align: center;
+    }
+    .banner-ade p {
+        margin-bottom: 20px;
+    }
+    .banner-slider-item .btn {
+        right: 15px;
+    }
+    .why-item {
+        margin-bottom: 30px;
+    }
+    form .btn {
+        margin-top: 20px;
+    }
+    footer .top-text, footer .top-phone, footer .top-soc, footer .top-phone a {
+        text-align: left;
+    }
+    .top-soc a {
+        margin-left: 5px;
+    }
+    .menu-burger {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        z-index: 999;
+    }
+    .menu-burger span {
+        display: block;
+        position: relative;
+        height: 2px;
+        width: 30px;
+        background: #fff;
+        margin-bottom: 7px;
+    }
+    .mobile-menu.active {
+        display: block;
+        color: #fff;
+        overflow-x: auto;
+        right: 0;
+        left: 0;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        padding: 25px;
+        z-index: 1000;
+        background-image: url("../images/banner.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .block-menu-close {
+        display: none;
+    }
+    .mobile-menu.active .block-menu-close {
+        right: 15px;
+        display: block;
+        position: absolute;
+        top: 15px;
+        font-size: 24px;
+        line-height: 24px;
+        background: #fff;
+        padding: 0px 10px 5px;
+        color: #313131;
+        z-index: 1100;
+    }
+    .mobile-menu.active .top-lang {
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .mobile-menu.active h4 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    .mobile-menu.active ul li a {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 5px;
+
+    }
+    .mobile-menu.active .top-text {
+        display: block;
+        text-align: left;
+    }
+    .mobile-menu.active .top-text p {
+        font-size: 14px;
+    }
+    footer .top-logo {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .about-product-img img {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .top-logo:after {
+        display: none;
+    }
+    .category-text h4 {
+        font-size: 20px;
+    }
+    .category-item img {
+        top: 80px;
+        width: 50%;
+        left: -30px;
+    }
+    .category-text a, .category-text p {
+        padding-left: 50px;
+        display: block;
+        color: #b2b2b3;
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 5px;
+    }
+    .top-phone a img{
+        display: none;
+    }
+}
