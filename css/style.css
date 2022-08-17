@@ -979,62 +979,6 @@ footer ul li {
     transform-origin: 47% 100%;
 }
 
-@keyframes webapico-anime {
-    0% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
-    15% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(-60deg);
-        background-size: cover;
-    }
-    20% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(-45deg);
-        background-size: cover;
-    }
-    25% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(-60deg);
-        background-size: cover;
-    }
-    30% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(-45deg);
-        background-size: cover;
-    }
-    50% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(0deg);
-        background-size: cover;
-    }
-    70% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
-    73% {
-        background-image: url(../images/weba/webapico2.png);
-        background-size: cover;
-    }
-    76% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
-    81% {
-        background-image: url(../images/weba/webapico2.png);
-        background-size: cover;
-    }
-    83% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
-    100% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
-}
-
 /**/
 #about-product {
     position: relative;
