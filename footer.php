@@ -51,9 +51,6 @@
                     <li>
                         <a href="<?php echo home_url(); ?>/kontakty/">Łączność</a>
                     </li>
-                    <li>
-                        <a href="<?php echo home_url(); ?>/politika-konfidencialnosti/"></a>
-                    </li>
                 </ul>
             </div>
             <div class="col-md-2">
@@ -81,7 +78,7 @@
         </div>
         <div class="row">
             <div class="col-md-10">
-                <p>&copy; 2020—2021 Woodbau.de / Wszelkie prawa zastrzeżone.</p>
+                <p>&copy; 2020—2022 woodbaupolska.pl / Wszelkie prawa zastrzeżone.</p>
             </div>
         </div>
     </div>
