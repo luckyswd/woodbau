@@ -300,3 +300,10 @@ add_action('after_setup_theme', function () {
     )
   );
 });
+
+$currentUrl = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+if ($currentUrl == 'http://woodbau.de/pl/') {
+    wp_redirect('https://woodbaupolska.pl');
+    exit();
+}
