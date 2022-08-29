@@ -53,11 +53,11 @@ get_header();
                     <img src="<?php echo get_template_directory_uri(); ?>/images/category-03.png">
                     <div class="category-text">
                         <h4>Budynki z drewna</h4>
-                        <a href="<?php echo home_url(); ?>/categories/postrojki-iz-brusa/">Małe domy</a>
-                        <a href="<?php echo home_url(); ?>/categories/postrojki-iz-brusa/">Altany</a>
-                        <a href="<?php echo home_url(); ?>/categories/postrojki-iz-brusa/">Budynki gospodarcze</a>
-                        <a href="<?php echo home_url(); ?>/categories/postrojki-iz-brusa/">Domy dla dzieci</a>
-                        <a href="<?php echo home_url(); ?>/categories/postrojki-iz-brusa/" class="btn btn-green">Cały katalog</a>
+                        <a href="<?php echo home_url(); ?>/categories/budynki-drewniane/">Małe domy</a>
+                        <a href="<?php echo home_url(); ?>/categories/budynki-drewniane/">Altany</a>
+                        <a href="<?php echo home_url(); ?>/categories/budynki-drewniane/">Budynki gospodarcze</a>
+                        <a href="<?php echo home_url(); ?>/categories/budynki-drewniane/">Domy dla dzieci</a>
+                        <a href="<?php echo home_url(); ?>/categories/budynki-drewniane/" class="btn btn-green">Cały katalog</a>
                     </div>
                 </div>
             </div>
