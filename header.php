@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="facebook-domain-verification" content="rpm005ev9ew99k355smftjbnjdfqq8"/>
-    <meta name="google-site-verification" content="rYzYhttAWhp3GIBHmWACSdn0xzfsiq5CFmZtfX-UdsY"/>
+    <meta name="google-site-verification" content="rP2w038lnVflZPydQn1VcNQG1vt0jQ1BOAtppqDbAHw"/>
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" type="image/png">
     <title>Woodbau</title>
     <?php wp_head(); ?>
@@ -25,29 +25,6 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css">
-
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-          'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-MV7GRL6');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV7GRL6"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -173,10 +150,6 @@
     </section>
     <?php if (is_front_page()) { ?>
         <section id="banner">
-            <div class="texture-01"><img src="<?php echo get_template_directory_uri(); ?>/images/texture-01.png">
-            </div>
-            <div class="texture-02"><img src="<?php echo get_template_directory_uri(); ?>/images/texture-02.png">
-            </div>
             <div class="header-overflow">
                 <div class="container">
                     <div class="row">
@@ -276,10 +249,6 @@
         ?>
         <section id="banner">
             <div class="container">
-                <div class="texture-01"><img src="<?php echo get_template_directory_uri(); ?>/images/texture-01.png">
-                </div>
-                <div class="texture-02"><img src="<?php echo get_template_directory_uri(); ?>/images/texture-02.png">
-                </div>
                 <div class="row">
                     <div class="col-md-7">
                         <div class="banner-text">

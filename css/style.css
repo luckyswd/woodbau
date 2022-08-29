@@ -123,18 +123,6 @@ header {
     min-height: 650px;
 }
 
-.header-index:before {
-    content: '';
-    position: absolute;
-    width: 1432px;
-    height: 393px;
-    background-image: url("../images/texture-03.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    bottom: 100px;
-}
-
 .top-text {
     padding-top: 35px;
 }

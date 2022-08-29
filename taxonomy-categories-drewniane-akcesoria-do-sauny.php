@@ -5,8 +5,6 @@ $term_id = get_queried_object()->term_id;
 ?>
 
 <section id="about-product">
-    <div class="texture-product"><img src="<?php echo carbon_get_term_meta($term_id, 'code_category_texture_1') ?>">
-    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -53,8 +51,6 @@ $term_id = get_queried_object()->term_id;
     </div>
 </section>
 <section id="products" class="aksessuary">
-    <div class="texture-product-2"><img src="<?php echo carbon_get_term_meta($term_id, 'code_category_texture_2') ?>">
-    </div>
     <div class="container" id="mebel">
         <div class="row">
             <div class="col-md-12">
@@ -575,8 +571,6 @@ $term_id = get_queried_object()->term_id;
     </div>
 </section>
 <section id="why">
-    <div class="texture-11"><img src="<?php echo get_template_directory_uri(); ?>/images/texture-07.png"></div>
-    <div class="texture-12"><img src="<?php echo get_template_directory_uri(); ?>/images/texture-08.png"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
