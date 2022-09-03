@@ -1,0 +1,32 @@
+.own-production-module {
+  margin: 100px 0;
+
+  .own-production-block h3 {
+    font-size: 48px;
+    line-height: 48px;
+    color: #313131;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .own-production-block p {
+    font-size: 22px;
+    line-height: 28px;
+    color: #313131;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .own-production-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin-right: 0;
+    }
+  }
+}

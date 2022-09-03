@@ -1,0 +1,54 @@
+.exhibition-module {
+  margin: 100px 0;
+
+  .exhibition-block {
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    gap: 35px;
+  }
+
+  .block-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      font-size: 40px;
+      line-height: 46px;
+      color: #313131;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 26px;
+      color: #313131;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    a {
+      text-align: center;
+    }
+  }
+
+  .block-right {
+    .exhibition-images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+
+      a {
+        height: 310px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin-right: 0;
+    }
+  }
+}

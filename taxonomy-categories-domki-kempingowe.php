@@ -296,47 +296,47 @@ $term_id = get_queried_object()->term_id;
                             <a href="<?php echo home_url(); ?>/catalog/banya-kvadro/#products">Bath-kvadro</a>
                             <a href="<?php echo home_url(); ?>/catalog/banya-ovalnaya/#products">Wanna owalna</a>
                             <a href="<?php echo home_url(); ?>/catalog/arochnaya-banya/#products">Łukowata wanna</a>
-                            <a href="<?php echo home_url(); ?>/categories/bani/#products" class="btn btn-green">Cały katalog</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BANI ?>#products" class="btn btn-green">Cały katalog</a>
                         </div>
                     </div>
                     <div class="category-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/category-04.png">
                         <div class="category-text">
                             <h4>EasyCube</h4>
-                            <a href="<?php echo home_url(); ?>/categories/xaberkub/#products">Z 3 markizami i hamakiem</a>
-                            <a href="<?php echo home_url(); ?>/categories/xaberkub/#products">Z markizą i ścianą</a>
-                            <a href="<?php echo home_url(); ?>/categories/xaberkub/#products">Z dwiema markizami i hamakiem</a>
-                            <a href="<?php echo home_url(); ?>/categories/xaberkub/#products" class="btn btn-green">Więcej szczegółów</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_EASYCUBE ?>#products">Z 3 markizami i hamakiem</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_EASYCUBE ?>#products">Z markizą i ścianą</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_EASYCUBE ?>#products">Z dwiema markizami i hamakiem</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_EASYCUBE ?>#products" class="btn btn-green">Więcej szczegółów</a>
                         </div>
                     </div>
                     <div class="category-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/category-07.png">
                         <div class="category-text">
                             <h4>Dąb</h4>
-                            <a href="<?php echo home_url(); ?>/categories/stoly-iz-duba/#products">Wymiary</a>
-                            <a href="<?php echo home_url(); ?>/categories/stoly-iz-duba/#about-product">Opis</a>
-                            <a href="<?php echo home_url(); ?>/categories/stoly-iz-duba/#products">Stoły dębowe</a>
-                            <a href="<?php echo home_url(); ?>/categories/stoly-iz-duba/#products" class="btn btn-green">Więcej szczegółów</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_STOLY_DEBOWE ?>#products">Wymiary</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_STOLY_DEBOWE ?>#about-product">Opis</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_STOLY_DEBOWE ?>#products">Stoły dębowe</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_STOLY_DEBOWE ?>#products" class="btn btn-green">Więcej szczegółów</a>
                         </div>
                     </div>
                     <div class="category-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/category-08.png">
                         <div class="category-text">
                             <h4>Termodrewno</h4>
-                            <a href="<?php echo home_url(); ?>/categories/pilomaterialy/#products">Deska</a>
-                            <a href="<?php echo home_url(); ?>/categories/pilomaterialy/#products">Deska tarasowa</a>
-                            <a href="<?php echo home_url(); ?>/categories/pilomaterialy/#products">Deska tarasowa</a>
-                            <a href="<?php echo home_url(); ?>/categories/pilomaterialy/#products" class="btn btn-green">Cały katalog</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_THERMO_DREWNO ?>#products">Deska</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_THERMO_DREWNO ?>#products">Deska tarasowa</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_THERMO_DREWNO ?>#products">Deska tarasowa</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_THERMO_DREWNO ?>#products" class="btn btn-green">Cały katalog</a>
                         </div>
                     </div>
                     <div class="category-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/category-05.png">
                         <div class="category-text">
                             <h4>Do gotowania żywności</h4>
-                            <a href="<?php echo home_url(); ?>/categories/tandyry-i-kazany/#products">Tandoor</a>
-                            <a href="<?php echo home_url(); ?>/categories/tandyry-i-kazany/#products">Kazań</a>
-                            <a href="<?php echo home_url(); ?>/categories/tandyry-i-kazany/#products">Kociołki</a>
-                            <a href="<?php echo home_url(); ?>/categories/tandyry-i-kazany/#products" class="btn btn-green">Cały katalog</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_TANDIRY_I_KOCIOLKI ?>#products">Tandoor</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_TANDIRY_I_KOCIOLKI ?>#products">Kazań</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_TANDIRY_I_KOCIOLKI ?>#products">Kociołki</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_TANDIRY_I_KOCIOLKI ?>#products" class="btn btn-green">Cały katalog</a>
                         </div>
                     </div>
                     <div class="category-item">
@@ -344,42 +344,42 @@ $term_id = get_queried_object()->term_id;
                         <div class="category-text">
                             <h4>Kompleks grillowy</h4>
                             <p>Zmontowany jako konstruktor w 20 minut</p>
-                            <a href="<?php echo home_url(); ?>/categories/barbekyu/">Opis</a>
-                            <a href="<?php echo home_url(); ?>/categories/barbekyu/#products" class="btn btn-green">Katalog</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BARBECUE ?>">Opis</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BARBECUE ?>#products" class="btn btn-green">Katalog</a>
                         </div>
                     </div>
                     <div class="category-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/category-03.png">
                         <div class="category-text">
                             <h4>Budynki z minibarami</h4>
-                            <a href="<?php echo home_url(); ?>/categories/postrojki-iz-brusa/#products">Małe domy</a>
-                            <a href="<?php echo home_url(); ?>/categories/postrojki-iz-brusa/#products">Altany</a>
-                            <a href="<?php echo home_url(); ?>/categories/postrojki-iz-brusa/#products">Budynki gospodarcze</a>
-                            <a href="<?php echo home_url(); ?>/categories/postrojki-iz-brusa/#products">Domy dla dzieci</a>
-                            <a href="<?php echo home_url(); ?>/categories/postrojki-iz-brusa/#products" class="btn btn-green">Więcej szczegółów</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BUDYNKI_DREWNIANE ?>#products">Małe domy</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BUDYNKI_DREWNIANE ?>#products">Altany</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BUDYNKI_DREWNIANE ?>#products">Budynki gospodarcze</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BUDYNKI_DREWNIANE ?>#products">Domy dla dzieci</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BUDYNKI_DREWNIANE ?>#products" class="btn btn-green">Więcej szczegółów</a>
                         </div>
                     </div>
                     <div class="category-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/category-09.png">
                         <div class="category-text">
                             <h4>Akcesoria do kąpieli</h4>
-                            <a href="<?php echo home_url(); ?>/categories/bannye-aksessuary-iz-dereva/#mebel">Akcesoria i meble</a>
-                            <a href="<?php echo home_url(); ?>/categories/bannye-aksessuary-iz-dereva/#vedra">Wiadra na wodę</a>
-                            <a href="<?php echo home_url(); ?>/categories/bannye-aksessuary-iz-dereva/#shaiki">Gangi i parowce</a>
-                            <a href="<?php echo home_url(); ?>/categories/bannye-aksessuary-iz-dereva/#abaj">Abażury do lamp</a>
-                            <a href="<?php echo home_url(); ?>/categories/bannye-aksessuary-iz-dereva/#products" class="btn btn-green">Więcej szczegółów</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DREWNIANE_AKCESORIA_DO_SAUNY ?>#mebel">Akcesoria i meble</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DREWNIANE_AKCESORIA_DO_SAUNY ?>#vedra">Wiadra na wodę</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DREWNIANE_AKCESORIA_DO_SAUNY ?>#shaiki">Gangi i parowce</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DREWNIANE_AKCESORIA_DO_SAUNY ?>#abaj">Abażury do lamp</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DREWNIANE_AKCESORIA_DO_SAUNY ?>#products" class="btn btn-green">Więcej szczegółów</a>
                         </div>
                     </div>
                     <div class="category-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/category-10.png">
                         <div class="category-text">
                             <h4>Kabiny kempingowe</h4>
-                            <a href="<?php echo home_url(); ?>/categories/kemping-domiki/#model1">Projekt KD-1</a>
-                            <a href="<?php echo home_url(); ?>/categories/kemping-domiki/#model2">Projekt KD-2</a>
-                            <a href="<?php echo home_url(); ?>/categories/kemping-domiki/#model3">Projekt KD-3</a>
-                            <a href="<?php echo home_url(); ?>/categories/kemping-domiki/#model4">Projekt KD-4</a>
-                            <a href="<?php echo home_url(); ?>/categories/kemping-domiki/#model5">Projekt KD-5</a>
-                            <a href="<?php echo home_url(); ?>/categories/kemping-domiki//#products" class="btn btn-green">Więcej szczegółów</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DOMKI_KEMPINGOWE ?>#model1">Projekt KD-1</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DOMKI_KEMPINGOWE ?>#model2">Projekt KD-2</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DOMKI_KEMPINGOWE ?>#model3">Projekt KD-3</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DOMKI_KEMPINGOWE ?>#model4">Projekt KD-4</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DOMKI_KEMPINGOWE ?>#model5">Projekt KD-5</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DOMKI_KEMPINGOWE ?>#products" class="btn btn-green">Więcej szczegółów</a>
                         </div>
                     </div>
                 </div>

@@ -177,7 +177,7 @@
                                         <span>od 12000 PLN</span>
                                         <p>za 10 dni</p>
                                     </div>
-                                    <a href="./categories/bani/"
+                                    <a href="<?= Urls::CATEGORIES_BANI ?>"
                                        class="btn btn-green">Cały katalog</a>
                                 </div>
                                 <div class="banner-slider-item">
@@ -187,7 +187,7 @@
                                         <span>od 12000 PLN</span>
                                         <p>za 10 dni</p>
                                     </div>
-                                    <a href="./categories/barbekyu/"
+                                    <a href="<?= Urls::CATEGORIES_BANI ?>"
                                        class="btn btn-green">Cały katalog</a>
                                 </div>
                                 <div class="banner-slider-item">
@@ -197,7 +197,7 @@
                                         <span>od 12000 PLN</span>
                                         <p>za 10 dni</p>
                                     </div>
-                                    <a href="./categories/barbekyu/"
+                                    <a href="<?= Urls::CATEGORIES_BARBECUE ?>"
                                        class="btn btn-green">Cały katalog</a>
                                 </div>
                                 <div class="banner-slider-item">
@@ -207,7 +207,7 @@
                                         <span>od 12000 PLN</span>
                                         <p>za 10 dni</p>
                                     </div>
-                                    <a href="./categories/barbekyu/"
+                                    <a href="<?= Urls::CATEGORIES_BARBECUE ?>"
                                        class="btn btn-green">Cały katalog</a>
                                 </div>
                             </div>
