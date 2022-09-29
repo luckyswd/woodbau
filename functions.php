@@ -12,6 +12,16 @@ function crb_register_custom_fields()
     require_once __DIR__ . '/custom-fields/portfolio.php';
 }
 
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title' => 'Глобальные настройки',
+        'menu_title' => 'Глобальные настройки',
+        'menu_slug' => 'theme-general-settings',
+        'capability' => 'edit_posts',
+        'redirect' => false
+    ));
+}
+
 ## end Carbon
 
 function globSearch($pattern, $flags = 0)

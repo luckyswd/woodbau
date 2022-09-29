@@ -27,17 +27,27 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css">
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-5ZSQC5X');</script>
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5ZSQC5X');</script>
     <!-- End Google Tag Manager -->
 
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZSQC5X"
-                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZSQC5X"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
 
@@ -71,7 +81,23 @@
 </head>
 <body>
 
-<header <?php if (is_front_page() || is_tax()){ ?>class="header-index"<?php }; ?>>
+<?php
+$facebook = get_field('facebook', 'option');
+$instagram = get_field('instagram', 'option');
+$whatsapp = get_field('whatsapp', 'option');
+$phone = get_field('phone', 'option');
+
+$term_url = get_query_var('term');
+$currentUrl = $_SERVER['REQUEST_URI'];
+function checkHeaderIndexClass() {
+    $term_url = get_query_var('term');
+    if (is_front_page() || (is_tax() && !str_contains($term_url, 'sauny-'))) {
+        return 'header-index';
+    }
+}
+?>
+
+<header class="<?=checkHeaderIndexClass()?>">
     <section id="top">
         <div class="container">
             <div class="row">
@@ -104,13 +130,32 @@
                 </div>
                 <div class="col-md-2">
                     <div class="top-soc">
-                        <a href="https://www.facebook.com/WoodBauPolska" target="_blank">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-facebook.png"></a>
-                        <a href="https://www.instagram.com/woodbau.poland" target="_blank">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-telegram.png"></a>
-                        <a href="https://api.whatsapp.com/send?phone=48535104879&app=facebook&entry_point=page_cta&fbclid=IwAR3g-Ur9AkIT893jD1skJT8JQXQKTGMFqY3ihfP5mR6JmJaRrwyM3JbCosQ"
-                           target="_blank">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-whatsapp.png"></a>
+                        <?php if (!empty($facebook['image'])) : ?>
+                            <a href="<?= $facebook['link'] ?? '#' ?>" target="_blank">
+                                <picture>
+                                    <img loading="lazy" src="<?= $facebook['image']['url'] ?>"
+                                         alt="<?= $facebook['image']['title'] ?>">
+                                </picture>
+                            </a>
+                        <?php endif; ?>
+
+                        <?php if (!empty($instagram['image'])) : ?>
+                            <a href="<?= $instagram['link'] ?? '#' ?>" target="_blank">
+                                <picture>
+                                    <img loading="lazy" src="<?= $instagram['image']['url'] ?>"
+                                         alt="<?= $instagram['image']['title'] ?>">
+                                </picture>
+                            </a>
+                        <?php endif; ?>
+                        <?php if (!empty($whatsapp['image'])) : ?>
+                            <a href="https://api.whatsapp.com/send?phone=<?= $phone['phone_number'] ?>&app=facebook&entry_point=page_cta&fbclid=IwAR3g-Ur9AkIT893jD1skJT8JQXQKTGMFqY3ihfP5mR6JmJaRrwyM3JbCosQ"
+                               target="_blank">
+                                <picture>
+                                    <img loading="lazy" src="<?= $whatsapp['image']['url'] ?>"
+                                         alt="<?= $whatsapp['image']['title'] ?>">
+                                </picture>
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -124,7 +169,7 @@
                         </ul>
                     </div>
                     <div class="top-phone">
-                        <a href="tel:+48535104879">+48535104879</a>
+                        <a href="tel:+<?= $phone['phone_number'] ?>">+<?= $phone['phone_number'] ?></a>
                     </div>
 
                     <a href="#modal-popup" class="popup-modal btn-call">Poproś o kontakt</a>
@@ -160,10 +205,10 @@
                             <div class="banner-ade">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h3>10 lat doświadczenia </span></h3>
+                                        <h3>10 <span>lat doświadczenia </span></h3>
                                     </div>
                                     <div class="col-md-6">
-                                        <h3>6500 <span>+projektów</span></h3>
+                                        <h3>6500+ <span>projektów</span></h3>
                                     </div>
                                 </div>
                             </div>
@@ -247,70 +292,76 @@
         $term_url = get_query_var('term');
         $term_id = get_queried_object()->term_id;
         ?>
-        <section id="banner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="banner-text">
-                            <h1><?php echo carbon_get_term_meta($term_id, 'code_category_name'); ?><?php ?>
-                                <span><?php echo carbon_get_term_meta($term_id, 'code_category_name_2') ?></span></h1>
-                        </div>
-                        <div class="banner-ade">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h3>10 <span>lat doświadczenia</span></h3>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3>6500 <span>+projektów</span></h3>
+        <?php if (str_contains($term_url, 'sauny-') === false) : ?>
+            <section id="banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="banner-text">
+                                <h1><?php echo carbon_get_term_meta($term_id, 'code_category_name'); ?><?php ?>
+                                    <span><?php echo carbon_get_term_meta($term_id, 'code_category_name_2') ?></span>
+                                </h1>
+                            </div>
+                            <div class="banner-ade">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3>10 <span>lat doświadczenia</span></h3>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>6500 <span>+projektów</span></h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-5">
-                        <div class="banner-slider owl-carousel owl-theme" id="owl-banner-slider">
-                            <?php $slider = carbon_get_term_meta($term_id, 'code_category_slider') ?>
-                            <?php foreach ($slider as $key => $value) { ?>
-                                <div class="banner-slider-item">
-                                    <img src="<?php echo $value['code_category_slider_img']; ?>">
-                                    <div class="banner-sale">
-                                        <h4><?php echo $value['code_category_slider_name']; ?></h4>
-                                        <span><?php echo $value['code_category_slider_price']; ?></span>
-                                        <p><?php echo $value['code_category_slider_des']; ?></p>
+                        <div class="col-md-5">
+                            <div class="banner-slider owl-carousel owl-theme" id="owl-banner-slider">
+                                <?php $slider = carbon_get_term_meta($term_id, 'code_category_slider') ?>
+                                <?php foreach ($slider as $key => $value) { ?>
+                                    <div class="banner-slider-item">
+                                        <img src="<?php echo $value['code_category_slider_img']; ?>">
+                                        <div class="banner-sale">
+                                            <h4><?php echo $value['code_category_slider_name']; ?></h4>
+                                            <span><?php echo $value['code_category_slider_price']; ?></span>
+                                            <p><?php echo $value['code_category_slider_des']; ?></p>
+                                        </div>
+                                        <a href="<?php echo $value['code_category_slider_href']; ?>"
+                                           class="btn btn-green">Cały katalog</a>
                                     </div>
-                                    <a href="<?php echo $value['code_category_slider_href']; ?>"
-                                       class="btn btn-green">Cały katalog</a>
-                                </div>
-                            <?php }; ?>
+                                <?php }; ?>
+                            </div>
+                            <script>
+                              $(document).ready(function () {
+                                var owl = $('#owl-banner-slider');
+                                owl.owlCarousel({
+                                  items: 1,
+                                  dots: false,
+                                  loop: true,
+                                  nav: true,
+                                  margin: 0,
+                                  autoplay: true,
+                                  autoplayTimeout: 3000,
+                                  autoplayHoverPause: true,
+                                  responsive: {
+                                    0: {
+                                      items: 1
+                                    },
+                                    600: {
+                                      items: 1
+                                    },
+                                    1000: {
+                                      items: 1
+                                    }
+                                  },
+                                });
+                              })
+                            </script>
                         </div>
-                        <script>
-                          $(document).ready(function () {
-                            var owl = $('#owl-banner-slider');
-                            owl.owlCarousel({
-                              items: 1,
-                              dots: false,
-                              loop: true,
-                              nav: true,
-                              margin: 0,
-                              autoplay: true,
-                              autoplayTimeout: 3000,
-                              autoplayHoverPause: true,
-                              responsive: {
-                                0: {
-                                  items: 1
-                                },
-                                600: {
-                                  items: 1
-                                },
-                                1000: {
-                                  items: 1
-                                }
-                              },
-                            });
-                          })
-                        </script>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        <?php endif; ?>
     <?php }; ?>
+    <?php if ($currentUrl === Urls::CATEGORIES_BANI) : ?>
+        <?php RenderBlock::renderBlockByName('acf/catalog-hero'); ?>
+    <?php endif;?>
 </header>

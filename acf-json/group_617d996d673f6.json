@@ -168,6 +168,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_632213979105f",
+            "label": "Сроки изготовления",
+            "name": "catalog_time",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_617d996d675af",
             "label": "Варианты длины заголовок",
             "name": "header_length_options",
@@ -322,6 +341,33 @@
             "delay": 0
         },
         {
+            "key": "field_63220f3bb57be",
+            "label": "Картинки",
+            "name": "images_product",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_617d996d678c1",
             "label": "Форма",
             "name": "form_top",
@@ -356,7 +402,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": 1,
     "description": "",
-    "modified": 1656612533
+    "modified": 1663178023
 }

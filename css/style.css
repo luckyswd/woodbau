@@ -91,8 +91,8 @@ button:hover {
 }
 
 .btn {
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 16px;
+    line-height: 20px;
     padding: 15px 30px;
     border-radius: 20px;
 }
@@ -177,12 +177,13 @@ header {
 }
 
 .top-soc a img {
-    opacity: .7;
     transition: .2s ease-in-out;
+    width: 32px;
+    height: 32px;
 }
 
 .top-soc a:hover img {
-    opacity: 1;
+    opacity: 0.7;
 }
 
 .top-lang {
@@ -289,6 +290,15 @@ nav ul li:last-child a:after {
     margin-bottom: 0px;
 }
 
+.header-index .banner-ade h3 {
+    display: flex;
+    align-items: center;
+}
+
+.header-index .banner-ade h3 span {
+    padding-left: 8px;
+}
+
 .header-index .banner-ade {
     display: block;
 }
@@ -296,7 +306,6 @@ nav ul li:last-child a:after {
 .header-index .banner-ade h3 {
     font-size: 40px;
     line-height: 1;
-    display: block;
     margin-bottom: 5px;
     font-weight: 700;
 }
@@ -500,7 +509,7 @@ nav ul li:last-child a:after {
     text-align: center;
 }
 
-.block-head h3 {
+.block-head h1, .block-head h3 {
     font-size: 48px;
     color: #313131;
     line-height: 48px;
@@ -2349,7 +2358,18 @@ footer .top-logo:after {
     padding: 45px;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 80px;
+    margin-top: 20px;
+}
+
+.calculator__result-content {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.calculator__result-content span {
+    font-size: 16px;
+    font-weight: normal;
 }
 
 .calculator-form-data {
@@ -3012,7 +3032,7 @@ body .wood-arenda {
 
 .swiper-slide img {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     height: 100%;
     border-radius: 20px;
 }
@@ -3457,6 +3477,8 @@ body .wood-arenda {
     border: 1px solid #e7e9eb;
     transition: all .3s ease-in-out;
     background: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .catalog-item:hover {
@@ -3509,9 +3531,16 @@ body .wood-arenda {
     margin-top: 12px;
 }
 
+.btn-wrapper {
+    padding: 0 10px;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
 .slider-info__services {
     display: grid;
     gap: 12px;
+    margin-top: 16px;
 }
 
 .service-item {
@@ -3558,13 +3587,23 @@ body .wood-arenda {
 
 .slider-info__right-price {
     display: flex;
-    justify-content: space-between;
     font-family: Montserrat;
     font-style: normal;
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 40px;
+    line-height: 48px;
     text-transform: uppercase;
     margin-bottom: 16px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.slider-info__right-price span {
+    margin-right: 10px;
+}
+
+.slider-info__right-price .price {
+    color: #459D69;
+    font-weight: 900;
 }
 
 .slider-info__services h4 {
@@ -3578,30 +3617,46 @@ body .wood-arenda {
     font-weight: 700;
 }
 
-.slider-info-tabs {
-    display: flex;
-    margin: 24px 0;
-    border-bottom: 1px solid #a3abb3;
+.slider-info-tab-characteristics {
+    margin-right: -1px;
 }
 
-.slider-info-tab-characteristics {
-    margin-right: 24px;
+.slider-info-tabs {
+    display: flex;
+    margin-top: 24px;
 }
 
 .slider-info-tabs h4 {
+    position: relative;
     font-size: 24px;
     line-height: 32px;
     cursor: pointer;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    padding: 10px 20px;
+    background: #f1f1f1;
 }
 
 .slider-info-tabs h4.js-active-item {
     color: #459D69;
-    border-bottom: 2px solid #459D69;
-    margin-bottom: -1px;
+    background: white;
+}
+
+.slider-info-tabs h4.js-active-item:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: white;
+    left: 0;
+    bottom: -1px;
 }
 
 .slider-info-characteristics, .slider-info-description {
     display: none;
+    border: 1px solid #ddd;
+    padding: 20px;
 }
 
 .slider-info-content .js-active-item {
@@ -3609,7 +3664,7 @@ body .wood-arenda {
 }
 
 .slider-info-tabs h4:hover:not(.js-active-item) {
-    color: #97cdad;
+    opacity: 0.7;
 }
 
 .characteristic-item {
@@ -3623,6 +3678,7 @@ body .wood-arenda {
 
 .description-characteristic-name {
     margin-right: 6px;
+    text-align: center;
 }
 
 .description-characteristic-value {
@@ -4319,8 +4375,17 @@ body .wood-arenda {
 
 @media (max-width: 1024px) {
 
+    .header-index .banner-ade h3 {
+        display: block;
+    }
+
+    .header-index .banner-ade h3 span {
+        padding-left: 0;
+    }
+
     .block-catalog {
         grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 
     .barrel-bath__title {
@@ -4981,11 +5046,6 @@ body .wood-arenda {
 
     .left-side__text {
         font-size: 13px;
-    }
-
-    .btn {
-        font-size: 17px;
-        padding: 10px 35px;
     }
 
     .header-left {

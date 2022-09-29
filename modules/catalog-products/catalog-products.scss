@@ -1,0 +1,42 @@
+@import "../../css/partials/variables";
+
+.catalog-products-module {
+  .block-products {
+    margin: 40px 0;
+  }
+
+  .products-headline {
+    text-align: center;
+    margin-bottom: 32px;
+
+    h1, h2 {
+      font-size: 48px;
+      line-height: 56px;
+
+      @include _992 {
+        font-size: 32px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  .all-products {
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+
+    a {
+      width: max-content;
+
+      background: linear-gradient(to top, rgb(78 177 18 / 100%), #0fc12a);
+
+      &:hover {
+        background: linear-gradient(to top, #a36d19, #353c2d)
+      }
+
+      @include _480 {
+        width: 100%;
+      }
+    }
+  }
+}

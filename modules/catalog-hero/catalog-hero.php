@@ -1,20 +1,18 @@
 <?php
 
 /*
-Title: Каталог главный модуль
+Title: Сауны главный модуль
 Mode: preview
 */
 
 $headline = get_field('headline');
-$background_image = get_field('background_image');
 $advantages = get_field('advantages');
 $first_button = get_field('first_button');
 $subheadline_button = get_field('subheadline_button');
 $second_button = get_field('second_button');
 ?>
 <?php if (!is_admin()) : ?>
-<section class="hero-module" style="background-image: url('<?= $background_image['url'] ?>')">
-    <div class="hero-overlay"></div>
+<section class="hero-module">
     <div class="container">
         <div class="hero-block">
             <div class="hero-headline">

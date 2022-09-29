@@ -2,14 +2,12 @@
 get_header();
 ?>
 
-<?php RenderBlock::renderBlockByName('acf/catalog-hero'); ?>
-
 <section id="category">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h3>Katalog</h3>
+                    <h1>Katalog</h1>
                 </div>
             </div>
         </div>
@@ -93,9 +91,6 @@ get_header();
         </div>
     </div>
 </section>
-
-<?php RenderBlock::renderBlockByName('acf/own-production'); ?>
-<?php RenderBlock::renderBlockByName('acf/exhibition'); ?>
 
 <?php
 get_footer();

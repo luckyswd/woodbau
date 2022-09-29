@@ -1,6 +1,6 @@
 {
     "key": "group_630e56fa6582c",
-    "title": "Каталог главный модуль",
+    "title": "Сауны главный модуль",
     "fields": [
         {
             "key": "field_630e5737904d2",
@@ -20,30 +20,6 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
-        },
-        {
-            "key": "field_630e579c904d6",
-            "label": "Фоновая картинка",
-            "name": "background_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
         },
         {
             "key": "field_630e5745904d3",
@@ -152,5 +128,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1661969914
+    "modified": 1663946679
 }

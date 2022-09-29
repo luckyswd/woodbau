@@ -130,6 +130,7 @@ if (containerAdditionalOptions !== null) {
 const inputResultItems = document.querySelector('.hidden-fields-data input');
 const containerResultScroll = document.querySelector('.total-price')
 const containerPrice = document.querySelector('.calculator-total-price-sticky');
+const contentResult = document.querySelector('.calculator__result-content span');
 
 function priceList() {
   let activeItems = document.querySelectorAll('.js-active-item');
@@ -161,6 +162,7 @@ function priceList() {
     //      }
 
     finalResult = itemsResult.join(', ');
+    contentResult.textContent = finalResult
     inputResultItems.value = finalResult;
   })
 
@@ -269,13 +271,33 @@ new Swiper(".gallerySlider", {
   }
 });
 
-let sliderPrice = document.querySelector('.slider-info__right-price span');
-const switchers = document.querySelectorAll('.service-item-switcher');
+let sliderPrice = document.querySelector('.slider-info__right-price .price');
+const switchersTop = document.querySelectorAll('.service-item-switcher.top');
+const switchersBottom = document.querySelectorAll('.service-item-switcher.bottom');
 const sliderInfoTabs = document.querySelectorAll('.slider-info-tabs h4');
 const sliderInfoCharacteristics = document.querySelectorAll('.slider-info-content div');
 
-if (switchers !== null) {
-  switchers.forEach((item) => {
+if (switchersTop !== null) {
+  switchersTop.forEach((item) => {
+    item.addEventListener('click', () => {
+      switchersTop.forEach((switchTop) => {
+        if (switchTop.classList.contains('active-switch')) {
+          switchTop.classList.remove('active-switch');
+          sliderPrice.textContent = Number(sliderPrice.textContent) - Number(switchTop.getAttribute('data-price'))
+        }
+      })
+
+      item.classList.add('active-switch');
+      if (item.classList.contains('active-switch')) {
+        item.classList.add('active-switch');
+        sliderPrice.textContent = Number(sliderPrice.textContent) + Number(item.getAttribute('data-price'))
+      }
+    })
+  })
+}
+
+if (switchersBottom !== null) {
+  switchersBottom.forEach((item) => {
     item.addEventListener('click', () => {
       item.classList.toggle('active-switch')
       if (item.classList.contains('active-switch')) {
@@ -306,3 +328,28 @@ if (sliderInfoTabs !== null) {
     })
   })
 }
+
+$(document).ready(function () {
+  var owl = $('#owl-project-slider');
+  owl.owlCarousel({
+    items: 2,
+    dots: true,
+    loop: true,
+    nav: false,
+    margin: 30,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 2
+      }
+    },
+  });
+})

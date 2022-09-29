@@ -144,6 +144,67 @@
             ]
         },
         {
+            "key": "field_632de0dae197f",
+            "label": "Размеры",
+            "name": "dimensions",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_632de0dae1980",
+                    "label": "Размер",
+                    "name": "size_name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_632de0dae1981",
+                    "label": "Цена",
+                    "name": "size_price",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                }
+            ]
+        },
+        {
             "key": "field_62bdf10e7a294",
             "label": "Фотографии",
             "name": "gallery",
@@ -207,5 +268,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1656763754
+    "modified": 1663951167
 }

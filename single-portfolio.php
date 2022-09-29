@@ -124,11 +124,7 @@ $values = get_post_meta(get_the_ID(), false);
                     <?php } ?>
                     <?php if ($values["_code_portfolio_time"]["0"] !== "0") { ?>
                         <h3>Czas produkcji</h3>
-                        <p> 3-4 tygodnie </p>
-                    <?php } ?>
-                    <?php if ($values["_code_portfolio_price"]["0"] !== "0") { ?>
-                        <h3>Ekwipunek</h3>
-                        <p><?php echo $values["_code_portfolio_description"]["0"]; ?></p>
+                        <p> 4-6 tygodnie </p>
                     <?php } ?>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Aby uzyskać konsultację</a>
                 </div>

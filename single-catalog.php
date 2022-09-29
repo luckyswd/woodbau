@@ -39,8 +39,11 @@ $contact_form_result_background_image = get_field('contact_form_result_backgroun
 $сurrency_type = get_field('сurrency_type', $id);
 $length_title = get_field('length_title', $id);
 $length_blocks = get_field('length_block', $id);
+$code_catalog_time = get_field('catalog_time', $id);
 
-$code_catalog_time = carbon_get_the_post_meta('code_catalog_time');
+if (empty($code_catalog_time)) {
+    $code_catalog_time = carbon_get_the_post_meta('code_catalog_time');
+}
 
 $subheadline = get_field('subheadline');
 $color_options = get_field('color_options');
@@ -53,11 +56,18 @@ $description = get_field('description');
 $form_top = get_field('form_top');
 $turnkey_configuration = get_field('turnkey_configuration');
 $turnkey_package_header = get_field('turnkey_package_header');
-$catId = $term_model[0]->term_taxonomy_id;
+$catId = '';
+
+foreach ($term_model as $term) {
+    if ($term->term_taxonomy_id == 27) {
+        $catId = $term->term_taxonomy_id;
+    }
+}
 
 $price = get_field('price');
 $characteristics = get_field('characteristics');
 $services = get_field('services');
+$dimensions = get_field('dimensions');
 
 if ($term_model_item === 'budynki-drewniane') {
     $images = get_field('gallery');
@@ -65,17 +75,20 @@ if ($term_model_item === 'budynki-drewniane') {
     $images = carbon_get_the_post_meta('code_catalog_photo');
 }
 
-if ($catId === 14 || $catId === 26 || $catId === 27) {
+if ($catId === 27) {
     $showClassCalc = 'show-calc';
+    $url_back =  get_home_url() .  '/sauny/#products';
 } else {
     $showClassCalc = '';
+    $url_back =  get_home_url() .  '/categories/' . $term_model_item . '/#products';
 }
 
 ?>
 <section class="slider-info">
     <div class="container">
-        <a href="<?= get_home_url() ?>/categories/<?= $term_model_item ?>/#products" class="breadcrumbs btn btn-green">
-            Powrót do katalogu </a>
+        <a href="<?= $url_back ?>" class="breadcrumbs btn btn-green">
+            Powrót do katalogu
+        </a>
 
         <div class="slider-info__wrapper">
             <h1 class="slider-mobile-title"><?= the_title() ?></h1>
@@ -126,7 +139,25 @@ if ($catId === 14 || $catId === 26 || $catId === 27) {
                 <h1><?= the_title() ?></h1>
                 <?php if ($term_model_item === 'budynki-drewniane') : ?>
                     <?php if (!empty($price)) : ?>
-                        <h2 class="slider-info__right-price"><span><?= $price ?></span> zł</h2>
+                        <h2 class="slider-info__right-price">
+                            <span>CENA:</span>
+                            <span class="price"><?= $price ?> </span> zł
+                        </h2>
+                    <?php endif; ?>
+                    <?php if (!empty($dimensions)) : ?>
+                        <div class="slider-info__services">
+                            <h4>Wymiary</h4>
+                            <?php foreach ($dimensions as $size) : ?>
+                                <?php if ($size['size_name']
+                                    && $size['size_price']) : ?>
+                                    <div class="service-item">
+                                        <div class="service-item-name"><?= $size['size_name'] ?></div>
+                                        <div class="service-item-switcher top"
+                                             data-price="<?= $size['size_price'] ?>"><span></span></div>
+                                    </div>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </div>
                     <?php endif; ?>
 
                     <?php if (!empty($services)) : ?>
@@ -137,14 +168,14 @@ if ($catId === 14 || $catId === 26 || $catId === 27) {
                                     && $service['service_price']) : ?>
                                     <div class="service-item">
                                         <div class="service-item-name"><?= $service['service_name'] ?></div>
-                                        <div class="service-item-switcher"
+                                        <div class="service-item-switcher bottom"
                                              data-price="<?= $service['service_price'] ?>"><span></span></div>
                                     </div>
                                 <?php endif; ?>
                             <?php endforeach; ?>
+                            <a style="width: max-content; margin-top: 20px" href="#modal-popup" class="btn btn-green popup-modal">Aby uzyskać konsultację</a>
                         </div>
                     <?php endif; ?>
-
                 <?php else: ?>
                     <?php if (!empty($subheadline)) : ?>
                         <div class="attr-subheadline"><?= $subheadline ?></div>
@@ -215,7 +246,6 @@ if ($catId === 14 || $catId === 26 || $catId === 27) {
                         <div class="attr-form"><?= $form_top ?></div>
                     <?php endif; ?>
                 <?php endif; ?>
-
             </div>
         </div>
         <?php if ($term_model_item === 'budynki-drewniane') : ?>
@@ -587,8 +617,10 @@ if ($catId === 14 || $catId === 26 || $catId === 27) {
                 Dziękuję bardzo. Wypełnij poniższe pola, aby wypełnić ankietę
             </h3>
         </div>
+        <div class="calculator__result-content">Twój wybór: <span>Niczego nie wybrałeś</span></div>
         <div class="calculator__result"
              style="background-image: url(<?= $contact_form_result_background_image['url'] ?>)">
+
             <?php if (!empty($contact_form_result)) : ?>
                 <?= $contact_form_result ?>
             <?php endif; ?>

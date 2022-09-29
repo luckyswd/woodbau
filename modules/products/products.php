@@ -7,6 +7,11 @@ Mode: preview
 
 $currentUrl = $_SERVER['REQUEST_URI'];
 $title = 'Katalog';
+
+if ($currentUrl == Urls::CATEGORIES_BANI) {
+    $title = 'Stwórz indywidualny projekt';
+}
+
 ?>
 
 <section id="products">
@@ -79,16 +84,17 @@ $title = 'Katalog';
                                         <?php endforeach; ?>
                                     </div>
                                 <?php endif; ?>
+                            </div>
+                            <div class="btn-wrapper">
                                 <div class="catalog-item__btn btn btn-green">Zobacz</div>
                             </div>
                         </a>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
-
         <?php elseif ($currentUrl === Urls::CATEGORIES_BANI) : ?>
             <div class="row">
-                <?php $post_catalog = new WP_Query(array('tax_query' => array(array('taxonomy' => 'categories', 'field' => 'slug', 'terms' => $term_url)), 'posts_per_page' => '99')); //ищем по типу поста?>
+                <?php $post_catalog = new WP_Query(array('tax_query' => array(array('taxonomy' => 'categories', 'field' => 'slug', 'terms' => 'sauny')), 'posts_per_page' => '99')); //ищем по типу поста?>
 
                 <?php if ($post_catalog->have_posts()) : ?><?php while ($post_catalog->have_posts()) : $post_catalog->the_post(); ?><?php $values = get_post_meta(get_the_ID()); ?><?php //dump($values); ?>
                     <div class="col-md-3">

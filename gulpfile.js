@@ -19,7 +19,8 @@ function style() {
   const number = getRandomInRange(1000, 1000000);
   return gulp.src(
     [
-      'modules/**/*.scss'
+      'modules/**/*.scss',
+      'css/partials/**/*',
     ]
   )
     .pipe(sass().on('error', sass.logError))
@@ -38,7 +39,8 @@ function scripts() {
   const number = getRandomInRange(1000, 1000000);
   return gulp.src(
     [
-      'modules/**/*.js'
+      'modules/**/*.js',
+      'js/partials/**/*.js'
     ]
   )
     .pipe(concat(`build${number}.js`))
@@ -53,20 +55,24 @@ gulp.task('dev', function () {
   fonts();
   watchScripts()
   gulp.watch([
-    'modules/**/*.scss'
+    'modules/**/*.scss',
+    'css/partials/**/*',
   ], watchStyles);
   gulp.watch([
-    'modules/**/*.scss'
+    'modules/**/*.scss',
+    'css/partials/**/*',
   ], fonts);
   gulp.watch([
-  'modules/**/*.js'
+    'modules/**/*.js',
+    'js/partials/**/*.js'
   ], watchScripts);
 })
 
 function watchStyles() {
   return gulp.src(
     [
-      'modules/**/*.scss'
+      'modules/**/*.scss',
+      'css/partials/**/*'
     ]
   )
     .pipe(sass().on('error', sass.logError))
@@ -76,7 +82,8 @@ function watchStyles() {
 function watchScripts() {
   return gulp.src(
     [
-      'modules/**/*.js'
+      'modules/**/*.js',
+      'js/partials/**/*.js'
     ]
   )
     .pipe(concat('build.js'))
