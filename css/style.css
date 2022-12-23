@@ -97,14 +97,14 @@ button:hover {
     border-radius: 20px;
 }
 
-.btn-green {
-    color: #fff;
-    background: linear-gradient(to top, #a36d19, #353c2d);
-}
-
-.btn-green:hover {
+.btn-green, .catalog-form__btn input, .calculator-form-submit input {
     color: #fff;
     background: linear-gradient(to top, #0fc12a, #0fc12a);
+}
+
+.btn-green:hover, .catalog-form__btn input:hover, .calculator-form-submit input:hover {
+    color: #fff;
+    background: linear-gradient(to top, #a36d19, #353c2d);
     box-shadow: 0px 0px 15px transparent;
 }
 
@@ -977,62 +977,6 @@ footer ul li {
     height: 52px;
     animation: webapico-anime 2s linear infinite;
     transform-origin: 47% 100%;
-}
-
-@keyframes webapico-anime {
-    0% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
-    15% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(-60deg);
-        background-size: cover;
-    }
-    20% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(-45deg);
-        background-size: cover;
-    }
-    25% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(-60deg);
-        background-size: cover;
-    }
-    30% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(-45deg);
-        background-size: cover;
-    }
-    50% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(0deg);
-        background-size: cover;
-    }
-    70% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
-    73% {
-        background-image: url(../images/weba/webapico2.png);
-        background-size: cover;
-    }
-    76% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
-    81% {
-        background-image: url(../images/weba/webapico2.png);
-        background-size: cover;
-    }
-    83% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
-    100% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
 }
 
 /**/
@@ -2429,7 +2373,6 @@ footer .top-logo:after {
 }
 
 .calculator-form-submit input {
-    background: linear-gradient(to top, #a36d19, #353c2d);
     border-radius: 100px;
     font-weight: 800;
     font-size: 23px;
@@ -3328,7 +3271,6 @@ body .wood-arenda {
     color: #FFFFFF;
     border-radius: 100px;
     margin-bottom: 0;
-    background: linear-gradient(to top, #a36d19, #353c2d);
 }
 
 .fancybox__content > .carousel__button.is-close {
