@@ -78,7 +78,7 @@
         </div>
         <div class="row">
             <div class="col-md-10">
-                <p>&copy; 2020—2021 Woodbau.by / <?php if (ICL_LANGUAGE_CODE == 'pl') {
+                <p>&copy; 2020—2022 Woodbau.by / <?php if (ICL_LANGUAGE_CODE == 'pl') {
                         echo 'Wszelkie prawa zastrzeżone.';
                     } elseif (ICL_LANGUAGE_CODE == 'ru') {
                         echo 'Все права защищены.';

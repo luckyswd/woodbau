@@ -58,6 +58,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	
 <header <?php if (is_front_page() || is_tax()){ ?>class="header-index"<?php }; ?>>
+
     <section id="top">
         <div class="container">
             <div class="row">
