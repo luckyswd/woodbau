@@ -1,0 +1,45 @@
+.properties {
+  margin-bottom: 1.5em;
+
+  &-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 0.4em;
+  }
+
+  .properties-items {
+    .property-item {
+      display: flex;
+      font-size: 18px;
+      overflow: hidden;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+  
+      &-name {
+        position: relative;
+        margin-right: auto;
+  
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: calc(100% + 3px);
+          display: block;
+          width: 100vw;
+          height: 1px;
+          border-bottom: 1px var(--green-main) dashed;
+        }
+      }
+  
+      &-value {
+          display: block;
+          background: white;
+          padding-left: 3px;
+          z-index: 2;
+      }
+    }
+  }
+}
+

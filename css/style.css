@@ -12,6 +12,7 @@ body {
     position: relative;
     overflow-x: hidden;
     font-family: Montserrat;
+    --green-main: #459D69;
 }
 
 .body-scroll {
@@ -3043,12 +3044,12 @@ body .wood-arenda {
 .slider-info__right h1 {
     font-family: Montserrat;
     font-style: normal;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 56px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1em;
     text-transform: uppercase;
     color: #459D69;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .attr-subheadline {
@@ -3438,12 +3439,12 @@ body .wood-arenda {
     margin-bottom: 12px;
 }
 
-.catalog-item__characteristic {
+.catalog-item__planning {
     display: flex;
     margin-bottom: 8px;
 }
 
-.characteristic-name {
+.planning-name {
     padding-right: 6px;
 }
 
@@ -3464,14 +3465,17 @@ body .wood-arenda {
 }
 
 .slider-info__services {
-    display: grid;
-    gap: 12px;
+    display: block;
 }
 
 .service-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.service-item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .service-item-switcher {
@@ -3488,13 +3492,13 @@ body .wood-arenda {
 .service-item-switcher span {
     content: "";
     position: absolute;
-    left: 2px;
-    top: 1px;
-    bottom: 1px;
+    top: 0;
+    left: 0;
     background-color: #aad178;
-    border: 1px solid #dddddd;
+    border: 2px solid white;
     border-radius: 50%;
-    width: 22px;
+    width: 24px;
+    height: 100%;
     transition: all .3s ease-in-out;
 }
 
@@ -3503,33 +3507,35 @@ body .wood-arenda {
 }
 
 .service-item-switcher.active-switch span {
-    background-color: #fff;
-}
-
-.service-item-switcher.active-switch span {
     left: 40px;
+    background-color: #fff;
+    border-color: #aad178;
 }
 
 .slider-info__right-price {
-    display: flex;
-    justify-content: space-between;
+    display: block;
     font-family: Montserrat;
     font-style: normal;
-    font-size: 48px;
-    line-height: 56px;
-    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1em;
     margin-bottom: 16px;
 }
 
+.slider-info__right-price span {
+    font-size: 30px;
+    color: var(--green-main);
+}
+
 .slider-info__services h4 {
-    font-size: 32px;
+    font-size: 30px;
+    font-weight: 600;
     line-height: 48px;
 }
 
 .service-item-name {
     font-size: 18px;
     line-height: 24px;
-    font-weight: 700;
 }
 
 .slider-info-tabs {
@@ -3538,13 +3544,15 @@ body .wood-arenda {
     border-bottom: 1px solid #a3abb3;
 }
 
-.slider-info-tab-characteristics {
-    margin-right: 24px;
+.slider-info-tabs > *:not(:last-child) {
+    margin-right: 1.25em;
 }
 
 .slider-info-tabs h4 {
-    font-size: 24px;
+    font-size: 22px;
+    font-weight: 600;
     line-height: 32px;
+    padding-bottom: 5px;
     cursor: pointer;
 }
 
@@ -3554,7 +3562,7 @@ body .wood-arenda {
     margin-bottom: -1px;
 }
 
-.slider-info-characteristics, .slider-info-description {
+.slider-info-content > *:not(.js-active-item) {
     display: none;
 }
 
@@ -3566,7 +3574,7 @@ body .wood-arenda {
     color: #97cdad;
 }
 
-.characteristic-item {
+.planning-item {
     display: flex;
     margin-bottom: 8px;
     font-size: 20px;
@@ -3575,11 +3583,11 @@ body .wood-arenda {
     align-items: center;
 }
 
-.description-characteristic-name {
+.description-planning-name {
     margin-right: 6px;
 }
 
-.description-characteristic-value {
+.description-planning-value {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -5170,7 +5178,7 @@ body .wood-arenda {
         width: 70%;
     }
 
-    .characteristic-item {
+    .planning-item {
         flex-direction: column;
     }
 
