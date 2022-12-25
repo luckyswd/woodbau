@@ -1,4 +1,5 @@
 <?php
+require_once 'helpers/RenderBlock.php';
 ## Carbon Fields
 add_action( 'carbon_fields_register_fields', 'crb_register_custom_fields' ); // Для версии 2.0 и выше
 function crb_register_custom_fields() {
@@ -8,19 +9,6 @@ function crb_register_custom_fields() {
     require_once __DIR__ . '/custom-fields/portfolio.php';
 }
 ## end Carbon
-function wood_scripts_styles()
-{
-  wp_enqueue_script('masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array(), '1.0', true);
-  wp_enqueue_script('swiper_js', get_template_directory_uri() . '/js/swiper.js', array(), '1.0', true);
-  wp_enqueue_script('mask', get_template_directory_uri() . '/js/jquery.mask.js', array(), '1.0', true);
-	wp_enqueue_script('fancy', get_template_directory_uri() . '/js/fancybox.js', array(), '1.0', true);
-  wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
-  wp_localize_script('main', 'ajax', [
-    'ajaxurl' => admin_url('admin-ajax.php'),
-  ]);
-}
-
-add_action('wp_enqueue_scripts', 'wood_scripts_styles', 1);
 ## Расширение возможностей WP для новой версии
 add_theme_support('title-tag');
 ##
@@ -299,3 +287,98 @@ add_action('after_setup_theme', function () {
     )
   );
 });
+
+function globSearch($pattern, $flags = 0)
+{
+    $files = glob($pattern, $flags);
+    foreach (glob(dirname($pattern) . '/*', GLOB_ONLYDIR | GLOB_NOSORT) as $dir)
+        $files = array_merge($files, globSearch($dir . '/' . basename($pattern), $flags));
+    return $files;
+}
+
+function wood_scripts_styles()
+{
+    $path = get_template_directory();
+    $filesCss = globSearch($path . "/dist/*.css");
+    $filesJs = globSearch($path . "/dist/*.js");
+
+    foreach ($filesCss as $file) {
+        $filePath = str_replace($path, '', $file);
+        $fileName = explode('/', $filePath);
+        $fileName = end($fileName);
+        $fileName = str_replace('.css', ' ', $fileName);
+        wp_register_style(trim($fileName),get_template_directory_uri() . $filePath, array(), '1.2', 'screen');
+        wp_enqueue_style(trim($fileName));
+    }
+
+    foreach ($filesJs as $file) {
+        $filePath = str_replace($path, '', $file);
+        $fileName = explode('/', $filePath);
+        $fileName = end($fileName);
+        $fileName = str_replace('.js', ' ', $fileName);
+        wp_enqueue_script(trim($fileName),get_template_directory_uri() . $filePath, array(), '1.0', true);
+    }
+
+    wp_enqueue_script('masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array(), '1.0', true);
+    wp_enqueue_script('swiper_js', get_template_directory_uri() . '/js/swiper.js', array(), '1.0', true);
+    wp_enqueue_script('mask', get_template_directory_uri() . '/js/jquery.mask.js', array(), '1.0', true);
+    wp_enqueue_script('fancy', get_template_directory_uri() . '/js/fancybox.js', array(), '1.0', true);
+    wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
+    wp_localize_script('main', 'ajax', [
+        'ajaxurl' => admin_url('admin-ajax.php'),
+    ]);
+}
+
+add_action('wp_enqueue_scripts', 'wood_scripts_styles', 1);
+
+add_action('acf/init', 'my_register_blocks');
+function my_register_blocks()
+{
+    if (function_exists('acf_register_block_type')) {
+        $path = get_template_directory();
+        $filesPhp = globSearch($path . "/modules/*.php");
+
+        foreach ($filesPhp as $file) {
+            $filePath = str_replace($path, '', $file);
+            $fileName = explode('/', $filePath);
+            $fileName = end($fileName);
+            $fileName = str_replace('.php', '', $fileName);
+            $file_headers = get_file_data(__DIR__ . $filePath, [
+                'title' => 'Title',
+                'description' => 'Description',
+                'category' => 'Category',
+                'icon' => 'Icon',
+                'keywords' => 'Keywords',
+                'mode' => 'Mode',
+                'align' => 'Align',
+                'post_types' => 'PostTypes',
+                'supports_align' => 'SupportsAlign',
+                'supports_anchor' => 'SupportsAnchor',
+                'supports_mode' => 'SupportsMode',
+                'supports_jsx' => 'SupportsInnerBlocks',
+                'supports_align_text' => 'SupportsAlignText',
+                'supports_align_content' => 'SupportsAlignContent',
+                'supports_multiple' => 'SupportsMultiple',
+                'enqueue_style'     => 'EnqueueStyle',
+                'enqueue_script'    => 'EnqueueScript',
+                'enqueue_assets'    => 'EnqueueAssets',
+            ]);
+
+            acf_register_block_type(array(
+                'name' => $fileName,
+                'title' => __($file_headers['title']),
+                'mode' => __($file_headers['mode']),
+                'render_callback' => 'my_acf_block_render_callback',
+                'category' => 'formatting',
+            ));
+        }
+    }
+}
+
+function my_acf_block_render_callback($block)
+{
+    $slug = str_replace('acf/', '', $block['name']);
+    if (file_exists(get_theme_file_path("modules/" . $slug . '/' . $slug . ".php"))) {
+        include(get_theme_file_path("modules/" . $slug . '/' . $slug . ".php"));
+    }
+}

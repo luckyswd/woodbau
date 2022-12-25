@@ -1,0 +1,80 @@
+.online-consultant {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+
+  &__main_image-close, &__main_image-open {
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  &__main_image-open {
+    fill: #fff;
+  }
+
+  &__wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: btn-wave 1s infinite linear;
+    border-radius: 50%;
+    background: #0fc12a;
+    transform: scale(1.2);
+    z-index: -1;
+  }
+
+  @keyframes btn-wave {
+    0% {
+      box-shadow: 0 0 0 0 #0fc12a
+    }
+    100% {
+      box-shadow: 0 0 0 14px rgba(10, 75, 120, 0);
+    }
+  }
+
+  &__socials {
+    pointer-events: none;
+
+    a {
+      transition: all .3s ease-in-out;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+
+      img {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .js-active-open {
+    opacity: 1;
+    z-index: 10;
+  }
+
+  .js-active-socials {
+    pointer-events: auto;
+
+    a {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}

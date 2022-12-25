@@ -55,7 +55,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 </head>
 <body>
-
+<?php
+$currentUrl = $_SERVER['REQUEST_URI'];
+?>
 	
 <header <?php if (is_front_page() || is_tax()){ ?>class="header-index"<?php }; ?>>
 
@@ -308,4 +310,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
     <?php }; ?>
+
+    <?php if ($currentUrl === '/sauny/') : ?>
+        <?php RenderBlock::renderBlockByName('acf/catalog-hero'); ?>
+    <?php endif;?>
 </header>

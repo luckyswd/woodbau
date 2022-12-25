@@ -1,0 +1,119 @@
+@import "../../css/partials/variables";
+
+.banner {
+  position: relative;
+  z-index: 2;
+
+  .banner-block {
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include _992 {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+
+  .banner-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include _992 {
+      align-items: center;
+    }
+
+    h3 {
+      color: #fff;
+      font-size: 34px;
+      line-height: 40px;
+
+      @include _992 {
+        font-size: 28px;
+        line-height: 32px;
+        text-align: center;
+      }
+    }
+
+    .banner-content {
+      display: flex;
+      margin-top: 40px;
+      align-items: center;
+
+      @include _992 {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .banner-phone {
+        font-size: 20px;
+        line-height: 24px;
+        color: white;
+        margin-right: 24px;
+        text-align: center;
+
+        @include _992 {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 16px;
+        }
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+      }
+    }
+
+    .btn-green {
+      margin-top: 40px;
+      max-width: max-content;
+    }
+  }
+
+  .banner-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include _992 {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.banner:before {
+  content: '';
+  background: #3fa778;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .1;
+  clip-path: polygon(64% 0%, 100% 18%, 100% 82%, 36% 100%, 0 82%, 0 18%);
+  z-index: -1;
+}
+.banner-inner {
+  position: relative;
+  clip-path: polygon(64% 100%, 100% 82%, 100% 0, 0 0, 0 74%);
+  z-index: 2;
+}
+.banner-inner:before {
+  content: '';
+  background: #3fa778;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  clip-path: polygon(0 100%, 100% 100%, 100% 26%, 36% 0, 0 18%);
+  z-index: -1;
+}
