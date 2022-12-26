@@ -1,3 +1,5 @@
+@import "./variables";
+
 .properties {
   margin-bottom: 1.5em;
 
@@ -43,3 +45,150 @@
   }
 }
 
+.tab-inner-title {
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  background-color: var(--green-main);
+  border-radius: 5px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  padding: 20px 0;
+
+  &-item {
+    flex-basis: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+
+    @include _992 {
+      flex-basis: 25%;
+    }
+
+    @include _768 {
+      flex-basis: 33.333%;
+    }
+
+    @include _480 {
+      flex-basis: 50%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.check-list {
+  padding-bottom: 30px;
+  line-height: 1.5em;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 18px;
+      display: block;
+      width: 15px;
+      height: 15px;
+      background: url(../../images/icons/check_green.svg) center/14px 14px no-repeat;
+    }
+  }
+}
+
+.planning {
+  &-item {
+    padding-bottom: 1em;
+    font-size: 20px;
+    line-height: 1.25em;
+  
+    &__name {
+      font-weight: 600;
+    }
+  
+    &__value {
+      font-size: 16px;
+      color: var(--green-main);
+    }
+  }
+
+  &-image {
+    width: 50%;
+    padding-top: 1em;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.doors {
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &-title {
+
+    }
+
+    &-text {
+
+    }
+
+    &-gallery {
+
+    }
+  }
+}
+
+.set-item {
+  &-list {
+
+  }
+}
+
+.additional-item {
+  &-content {
+    ul {
+      padding-bottom: 20px;
+      line-height: 1.5em;
+      list-style: none;
+
+      li {
+        position: relative;
+        padding-left: 40px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 5px;
+          left: 18px;
+          display: block;
+          width: 15px;
+          height: 15px;
+          background: url(../../images/icons/check_green.svg) center/14px 14px no-repeat;
+        }
+      }
+    }
+  }
+}

@@ -36,7 +36,7 @@ $additionalContent = get_field('additional_content');
         <div class="slider-info__wrapper">
             <h1 class="slider-mobile-title"><?= the_title() ?></h1>
             <div class="slider-info__left">
-                <div class="swiper mySwiper2">
+                <div class="swiper swiperBani">
                     <div class="swiper-wrapper">
                         <?php if (!empty($images)) : ?>
                             <?php foreach ($images as $image) {
@@ -117,18 +117,20 @@ $additionalContent = get_field('additional_content');
                 <div class="slider-info-planning js-active-item">
                     <?php foreach ($planningInfo as $planningInfoItem) : ?>
                         <div class="planning-item">
-                            <div class="description-planning-name"><?= $planningInfoItem['text'] ?></div>
-                            <a href="<?= $planningInfoItem['file'] ?>" target="_blank" class="description-planning-value">Посмотреть все характеристики</a>
+                            <div class="planning-item__name"><?= $planningInfoItem['text'] ?></div>
+                            <a href="<?= $planningInfoItem['file'] ?>" target="_blank" class="planning-item__value">Посмотреть все характеристики</a>
                         </div>
                     <?php endforeach; ?>
                     <?php if (!empty($planningImage)) : ?>
-                      <img src="<?= $planningImage ?>" alt="Планировка">
+                      <div class="planning-image">
+                          <img src="<?= $planningImage ?>" alt="Планировка">
+                      </div>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
             <?php if (!empty($doorsInfo)) : ?>
                 <div class="slider-info-doors">
-                    <?php foreach ($doorsInfo as $doorsInfoItem) : ?>
+                    <?php foreach ($doorsInfo as $index => $doorsInfoItem) : ?>
                         <div class="doors-item">
                             <?php if (!empty($doorsInfoItem['title'])) : ?>
                                 <div class="door-item-title tab-inner-title"><?= $doorsInfoItem['title'] ?></div>
@@ -136,9 +138,13 @@ $additionalContent = get_field('additional_content');
                             <?php if (!empty($doorsInfoItem['text'])) : ?>
                                 <div class="door-item-text"><?= $doorsInfoItem['text'] ?></div>
                             <?php endif; ?>
-                            <?php if (!empty($doorsInfoItem['image'])) : ?>
-                                <div class="door-item-image">
-                                    <img src="<?= $doorsInfoItem['image']['url'] ?>" alt="<?= $doorsInfoItem['image']['alt'] ?>" />
+                            <?php if (!empty($doorsInfoItem['gallery'])) : ?>
+                                <div class="door-item-gallery gallery">
+                                    <?php foreach ($doorsInfoItem['gallery'] as $doorImage) : ?>
+                                        <a href="javascript:;" data-fancybox="doors-<?= $index ?>" data-src="<?= $doorImage['url'] ?>" class="gallery-item">
+                                            <img class="" src="<?= $doorImage['url'] ?>" alt="<?= $doorImage['alt'] ?>">
+                                        </a>
+                                    <?php endforeach; ?>
                                 </div>
                             <?php endif; ?>
                         </div>
@@ -156,12 +162,10 @@ $additionalContent = get_field('additional_content');
                                 <div class="facades-item-text"><?= $facadesInfoItem['text'] ?></div>
                             <?php endif; ?>
                             <?php if (!empty($facadesInfoItem['gallery'])) : ?>
-                                <div class="facades-item-gallery">
+                                <div class="facades-item-gallery gallery">
                                     <?php foreach ($facadesInfoItem['gallery'] as $facadeImage) : ?>
-                                      <a href="javascript:;" data-fancybox="facades-<?= $index ?>" data-src="<?= $facadeImage['url'] ?>" class="slider-open-window">
-                                          <picture>
-                                              <img class="" src="<?= $facadeImage['url'] ?>" alt="<?= $facadeImage['alt'] ?>">
-                                          </picture>
+                                      <a href="javascript:;" data-fancybox="facades-<?= $index ?>" data-src="<?= $facadeImage['url'] ?>" class="gallery-item">
+                                          <img class="" src="<?= $facadeImage['url'] ?>" alt="<?= $facadeImage['alt'] ?>">
                                       </a>
                                     <?php endforeach; ?>
                                 </div>
@@ -173,12 +177,10 @@ $additionalContent = get_field('additional_content');
             <?php if (!empty($photos)) : ?>
                 <div class="slider-info-photos">
                     <div class="photos-item">
-                        <div class="photos-item-gallery">
+                        <div class="photos-item-gallery gallery">
                             <?php foreach ($photos as $photosImage) : ?>
-                              <a href="javascript:;" data-fancybox="photos" data-src="<?= $photosImage['url'] ?>" class="slider-open-window">
-                                  <picture>
-                                      <img class="" src="<?= $photosImage['url'] ?>" alt="<?= $photosImage['alt'] ?>">
-                                  </picture>
+                              <a href="javascript:;" data-fancybox="photos" data-src="<?= $photosImage['url'] ?>" class="gallery-item">
+                                  <img class="" src="<?= $photosImage['url'] ?>" alt="<?= $photosImage['alt'] ?>">
                               </a>
                             <?php endforeach; ?>
                         </div>
@@ -190,7 +192,7 @@ $additionalContent = get_field('additional_content');
                     <div class="set-item">
                         <div class="set-item-title tab-inner-title"><?= $setFirstTitle ?></div>
                         <?php if (!empty($setList)) : ?>
-                            <ul class="set-item-list">
+                            <ul class="set-item-list check-list">
                                 <?php foreach ($setList as $setListItem) : ?>
                                     <li><?= $setListItem['item'] ?></li>
                                 <?php endforeach; ?>

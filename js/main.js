@@ -243,6 +243,15 @@ const swiper2 = new Swiper(".mySwiper2", {
     swiper: swiper,
   },
 });
+
+const swiperSingleCatalogBani = new Swiper(".swiperBani", {
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
 const prodName = $('.slider-info__right h1');
 if (prodName.length) {
   $('input[name="prod-name"]').val(prodName.text());

@@ -344,9 +344,9 @@
                 },
                 {
                     "key": "field_63a85d844fd2e",
-                    "label": "Изображение",
-                    "name": "image",
-                    "type": "image",
+                    "label": "Галерея изображений",
+                    "name": "gallery",
+                    "type": "gallery",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -357,7 +357,10 @@
                     },
                     "return_format": "array",
                     "preview_size": "full",
+                    "insert": "append",
                     "library": "all",
+                    "min": "",
+                    "max": "",
                     "min_width": "",
                     "min_height": "",
                     "min_size": "",
@@ -762,5 +765,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1671996348
+    "modified": 1672091763
 }
