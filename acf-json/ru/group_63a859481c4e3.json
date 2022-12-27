@@ -650,8 +650,8 @@
                 },
                 {
                     "key": "field_63a8618f4fd3e",
-                    "label": "Содержимое",
-                    "name": "content",
+                    "label": "Текст",
+                    "name": "text",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -662,10 +662,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": ""
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_63a8a26ddc063",
@@ -765,5 +765,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1672091763
+    "modified": 1672176455
 }
