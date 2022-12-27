@@ -19,12 +19,12 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-6">
                 <div class="top-logo">
                     <a href="#"><img src="https://woodbau.by/wp-content/uploads/2022/06/cropped-WOODBAU.BY-LOGO.png"></a>
                 </div>
             </div>
-            <div class="col-md-3 offset-md-2">
+            <div class="col-md-3">
                 <ul>
                     <li>
                         <a href="<?php echo home_url(); ?>">Главная</a>
@@ -52,7 +52,7 @@
                     </li>				
                 </ul>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <div class="top-text">
                     <p><span>Email</span>
                         <a href="mailto:woodbaus@gmail.com" target="_blank">woodbaus@gmail.com</a>
