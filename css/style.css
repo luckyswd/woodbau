@@ -3029,8 +3029,8 @@ body .wood-arenda {
 .swiper-pagination {
   position: absolute;
   width: 100%;
-  height: 30px;
-  bottom: -5px !important;
+  height: 15px;
+  bottom: 0px !important;
   z-index: 5;
   display: flex;
   align-items: center;
@@ -3057,6 +3057,7 @@ body .wood-arenda {
 
 .slider-info {
   margin: 40px 0;
+  overflow: hidden;
 }
 
 .swiperBani .swiper-slide-active {
@@ -3586,7 +3587,7 @@ body .wood-arenda {
   display: block;
   font-family: Montserrat;
   font-style: normal;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 1em;
   margin-bottom: 16px;
@@ -3609,18 +3610,41 @@ body .wood-arenda {
 }
 
 .slider-info-tabs {
+  position: relative;
   display: flex;
-  margin: 24px 0;
-  border-bottom: 1px solid #a3abb3;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin: 24px -20px;
 }
 
-.slider-info-tabs>*:not(:last-child) {
-  margin-right: 1.25em;
+.slider-info-tabs::before,
+.slider-info-tabs::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: 1px;
+  background-color: #a3abb3;
+  z-index: -1;
+}
+
+.slider-info-tabs::before {
+  top: 0px;
+  display: none;
+}
+
+.slider-info-tabs::after {
+  bottom: 0px;
+  display: block;
+}
+
+.slider-info-tabs > * {
+  padding: 0 20px;
 }
 
 .slider-info-tabs h4 {
   position: relative;
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 600;
   line-height: 32px;
   padding-bottom: 5px;
@@ -3628,11 +3652,24 @@ body .wood-arenda {
   transition: all 0.3s ease 0s;
 }
 
-.slider-info-tabs h4:after {
+.slider-info-tabs h4::before {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -1px;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 0px;
+  height: 2px;
+  background-color: var(--green-main);
+  transition: all 0.3s ease 0s;
+}
+
+.slider-info-tabs h4::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  bottom: 0px;
   display: block;
   width: 0%;
   height: 2px;
@@ -3645,7 +3682,7 @@ body .wood-arenda {
 }
 
 .slider-info-tabs h4.js-active-item:after {
-  width: 100%;
+  width: calc(100% - 20px);
 }
 
 .slider-info-content>*:not(.js-active-item) {
@@ -4763,7 +4800,6 @@ body .wood-arenda {
 
   .attr-subheadline {
     margin-bottom: 15px;
-
   }
 
   .attr-colors-wrapper {
@@ -4815,6 +4851,10 @@ body .wood-arenda {
     display: none;
   }
 
+  .slider-info__services h4 {
+    font-size: 22px;
+  }
+
   .swiper-slide {
     height: auto;
   }
@@ -4824,13 +4864,22 @@ body .wood-arenda {
   }
 
   .slider-info__left {
-    width: 100%;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .swiperBani .swiper-slide {
+    max-height: 300px;
   }
 
   .slider-info__right {
     width: 100%;
     padding-left: 0;
     margin-top: 30px;
+  }
+
+  .slider-info-tabs h4:not(.js-active-item) {
+    font-size: 12px;
   }
 
   .rental__left::before {
@@ -5262,6 +5311,35 @@ body .wood-arenda {
     max-height: unset;
     visibility: visible;
     padding-top: 20px;
+  }
+
+  .slider-info__left {
+    width: 100%;
+  }
+
+  .slider-info-tabs::before {
+    display: block;
+  }
+
+  .slider-info-tabs > * {
+    flex-basis: 50%;
+  }
+
+  .slider-info-tabs h4 {
+    font-size: 18px;
+    padding-top: 5px;
+  }
+
+  .slider-info-tabs h4::after {
+    display: none;
+  }
+
+  .slider-info-tabs h4.js-active-item {
+    padding-left: 36px;
+  }
+
+  .slider-info-tabs h4.js-active-item::before {
+    width: 10px;
   }
 }
 
@@ -5900,7 +5978,18 @@ body .wood-arenda {
   .first-section {
     padding-bottom: 40px;
   }
+
+  .slider-info-tabs > * {
+    
+  }
 }
+
+@media (max-width: 420px) {
+  .slider-info-tabs > * {
+    flex-basis: 100%;
+  }
+}
+
 
 @media (max-width: 400px) {
   .rentals-set::before {

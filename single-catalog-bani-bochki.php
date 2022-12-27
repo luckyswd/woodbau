@@ -45,9 +45,7 @@ $additionalContent = get_field('additional_content');
                                 <div class="swiper-slide">
                                     <a href="javascript:;" data-fancybox="slider" data-src="<?= $image ?>"
                                        class="slider-open-window">
-                                        <picture>
-                                            <img class="slide-main-image" src="<?= $image; ?>" alt="slide">
-                                        </picture>
+                                        <img class="slide-main-image" src="<?= $image; ?>" alt="slide">
                                     </a>
                                 </div>
                             <?php } ?>
@@ -206,16 +204,22 @@ $additionalContent = get_field('additional_content');
                                 <?php foreach ($setDropDownList as $setDropDownListItem) : ?>
                                     <div class="dropdown-list-item">
                                         <?php if (!empty($setDropDownListItem['title'])) : ?>
-                                            <div class="dropdown-list-item-title"><?= $setDropDownListItem['title'] ?></div>
-                                        <?php endif; ?>
-                                        <?php if (!empty($setDropDownListItem['content'])) : ?>
-                                            <div class="dropdown-list-item-content"><?= $setDropDownListItem['content'] ?></div>
-                                        <?php endif; ?>
-                                        <?php if (!empty($setDropDownListItem['image'])) : ?>
-                                            <div class="dropdown-list-item-image">
-                                                <img src="<?= $setDropDownListItem['image']['url'] ?>" alt="<?= $setDropDownListItem['image']['alt'] ?>">
+                                            <div class="dropdown-list-item-title">
+                                                <?= $setDropDownListItem['title'] ?>
                                             </div>
                                         <?php endif; ?>
+                                        <div class="dropdown-list-item-content">
+                                            <?php if (!empty($setDropDownListItem['text'])) : ?>
+                                              <div class="dropdown-list-item-text">
+                                                <?= $setDropDownListItem['text'] ?>
+                                              </div>
+                                            <?php endif; ?>
+                                            <?php if (!empty($setDropDownListItem['image'])) : ?>
+                                                <div class="dropdown-list-item-image">
+                                                    <img src="<?= $setDropDownListItem['image']['url'] ?>" alt="<?= $setDropDownListItem['image']['alt'] ?>">
+                                                </div>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
                                 <?php endforeach; ?>
                             </div>

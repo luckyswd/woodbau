@@ -53,6 +53,10 @@
   color: white;
   background-color: var(--green-main);
   border-radius: 5px;
+
+  @include _768 {
+    font-size: 18px;
+  }
 }
 
 .gallery {
@@ -61,6 +65,10 @@
   margin: -15px;
   padding: 20px 0;
 
+  @include _640 {
+    padding: 10px 0;
+  }
+
   &-item {
     flex-basis: 20%;
     display: flex;
@@ -68,11 +76,11 @@
     justify-content: center;
     padding: 15px;
 
-    @include _992 {
+    @include _768 {
       flex-basis: 25%;
     }
 
-    @include _768 {
+    @include _640 {
       flex-basis: 33.333%;
     }
 
@@ -97,6 +105,10 @@
   padding-bottom: 30px;
   line-height: 1.5em;
   list-style: none;
+
+  @include _768 {
+    padding-bottom: 20px;
+  }
 
   li {
     position: relative;
@@ -164,6 +176,82 @@
 .set-item {
   &-list {
 
+  }
+
+  .dropdown-list-item {
+    padding: 0 20px;
+
+    &-title {
+      position: relative;
+      padding: 10px 30px 10px 0px;
+      margin-bottom: 10px;
+      font-weight: 500;
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--green-main);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: var(--green-main);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        display: block;
+        width: 18px;
+        height: 10px;
+        background: url(./../../images/icons/arrow-down.svg) center/18px 10px no-repeat;
+        z-index: 1;
+        transition: all 0.3s ease 0s;
+      }
+    }
+
+    &-content {
+      height: 0px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, height 0.3s ease 0.2s;
+    }
+
+    &-text {
+      margin-bottom: 1em;
+    }
+
+    &-image {
+      img {
+        max-height: 250px;
+      }
+    }
+
+    &.active {
+      .dropdown-list-item-title {
+        color: var(--green-main);
+
+        &::after {
+          transform: rotate(180deg) translateY(50%);
+        }
+      }
+
+      .dropdown-list-item-content {
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease, height 0.3s ease 0.2s;
+      }
+    }
   }
 }
 
