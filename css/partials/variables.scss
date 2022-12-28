@@ -26,8 +26,8 @@ $transition: all .3s ease-in-out;
     }
 }
 
-@mixin _768 {
-    @media (max-width: 768px) {
+@mixin _767 {
+    @media (max-width: 767px) {
         @content;
     }
 }

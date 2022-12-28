@@ -27,7 +27,7 @@
     margin-bottom: 40px;
     text-align: center;
 
-    @include _768 {
+    @include _767 {
       font-size: 18px;
       line-height: 22px;
     }
@@ -38,7 +38,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 
-    @include _768 {
+    @include _767 {
       grid-template-columns: repeat(2, 1fr);
     }
 
