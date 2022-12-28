@@ -56,38 +56,39 @@ $additionalContent = get_field('additional_content');
             </div>
             <div class="slider-info__right">
                 <h1><?= the_title() ?></h1>
-                    <?php if (!empty($properties)) : ?>
-                        <div class="properties">
-                            <div class="properties-title">Характеристики</div>
-                            <div class="properties-items">
-                                <?php foreach ($properties as $property) : ?>
-                                    <?php if ($property['property_name'] && $property['property_value']) : ?>
-                                        <div class="property-item">
-                                            <div class="property-item-name"><?= $property['property_name'] ?></div>
-                                            <div class="property-item-value"><?= $property['property_value'] ?></div>
-                                        </div>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                    <?php if (!empty($price)) : ?>
-                        <div class="slider-info__right-price">Цена: <span><?= $price ?></span> руб.</div>
-                    <?php endif; ?>
-                    <?php if (!empty($services)) : ?>
-                        <div class="slider-info__services">
-                            <h4>Возможные услуги</h4>
-                            <?php foreach ($services as $service) : ?>
-                                <?php if ($service['service_name'] && $service['service_price']) : ?>
-                                    <div class="service-item">
-                                        <div class="service-item-name"><?= $service['service_name'] ?></div>
-                                        <div class="service-item-switcher"
-                                             data-price="<?= $service['service_price'] ?>"><span></span></div>
+                <?php if (!empty($properties)) : ?>
+                    <div class="properties">
+                        <div class="properties-title">Характеристики</div>
+                        <div class="properties-items">
+                            <?php foreach ($properties as $property) : ?>
+                                <?php if ($property['property_name'] && $property['property_value']) : ?>
+                                    <div class="property-item">
+                                        <div class="property-item-name"><?= $property['property_name'] ?></div>
+                                        <div class="property-item-value"><?= $property['property_value'] ?></div>
                                     </div>
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </div>
-                    <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+                <?php if (!empty($services)) : ?>
+                    <div class="slider-info__services">
+                        <h4>Возможные услуги</h4>
+                        <?php foreach ($services as $service) : ?>
+                            <?php if ($service['service_name'] && $service['service_price']) : ?>
+                                <div class="service-item">
+                                    <div class="service-item-name"><?= $service['service_name'] ?></div>
+                                    <div class="service-item-switcher"
+                                          data-price="<?= $service['service_price'] ?>"><span></span></div>
+                                </div>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+                <?php if (!empty($price)) : ?>
+                    <div class="slider-info__right-price">Цена: <span><?= $price ?></span> руб.</div>
+                <?php endif; ?>
+                <?php echo do_shortcode('[contact-form-7 id="3252" title="Order form RU"]'); ?>
             </div>
         </div>
         <div class="slider-info-tabs">
@@ -129,7 +130,7 @@ $additionalContent = get_field('additional_content');
             <?php if (!empty($doorsInfo)) : ?>
                 <div class="slider-info-doors">
                     <?php foreach ($doorsInfo as $index => $doorsInfoItem) : ?>
-                        <div class="doors-item">
+                        <div class="door-item">
                             <?php if (!empty($doorsInfoItem['title'])) : ?>
                                 <div class="door-item-title tab-inner-title"><?= $doorsInfoItem['title'] ?></div>
                             <?php endif; ?>
@@ -152,17 +153,17 @@ $additionalContent = get_field('additional_content');
             <?php if (!empty($facadesInfo)) : ?>
                 <div class="slider-info-facades">
                     <?php foreach ($facadesInfo as $index => $facadesInfoItem) : ?>
-                        <div class="facades-item">
+                        <div class="facade-item">
                             <?php if (!empty($facadesInfoItem['title'])) : ?>
-                                <div class="facades-item-title tab-inner-title"><?= $facadesInfoItem['title'] ?></div>
+                                <div class="facade-item-title tab-inner-title"><?= $facadesInfoItem['title'] ?></div>
                             <?php endif; ?>
                             <?php if (!empty($facadesInfoItem['text'])) : ?>
-                                <div class="facades-item-text"><?= $facadesInfoItem['text'] ?></div>
+                                <div class="facade-item-text"><?= $facadesInfoItem['text'] ?></div>
                             <?php endif; ?>
                             <?php if (!empty($facadesInfoItem['gallery'])) : ?>
-                                <div class="facades-item-gallery gallery">
+                                <div class="facade-item-gallery gallery">
                                     <?php foreach ($facadesInfoItem['gallery'] as $facadeImage) : ?>
-                                      <a href="javascript:;" data-fancybox="facades-<?= $index ?>" data-src="<?= $facadeImage['url'] ?>" class="gallery-item">
+                                      <a href="javascript:;" data-fancybox="facade-<?= $index ?>" data-src="<?= $facadeImage['url'] ?>" class="gallery-item">
                                           <img class="" src="<?= $facadeImage['url'] ?>" alt="<?= $facadeImage['alt'] ?>">
                                       </a>
                                     <?php endforeach; ?>

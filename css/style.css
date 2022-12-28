@@ -859,6 +859,7 @@ html {
 form input,
 form select,
 form label {
+  font-family: Montserrat;
   padding: 13px 15px;
   font-size: 14px;
   line-height: 14px;
@@ -891,7 +892,7 @@ form h4 {
 form input::placeholder,
 form textarea::placeholder {
   color: #b2b2b3;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 form textarea {
@@ -3097,6 +3098,7 @@ body .wood-arenda {
 
 .slider-info__wrapper {
   display: flex;
+  margin-bottom: 2.5em;
 }
 
 .slider-info__right h1 {
@@ -3537,6 +3539,7 @@ body .wood-arenda {
 
 .slider-info__services {
   display: block;
+  margin-bottom: 1.5em;
 }
 
 .service-item {
@@ -3590,7 +3593,7 @@ body .wood-arenda {
   font-size: 22px;
   font-weight: 700;
   line-height: 1em;
-  margin-bottom: 16px;
+  margin-bottom: 1em;
 }
 
 .slider-info__right-price span {
@@ -3599,9 +3602,9 @@ body .wood-arenda {
 }
 
 .slider-info__services h4 {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 600;
-  line-height: 48px;
+  margin-bottom: 0.5em;
 }
 
 .service-item-name {
@@ -3614,7 +3617,7 @@ body .wood-arenda {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  margin: 24px -20px;
+  margin: 0px -18px 24px;
 }
 
 .slider-info-tabs::before,
@@ -3639,7 +3642,7 @@ body .wood-arenda {
 }
 
 .slider-info-tabs > * {
-  padding: 0 20px;
+  padding: 0 18px;
 }
 
 .slider-info-tabs h4 {
@@ -3695,6 +3698,16 @@ body .wood-arenda {
 
 .slider-info-content img {
   max-width: 100%;
+}
+
+.slider-info-content a {
+  font-weight: 500;
+  text-decoration: underline;
+  color: var(--green-main);
+}
+
+.slider-info-content a:hover {
+  text-decoration: none;
 }
 
 .slider-info-tabs h4:hover:not(.js-active-item) {
@@ -4838,9 +4851,9 @@ body .wood-arenda {
   .slider-mobile-title {
     font-family: Montserrat;
     font-style: normal;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 56px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.25em;
     text-transform: uppercase;
     color: #459D69;
     margin-bottom: 30px;
@@ -4849,10 +4862,6 @@ body .wood-arenda {
 
   .slider-info__right h1 {
     display: none;
-  }
-
-  .slider-info__services h4 {
-    font-size: 22px;
   }
 
   .swiper-slide {
@@ -4879,7 +4888,7 @@ body .wood-arenda {
   }
 
   .slider-info-tabs h4:not(.js-active-item) {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .rental__left::before {
@@ -5317,6 +5326,11 @@ body .wood-arenda {
     width: 100%;
   }
 
+  .slider-mobile-title {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+
   .slider-info-tabs::before {
     display: block;
   }
@@ -5439,11 +5453,6 @@ body .wood-arenda {
   .who-benefits__block-image p {
     font-size: 16px;
     line-height: 20px;
-  }
-
-  .slider-mobile-title {
-    font-size: 36px;
-    line-height: 48px;
   }
 
   .attr-subheadline {
@@ -5912,6 +5921,10 @@ body .wood-arenda {
   .first-section .left-side__content {
     margin-bottom: 40px;
   }
+  
+  .slider-mobile-title {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -5978,13 +5991,9 @@ body .wood-arenda {
   .first-section {
     padding-bottom: 40px;
   }
-
-  .slider-info-tabs > * {
-    
-  }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 430px) {
   .slider-info-tabs > * {
     flex-basis: 100%;
   }
