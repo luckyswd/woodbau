@@ -3458,9 +3458,14 @@ body .wood-arenda {
     width: 100%;
     max-height: 460px;
 }
-#gallery-slider .swiper-slide {
-	height: auto;
-	max-height: 560px;
+#gallery-slider a {
+    height: 100%;
+    width: 100%;
+    max-height: 250px;
+}
+
+.gallerySlider {
+    overflow: hidden;
 }
 #gallery-slider .swiper-button-prev, #gallery-slider .swiper-button-next {
 	color: #459D69;
