@@ -10,24 +10,26 @@ $services = get_field('services');
 $planningInfo = get_field('planning_info');
 $planningImage = get_field('planning_image');
 
+// Древесина
+$woodInfo = get_field('wood_info');
+
+// Печи
+$ovenInfo = get_field('oven_info');
+
+// Окна
+$windowsInfo = get_field('windows_info');
+
 // Двери
 $doorsInfo = get_field('doors_info');
 
-// Фасады
-$facadesInfo = get_field('facades_info');
-
-// Фото
-$photos = get_field('photos');
-
 // Комплект
-$setFirstTitle = get_field('set_first_title');
+$setTitle = get_field('set_title');
 $setList = get_field('set_list');
-$setSecondTitle = get_field('set_second_title');
-$setDropDownList = get_field('set_drop-down_list');
 
 // Дополнительно
 $additionalTitle = get_field('additional_title');
 $additionalContent = get_field('additional_content');
+$additionalPhotos = get_field('additional_photos');
 
 ?>
 
@@ -71,40 +73,50 @@ $additionalContent = get_field('additional_content');
                         </div>
                     </div>
                 <?php endif; ?>
-                <?php if (!empty($services)) : ?>
-                    <div class="slider-info__services">
-                        <h4>Возможные услуги</h4>
-                        <?php foreach ($services as $service) : ?>
-                            <?php if ($service['service_name'] && $service['service_price']) : ?>
-                                <div class="service-item">
-                                    <div class="service-item-name"><?= $service['service_name'] ?></div>
-                                    <div class="service-item-switcher"
-                                          data-price="<?= $service['service_price'] ?>"><span></span></div>
-                                </div>
-                            <?php endif; ?>
-                        <?php endforeach; ?>
-                    </div>
-                <?php endif; ?>
-                <?php if (!empty($price)) : ?>
-                    <div class="slider-info__right-price">Цена: <span><?= $price ?></span> руб.</div>
-                <?php endif; ?>
-                <?php echo do_shortcode('[contact-form-7 id="3252" title="Order form RU"]'); ?>
+            </div>
+            <div class="slider-info__bottom">
+                <div class="slider-info__bottom-text">
+                    <?php if (!empty($services)) : ?>
+                        <div class="slider-info__services">
+                            <h4>Возможные услуги</h4>
+                            <?php foreach ($services as $service) : ?>
+                                <?php if ($service['service_name'] && $service['service_price']) : ?>
+                                    <div class="service-item">
+                                        <div class="service-item-name"><?= $service['service_name'] ?></div>
+                                        <div class="service-item-switcher"
+                                              data-price="<?= $service['service_price'] ?>"><span></span></div>
+                                    </div>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (!empty($price)) : ?>
+                        <div class="slider-info__right-price">Цена: <span><?= $price ?></span> руб.</div>
+                    <?php endif; ?>
+                </div>
+                <div class="slider-info__bottom-form">
+                    <h4>Оформить заказ</h4>
+                    <?php echo do_shortcode('[contact-form-7 id="3252" title="Order form RU"]'); ?>
+                </div>
             </div>
         </div>
         <div class="slider-info-tabs">
             <?php if (!empty($planningInfo)) : ?>
                 <h4 class="slider-info-tab-planning js-active-item" data-class="slider-info-planning">Планировка</h4>
             <?php endif; ?>
+            <?php if (!empty($woodInfo)) : ?>
+                <h4 class="slider-info-tab-wood" data-class="slider-info-wood">Древесина</h4>
+            <?php endif; ?>
+            <?php if (!empty($ovenInfo)) : ?>
+                <h4 class="slider-info-tab-oven" data-class="slider-info-oven">Печи</h4>
+            <?php endif; ?>
+            <?php if (!empty($windowsInfo)) : ?>
+                <h4 class="slider-info-tab-windows" data-class="slider-info-windows">Окна</h4>
+            <?php endif; ?>
             <?php if (!empty($doorsInfo)) : ?>
                 <h4 class="slider-info-tab-doors" data-class="slider-info-doors">Двери</h4>
             <?php endif; ?>
-            <?php if (!empty($facadesInfo)) : ?>
-                <h4 class="slider-info-tab-facades" data-class="slider-info-facades">Фасады</h4>
-            <?php endif; ?>
-            <?php if (!empty($photos)) : ?>
-                <h4 class="slider-info-tab-photos" data-class="slider-info-photos">Фотографии</h4>
-            <?php endif; ?>
-            <?php if (!empty($setFirstTitle)) : ?>
+            <?php if (!empty($setTitle)) : ?>
                 <h4 class="slider-info-tab-set" data-class="slider-info-set">Комплект</h4>
             <?php endif; ?>
             <?php if (!empty($additionalTitle)) : ?>
@@ -127,6 +139,76 @@ $additionalContent = get_field('additional_content');
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
+            <?php if (!empty($woodInfo)) : ?>
+                <div class="slider-info-wood">
+                    <?php foreach ($woodInfo as $index => $woodInfoItem) : ?>
+                        <div class="wood-item <?= $woodInfoItem['image'] ? 'wood-item--with-image' : '' ?>">
+                            <div class="wood-item__text"><?= $woodInfoItem['text'] ?></div>
+                            <?php if ($woodInfoItem['image']) : ?>
+                                <a href="javascript:;"
+                                   data-fancybox="wood-image-<?= $index ?>"
+                                   data-src="<?= $woodInfoItem['image']['url'] ?>"
+                                   class="wood-item__image">
+                                    <img src="<?= $woodInfoItem['image']['url'] ?>" alt="<?= $woodInfoItem['image']['alt'] ?>">
+                                </a>
+                            <?php endif; ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+            <?php if (!empty($ovenInfo)) : ?>
+                <div class="slider-info-oven">
+                    <?php foreach ($ovenInfo as $index => $ovenInfoItem) : ?>
+                        <div class="oven-item">
+                            <?php if (!empty($ovenInfoItem['title'])) : ?>
+                                <div class="oven-item-title tab-inner-title"><?= $ovenInfoItem['title'] ?></div>
+                            <?php endif; ?>
+                            <?php if (!empty($ovenInfoItem['text'])) : ?>
+                                <div class="oven-item-text"><?= $ovenInfoItem['text'] ?></div>
+                            <?php endif; ?>
+                            <?php if (!empty($ovenInfoItem['gallery'])) : ?>
+                                <div class="oven-item-gallery gallery">
+                                    <?php foreach ($ovenInfoItem['gallery'] as $image) : ?>
+                                      <div class="gallery-item">
+                                          <a href="javascript:;" data-fancybox="oven-<?= $index ?>" data-src="<?= $image['url'] ?>">
+                                              <img class="" src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+                                          </a>
+                                      </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+            <?php if (!empty($windowsInfo)) : ?>
+                <div class="slider-info-windows">
+                    <?php foreach ($windowsInfo as $index => $windowsInfoItem) : ?>
+                        <div class="window-item">
+                            <?php if (!empty($windowsInfoItem['title'])) : ?>
+                                <div class="window-item-title tab-inner-title"><?= $windowsInfoItem['title'] ?></div>
+                            <?php endif; ?>
+                            <?php if (!empty($windowsInfoItem['text'])) : ?>
+                                <div class="window-item-text"><?= $windowsInfoItem['text'] ?></div>
+                            <?php endif; ?>
+                            <?php if (!empty($windowsInfoItem['gallery'])) : ?>
+                                <div class="window-item-gallery gallery">
+                                    <?php foreach ($windowsInfoItem['gallery'] as $image) : ?>
+                                        <div class="gallery-item">
+                                            <a href="javascript:;" data-fancybox="windows-<?= $index ?>" data-src="<?= $image['url'] ?>">
+                                                <img class="" src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+                                            </a>
+                                            <?php if (!empty($image['caption'])): ?>
+                                                <span><?= $image['caption'] ?></span>
+                                            <?php endif; ?>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
             <?php if (!empty($doorsInfo)) : ?>
                 <div class="slider-info-doors">
                     <?php foreach ($doorsInfo as $index => $doorsInfoItem) : ?>
@@ -139,10 +221,15 @@ $additionalContent = get_field('additional_content');
                             <?php endif; ?>
                             <?php if (!empty($doorsInfoItem['gallery'])) : ?>
                                 <div class="door-item-gallery gallery">
-                                    <?php foreach ($doorsInfoItem['gallery'] as $doorImage) : ?>
-                                        <a href="javascript:;" data-fancybox="doors-<?= $index ?>" data-src="<?= $doorImage['url'] ?>" class="gallery-item">
-                                            <img class="" src="<?= $doorImage['url'] ?>" alt="<?= $doorImage['alt'] ?>">
-                                        </a>
+                                    <?php foreach ($doorsInfoItem['gallery'] as $image) : ?>
+                                        <div class="gallery-item">
+                                            <a href="javascript:;" data-fancybox="doors-<?= $index ?>" data-src="<?= $image['url'] ?>">
+                                                <img class="" src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+                                            </a>
+                                            <?php if (!empty($image['caption'])): ?>
+                                                <span><?= $image['caption'] ?></span>
+                                            <?php endif; ?>
+                                        </div>
                                     <?php endforeach; ?>
                                 </div>
                             <?php endif; ?>
@@ -150,80 +237,16 @@ $additionalContent = get_field('additional_content');
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
-            <?php if (!empty($facadesInfo)) : ?>
-                <div class="slider-info-facades">
-                    <?php foreach ($facadesInfo as $index => $facadesInfoItem) : ?>
-                        <div class="facade-item">
-                            <?php if (!empty($facadesInfoItem['title'])) : ?>
-                                <div class="facade-item-title tab-inner-title"><?= $facadesInfoItem['title'] ?></div>
-                            <?php endif; ?>
-                            <?php if (!empty($facadesInfoItem['text'])) : ?>
-                                <div class="facade-item-text"><?= $facadesInfoItem['text'] ?></div>
-                            <?php endif; ?>
-                            <?php if (!empty($facadesInfoItem['gallery'])) : ?>
-                                <div class="facade-item-gallery gallery">
-                                    <?php foreach ($facadesInfoItem['gallery'] as $facadeImage) : ?>
-                                      <a href="javascript:;" data-fancybox="facade-<?= $index ?>" data-src="<?= $facadeImage['url'] ?>" class="gallery-item">
-                                          <img class="" src="<?= $facadeImage['url'] ?>" alt="<?= $facadeImage['alt'] ?>">
-                                      </a>
-                                    <?php endforeach; ?>
-                                </div>
-                            <?php endif; ?>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
-            <?php if (!empty($photos)) : ?>
-                <div class="slider-info-photos">
-                    <div class="photos-item">
-                        <div class="photos-item-gallery gallery">
-                            <?php foreach ($photos as $photosImage) : ?>
-                              <a href="javascript:;" data-fancybox="photos" data-src="<?= $photosImage['url'] ?>" class="gallery-item">
-                                  <img class="" src="<?= $photosImage['url'] ?>" alt="<?= $photosImage['alt'] ?>">
-                              </a>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                </div>
-            <?php endif; ?>
-            <?php if (!empty($setFirstTitle)) : ?>
+            <?php if (!empty($setTitle)) : ?>
                 <div class="slider-info-set">
                     <div class="set-item">
-                        <div class="set-item-title tab-inner-title"><?= $setFirstTitle ?></div>
+                        <div class="set-item-title tab-inner-title"><?= $setTitle ?></div>
                         <?php if (!empty($setList)) : ?>
                             <ul class="set-item-list check-list">
                                 <?php foreach ($setList as $setListItem) : ?>
                                     <li><?= $setListItem['item'] ?></li>
                                 <?php endforeach; ?>
                             </ul>
-                        <?php endif; ?>
-                        <?php if (!empty($setSecondTitle)) : ?>
-                            <div class="set-item-title tab-inner-title"><?= $setSecondTitle ?></div>
-                        <?php endif; ?>
-                        <?php if (!empty($setDropDownList)) : ?>
-                            <div class="set-item-dropdown-list">
-                                <?php foreach ($setDropDownList as $setDropDownListItem) : ?>
-                                    <div class="dropdown-list-item">
-                                        <?php if (!empty($setDropDownListItem['title'])) : ?>
-                                            <div class="dropdown-list-item-title">
-                                                <?= $setDropDownListItem['title'] ?>
-                                            </div>
-                                        <?php endif; ?>
-                                        <div class="dropdown-list-item-content">
-                                            <?php if (!empty($setDropDownListItem['text'])) : ?>
-                                              <div class="dropdown-list-item-text">
-                                                <?= $setDropDownListItem['text'] ?>
-                                              </div>
-                                            <?php endif; ?>
-                                            <?php if (!empty($setDropDownListItem['image'])) : ?>
-                                                <div class="dropdown-list-item-image">
-                                                    <img src="<?= $setDropDownListItem['image']['url'] ?>" alt="<?= $setDropDownListItem['image']['alt'] ?>">
-                                                </div>
-                                            <?php endif; ?>
-                                        </div>
-                                    </div>
-                                <?php endforeach; ?>
-                            </div>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -235,6 +258,15 @@ $additionalContent = get_field('additional_content');
                         <?php if (!empty($additionalContent)) : ?>
                             <div class="additional-item-content"><?= $additionalContent ?></div>
                         <?php endif; ?>
+                        <div class="additional-item-gallery gallery">
+                            <?php foreach ($additionalPhotos as $image) : ?>
+                              <div class="gallery-item">
+                                  <a href="javascript:;" data-fancybox="additional-photos" data-src="<?= $image['url'] ?>">
+                                      <img class="" src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+                                  </a>
+                              </div>
+                            <?php endforeach; ?>
+                        </div>
                     </div>
                 </div>
             <?php endif; ?>

@@ -114,15 +114,15 @@ button:hover {
 .catalog-form__btn input,
 .calculator-form-submit input {
   color: #fff;
-  background: linear-gradient(to top, #0fc12a, #0fc12a);
+  background: var(--green-main);
 }
 
 .btn-green:hover,
 .catalog-form__btn input:hover,
 .calculator-form-submit input:hover {
   color: #fff;
-  background: linear-gradient(to top, #a36d19, #353c2d);
-  box-shadow: 0px 0px 15px transparent;
+  background: #3f9360;
+  box-shadow: inset 4px 4px 8px 0px #13562d;
 }
 
 header {
@@ -3088,17 +3088,43 @@ body .wood-arenda {
 
 .slider-info__left {
   overflow: hidden;
-  width: 55%;
+  width: 40%;
 }
 
 .slider-info__right {
-  width: 50%;
+  width: 60%;
   padding-left: 40px;
+}
+
+.slider-info__bottom {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.slider-info__bottom-text {
+  flex-basis: 40%;
+  flex-shrink: 0;
+}
+
+.slider-info__bottom-form {
+  flex-basis: 60%;
+  padding: 0 40px;
+  margin-left: 40px;
+}
+
+.slider-info__bottom-form h4 {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 .slider-info__wrapper {
   display: flex;
-  margin-bottom: 2.5em;
+  flex-wrap: wrap;
+  margin-bottom: 3em;
 }
 
 .slider-info__right h1 {
@@ -3371,6 +3397,7 @@ body .wood-arenda {
   line-height: 22px !important;
   color: #000000 !important;
   margin-top: 20px !important;
+  margin-bottom: 0 !important;
 }
 
 .slider-mobile-title {
@@ -3593,7 +3620,6 @@ body .wood-arenda {
   font-size: 22px;
   font-weight: 700;
   line-height: 1em;
-  margin-bottom: 1em;
 }
 
 .slider-info__right-price span {
@@ -3617,15 +3643,15 @@ body .wood-arenda {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  margin: 0px -18px 24px;
+  margin: 0px -14px 24px;
 }
 
 .slider-info-tabs::before,
 .slider-info-tabs::after {
   content: "";
   position: absolute;
-  left: 20px;
-  width: calc(100% - 40px);
+  left: 14px;
+  width: calc(100% - 28px);
   height: 1px;
   background-color: #a3abb3;
   z-index: -1;
@@ -3642,7 +3668,7 @@ body .wood-arenda {
 }
 
 .slider-info-tabs > * {
-  padding: 0 18px;
+  padding: 0 14px;
 }
 
 .slider-info-tabs h4 {
@@ -3658,7 +3684,7 @@ body .wood-arenda {
 .slider-info-tabs h4::before {
   content: "";
   position: absolute;
-  left: 20px;
+  left: 14px;
   top: 50%;
   transform: translateY(-50%);
   display: block;
@@ -3671,7 +3697,7 @@ body .wood-arenda {
 .slider-info-tabs h4::after {
   content: "";
   position: absolute;
-  left: 18px;
+  left: 14px;
   bottom: 0px;
   display: block;
   width: 0%;
@@ -3685,7 +3711,7 @@ body .wood-arenda {
 }
 
 .slider-info-tabs h4.js-active-item:after {
-  width: calc(100% - 20px);
+  width: calc(100% - 14px);
 }
 
 .slider-info-content>*:not(.js-active-item) {
@@ -4860,10 +4886,6 @@ body .wood-arenda {
     text-align: center;
   }
 
-  .slider-info__right h1 {
-    display: none;
-  }
-
   .swiper-slide {
     height: auto;
   }
@@ -4885,6 +4907,29 @@ body .wood-arenda {
     width: 100%;
     padding-left: 0;
     margin-top: 30px;
+  }
+
+  .slider-info__right h1 {
+    display: none;
+  }
+
+  .slider-info__right-price {
+    margin-bottom: 1em;
+  }
+
+  .slider-info__bottom {
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+  
+  .slider-info__bottom-text {
+    flex-basis: 100%;
+  }
+
+  .slider-info__bottom-form {
+    flex-basis: 100%;
+    padding: 20px 0 0;
+    margin-left: 0;
   }
 
   .slider-info-tabs h4:not(.js-active-item) {
@@ -5500,8 +5545,8 @@ body .wood-arenda {
   }
 
   .slider-info .wpcf7-response-output {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 14px !important;
+    line-height: 18px !important;
   }
 
   .catalog-form__name input {
@@ -5990,6 +6035,10 @@ body .wood-arenda {
 
   .first-section {
     padding-bottom: 40px;
+  }
+
+  .swiperBani .swiper-slide {
+    max-height: 280px;
   }
 }
 
