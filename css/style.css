@@ -3464,6 +3464,10 @@ body .wood-arenda {
   max-height: 250px;
 }
 
+.gallerySlider {
+  overflow: hidden;
+}
+
 #gallery-slider .swiper-slide {
   height: auto;
   max-height: 560px;
