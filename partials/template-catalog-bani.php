@@ -160,7 +160,7 @@ $term = get_queried_object();
             </div>
             <div class="row">
                 <div class="col-12 align-center">
-                    <a href="<?= home_url(); ?>/categories/saunas/" class="btn btn-green">Посмотреть все товары</a>
+                    <a href="<?= home_url(); ?>/saunas/" class="btn btn-green">Посмотреть все товары</a>
                 </div>
             </div>
         </div>

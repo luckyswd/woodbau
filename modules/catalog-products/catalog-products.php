@@ -98,7 +98,7 @@ if (empty($categories)) {
                                                 </div>
                                             </div>
                                             <div class="btn-wrapper">
-                                                <div class="catalog-item__btn btn btn-green">Zobacz</div>
+                                                <div class="catalog-item__btn btn btn-green">Подробнее</div>
                                             </div>
                                         </a>
                                     <?php endif; ?>

@@ -1085,6 +1085,8 @@ footer ul li {
   text-align: center;
   padding: 15px;
   transition: .2s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-item:hover {
@@ -1097,7 +1099,7 @@ footer ul li {
 }
 
 #products .product-item a {
-  margin-top: 24px;
+  margin-top: auto;
   padding: 15px 30px;
 }
 
@@ -3547,6 +3549,8 @@ body .wood-arenda {
   transition: all .3s ease-in-out;
   background: white;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog-item:hover {
@@ -3580,7 +3584,7 @@ body .wood-arenda {
 
 .catalog-item__characteristic {
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
@@ -3606,6 +3610,10 @@ body .wood-arenda {
 
 .catalog-item__bottom {
   padding: 10px;
+}
+
+.catalog-item .btn-wrapper {
+  margin-top: auto;
 }
 
 .catalog-item__btn {

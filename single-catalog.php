@@ -4,7 +4,7 @@ get_header();
 $post = $wp_query->post;
 $category = get_the_terms($post->ID, 'categories')[0]->slug;
 
-$customCategories = ['bani-bochki'];
+$customCategories = Helpers::BANI_URLS;
 
 if ( in_array($category, $customCategories) ) { //ID категории
     include( TEMPLATEPATH.'/single-catalog-'. $category .'.php' );
@@ -209,15 +209,7 @@ if ( in_array($category, $customCategories) ) { //ID категории
         </div>
         <div class="row">
             <div class="col-12 align-center">
-                <a href="<?= home_url(); ?>/categories/bani-ru/" class="btn btn-green">
-                    <?php if (ICL_LANGUAGE_CODE == 'pl') {
-                        echo 'Zobacz wszystkie produkty';
-                    } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                        echo 'Посмотреть все товары';
-                    } else {
-                        echo 'Alle Projekte Produkte';
-                    }; ?>
-                </a>
+                <a href="<?= home_url(); ?>/saunas/" class="btn btn-green">Посмотреть все товары</a>
             </div>
         </div>
     </div>
