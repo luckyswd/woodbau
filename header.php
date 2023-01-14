@@ -57,10 +57,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <body>
 <?php
 $currentUrl = $_SERVER['REQUEST_URI'];
+$term_url = get_query_var('term');
 ?>
 	
-<header <?php if (is_front_page() || is_tax()){ ?>class="header-index"<?php }; ?>>
-
+<header <?php if (is_front_page() || (is_tax() && !in_array($term_url, Helpers::BANI_URLS)) ){ ?>class="header-index"<?php }; ?>>
     <section id="top">
         <div class="container">
             <div class="row">
@@ -110,7 +110,7 @@ $currentUrl = $_SERVER['REQUEST_URI'];
                         </ul>
                     </div>
                     <div class="top-phone">
-                            <a href="tel:+375293800323" target="_blank"><img src="/wp-content/themes/woodbau/images/whatsapp.png">+37529 380 03 23</a>
+                            <a href="tel:+375293800323" target="_blank">+37529 380 03 23</a>
                             <a href="tel:+375339130323" target="_blank">+37533 913 03 23</a>
                             <a href="tel:+375173360323" target="_blank">+37517 336 03 23</a>
                     </div>
@@ -236,7 +236,8 @@ $currentUrl = $_SERVER['REQUEST_URI'];
             </div>
         </section>
     <?php }; ?>
-    <?php if (is_tax()) { ?><?php
+    <?php if (is_tax() && !in_array($term_url, Helpers::BANI_URLS)) { ?>
+        <?php
         $term_url = get_query_var('term');
         $term_id = get_queried_object()->term_id;
         ?>
@@ -311,7 +312,7 @@ $currentUrl = $_SERVER['REQUEST_URI'];
         </section>
     <?php }; ?>
 
-    <?php if ($currentUrl === '/sauny/') : ?>
+    <?php if ($currentUrl === '/saunas/') : ?>
         <?php RenderBlock::renderBlockByName('acf/catalog-hero'); ?>
     <?php endif;?>
 </header>

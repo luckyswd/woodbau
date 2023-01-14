@@ -1,5 +1,6 @@
 <?php
 require_once 'helpers/RenderBlock.php';
+require_once 'helpers/Helpers.php';
 ## Carbon Fields
 add_action( 'carbon_fields_register_fields', 'crb_register_custom_fields' ); // Для версии 2.0 и выше
 function crb_register_custom_fields() {
@@ -381,4 +382,14 @@ function my_acf_block_render_callback($block)
     if (file_exists(get_theme_file_path("modules/" . $slug . '/' . $slug . ".php"))) {
         include(get_theme_file_path("modules/" . $slug . '/' . $slug . ".php"));
     }
+}
+
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title' => 'Глобальные настройки',
+        'menu_title' => 'Глобальные настройки',
+        'menu_slug' => 'theme-general-settings',
+        'capability' => 'edit_posts',
+        'redirect' => false
+    ));
 }

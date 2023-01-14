@@ -538,7 +538,7 @@ nav ul li:last-child a:after {
   text-align: center;
 }
 
-.block-head h3 {
+.block-head h1 {
   font-size: 48px;
   color: #313131;
   line-height: 48px;
@@ -652,6 +652,14 @@ html {
   text-align: left;
   width: 1500px;
   left: -30%;
+}
+
+#project .block-head h3 {
+  font-size: 48px;
+  color: #313131;
+  line-height: 48px;
+  position: relative;
+  text-align: center;
 }
 
 .project-item {
@@ -1056,6 +1064,14 @@ footer ul li {
   position: relative;
 }
 
+#products .btn-back {
+  margin-top: 24px;
+}
+
+#products .block-head {
+  margin-top: 24px;
+}
+
 .texture-product-2 {
   position: absolute;
   top: 40%;
@@ -1067,8 +1083,7 @@ footer ul li {
   border-radius: 10px;
   background: #f6f6f7;
   text-align: center;
-  padding: 30px;
-  margin-bottom: 30px;
+  padding: 15px;
   transition: .2s ease-in-out;
 }
 
@@ -1076,20 +1091,35 @@ footer ul li {
   box-shadow: 0px 0px 20px #d8d8d8;
 }
 
-.product-item .product-item-img {
-  min-height: 200px;
-  margin: 15px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-
+#products .catalog-item__characteristic {
+  grid-template-columns: 1fr;
+  margin-bottom: 10px;
 }
 
-.product-item h4 {
-  font-size: 16px;
-  line-height: 18px;
-  height: 45px;
-  margin-bottom: 10px;
+#products .product-item a {
+  margin-top: 24px;
+  padding: 15px 30px;
+}
+
+#products .characteristic-value {
+  justify-content: center;
+}
+
+.product-item .product-item-img {
+  min-height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.product-item h2 {
+  margin: 10px 0;
+}
+
+#products .products-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
 }
 
 .aksessuary .product-item h4 {
@@ -1127,7 +1157,7 @@ footer ul li {
 
 .popup-modal-style {
   margin: auto;
-  padding: 40px 60px 60px 60px;
+  padding: 60px;
   width: 400px;
   position: relative;
   text-align: center;
@@ -1136,9 +1166,10 @@ footer ul li {
 }
 
 .popup-modal-style h3 {
-  font-size: 18px;
+  font-size: 24px;
   text-transform: uppercase;
   font-weight: 700;
+  margin-bottom: 16px;
 }
 
 .popup-modal-style p {
@@ -3354,11 +3385,8 @@ body .wood-arenda {
 }
 
 .catalog-form__btn input {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 23px;
-  line-height: 31px;
+  font-size: 14px;
+  line-height: 14px;
   color: #FFFFFF;
   border-radius: 100px;
   margin-bottom: 0;
@@ -3518,6 +3546,7 @@ body .wood-arenda {
   border: 1px solid #e7e9eb;
   transition: all .3s ease-in-out;
   background: white;
+  padding: 10px;
 }
 
 .catalog-item:hover {
@@ -3543,6 +3572,21 @@ body .wood-arenda {
 
 .catalog-item__headline {
   margin-bottom: 12px;
+}
+
+.catalog-item__characteristics {
+  margin-bottom: 10px;
+}
+
+.catalog-item__characteristic {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 10px;
+}
+
+.characteristic-value {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .catalog-item__planning {
@@ -4120,6 +4164,11 @@ body .wood-arenda {
   border-radius: 0;
 }
 
+#project .owl-dots {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
 @media (max-width: 1870px) {
   .barrel-bath__image {
     opacity: 0.5;
@@ -4298,6 +4347,9 @@ body .wood-arenda {
 }
 
 @media (max-width: 1200px) {
+  #products .products-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   .wood-arenda .container {
     max-width: 960px;
@@ -4792,6 +4844,25 @@ body .wood-arenda {
 
 @media (max-width: 992px) {
 
+  #products .products-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #project .block-head h3 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  #project .block-head {
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+
+  #project .owl-dots {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   .slider-info-description h1 {
     font-size: 48px;
     line-height: 56px;
@@ -5149,7 +5220,6 @@ body .wood-arenda {
 
   .btn {
     font-size: 17px;
-    padding: 10px 35px;
   }
 
   .header-left {
@@ -5409,6 +5479,9 @@ body .wood-arenda {
 }
 
 @media (max-width: 680px) {
+  #products .products-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   .service-item-name {
     width: 70%;

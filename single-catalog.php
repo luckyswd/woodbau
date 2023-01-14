@@ -12,7 +12,6 @@ if ( in_array($category, $customCategories) ) { //ID категории
     include( TEMPLATEPATH.'/single-catalog-default.php' );
 }
 ?>
-
 <!-- <section id="project">
     <div class="container">
         <div class="row">

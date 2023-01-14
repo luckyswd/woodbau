@@ -1,0 +1,32 @@
+.online-form {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: unset;
+  }
+
+  .online-form-btn {
+    padding: 10px 40px 10px 20px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    background: var(--green-main);
+    border-radius: 19px 0 0 19px;
+    text-overflow: ellipsis;
+    transform: translateX(25px);
+  }
+
+  svg {
+    z-index: 99;
+    path {
+      fill: var(--green-main);
+    }
+  }
+}
