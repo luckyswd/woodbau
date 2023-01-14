@@ -38,17 +38,6 @@ $second_button = get_field('second_button');
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
-
-            <div class="hero-buttons">
-                <?php if (!empty($first_button)) : ?>
-                    <a href="<?= $first_button['url'] ?>"
-                       class="btn btn-green hero-button-first"><?= $first_button['title'] ?></a>
-                <?php endif; ?>
-                <?php if (!empty($second_button)) : ?>
-                    <a href="<?= $second_button['url'] ?>"
-                       class="btn btn-green hero-button-second"><?= $second_button['title'] ?></a>
-                <?php endif; ?>
-            </div>
         </div>
     </div>
 </section>

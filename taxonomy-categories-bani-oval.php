@@ -1,0 +1,1 @@
+<?php include 'partials/template-catalog-bani.php';

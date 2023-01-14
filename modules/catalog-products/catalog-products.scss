@@ -27,12 +27,8 @@
 
     a {
       width: max-content;
-
-      background: linear-gradient(to top, rgb(78 177 18 / 100%), #0fc12a);
-
-      &:hover {
-        background: linear-gradient(to top, #a36d19, #353c2d)
-      }
+      color: #fff;
+      background: var(--green-main);
 
       @include _480 {
         width: 100%;

@@ -4,7 +4,6 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  min-height: 700px;
 
   .hero-overlay {
     position: absolute;
@@ -49,6 +48,7 @@
   h1 {
     font-size: 48px;
     line-height: 56px;
+    text-align: center;
 
     @include _992 {
       font-size: 32px;
@@ -95,14 +95,6 @@
       @include _767 {
         font-size: 18px;
         line-height: 20px;
-      }
-    }
-
-    .hero-button-first {
-      background: linear-gradient(to top, rgb(78 177 18 / 100%), #0fc12a);
-
-      &:hover {
-        background: linear-gradient(to top, #a36d19, #353c2d)
       }
     }
   }

@@ -787,6 +787,20 @@
                 "operator": "==",
                 "value": "categories:bani-bochki"
             }
+        ],
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "categories:bani-quad"
+            }
+        ],
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "categories:bani-oval"
+            }
         ]
     ],
     "menu_order": 0,
@@ -797,5 +811,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1673465522
+    "modified": 1673696188
 }
