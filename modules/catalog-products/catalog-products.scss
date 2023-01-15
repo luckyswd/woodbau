@@ -35,4 +35,47 @@
       }
     }
   }
+
+  @include _680 {
+    .catalog-item__btn {
+      display: none;
+    }
+
+    .catalog-item {
+      display: grid;
+      grid-template-columns: 35% 1fr;
+      column-gap: 10px;
+      flex-direction: unset;
+    }
+
+    .catalog-item__image {
+      width: 100%;
+      height: 100%;
+
+      img {
+        max-height: 170px;
+      }
+    }
+
+    .catalog-item__characteristic {
+      grid-template-columns: 1fr;
+    }
+
+    .catalog-item__characteristics:last-child {
+      .characteristic-value {
+        font-size: 24px;
+        color: var(--green-main);
+        font-weight: 700;
+      }
+
+      .characteristic-name {
+        display: none;
+      }
+    }
+
+    .characteristic-value {
+      word-break: break-word;
+      display: block;
+    }
+  }
 }
