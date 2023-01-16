@@ -63,11 +63,11 @@ $term = get_queried_object();
                                     <?php endforeach; ?>
                                 <?php endif; ?>
                             </div>
-                            <div class="catalog-item__characteristics">
+                            <div class="catalog-item__characteristics property-price">
                                 <?php if (!empty($price)) : ?>
                                     <div class="catalog-item__characteristic">
                                         <p class="characteristic-name">Цена:</p>
-                                        <p class="characteristic-value"><?= $price ?> руб.</p>
+                                        <p class="characteristic-value"><span><?= $price ?></span> руб.</p>
                                     </div>
                                 <?php endif; ?>
                             </div>

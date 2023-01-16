@@ -102,10 +102,10 @@ $additionalPhotos = get_field('additional_photos');
         </div>
         <div class="slider-info-tabs">
             <?php if (!empty($planningInfo)) : ?>
-                <h4 class="slider-info-tab-planning js-active-item" data-class="slider-info-planning">Планировка</h4>
+                <h4 class="slider-info-tab-planning" data-class="slider-info-planning">Планировка</h4>
             <?php endif; ?>
             <?php if (!empty($woodInfo)) : ?>
-                <h4 class="slider-info-tab-wood" data-class="slider-info-wood">Древесина</h4>
+                <h4 class="slider-info-tab-wood js-active-item" data-class="slider-info-wood">Древесина</h4>
             <?php endif; ?>
             <?php if (!empty($ovenInfo)) : ?>
                 <h4 class="slider-info-tab-oven" data-class="slider-info-oven">Печи</h4>
@@ -125,7 +125,7 @@ $additionalPhotos = get_field('additional_photos');
         </div>
         <div class="slider-info-content">
             <?php if (!empty($planningInfo)) : ?>
-                <div class="slider-info-planning js-active-item">
+                <div class="slider-info-planning">
                     <?php foreach ($planningInfo as $planningInfoItem) : ?>
                         <div class="planning-item">
                             <div class="planning-item__name"><?= $planningInfoItem['text'] ?></div>
@@ -140,7 +140,7 @@ $additionalPhotos = get_field('additional_photos');
                 </div>
             <?php endif; ?>
             <?php if (!empty($woodInfo)) : ?>
-                <div class="slider-info-wood">
+                <div class="slider-info-wood js-active-item">
                     <?php foreach ($woodInfo as $index => $woodInfoItem) : ?>
                         <div class="wood-item <?= $woodInfoItem['image'] ? 'wood-item--with-image' : '' ?>">
                             <div class="wood-item__text"><?= $woodInfoItem['text'] ?></div>

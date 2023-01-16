@@ -18,9 +18,7 @@
 </section>
 
 <?php
-$facebook = get_field('facebook', 'option');
 $instagram = get_field('instagram', 'option');
-$whatsapp = get_field('whatsapp', 'option');
 $phone = get_field('phone', 'option');
 ?>
 
@@ -114,27 +112,6 @@ $phone = get_field('phone', 'option');
                         <picture>
                             <img src="<?= $instagram['image']['url'] ?? '' ?>"
                                  alt="<?= $instagram['image']['alt'] ?: $instagram['image']['title'] ?? '' ?>"
-                                 width="33" height="33"
-                                 loading="lazy">
-                        </picture>
-                    </a>
-                <?php endif; ?>
-                <?php if (!empty($instagram['image'])) : ?>
-                    <a href="<?= $facebook['link'] ?? '' ?>" target="_blank">
-                        <picture>
-                            <img src="<?= $facebook['image']['url'] ?? '' ?>"
-                                 alt="<?= $facebook['image']['alt'] ?: $facebook['image']['title'] ?? '' ?>"
-                                 width="33" height="33"
-                                 loading="lazy">
-                        </picture>
-                    </a>
-                <?php endif; ?>
-                <?php if (!empty($whatsapp['image'])) : ?>
-                    <a href="https://api.whatsapp.com/send?phone=<?= Helpers::getPhoneWithOutSymbols($phone['phone_number']) ?>&app=facebook&entry_point=page_cta&fbclid=IwAR3g-Ur9AkIT893jD1skJT8JQXQKTGMFqY3ihfP5mR6JmJaRrwyM3JbCosQ"
-                       target="_blank">
-                        <picture>
-                            <img src="<?= $whatsapp['image']['url'] ?? '' ?>"
-                                 alt="<?= $whatsapp['image']['alt'] ?: $whatsapp['image']['title'] ?? '' ?>"
                                  width="33" height="33"
                                  loading="lazy">
                         </picture>

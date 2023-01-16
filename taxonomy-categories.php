@@ -20,66 +20,10 @@ $term_id = get_queried_object()->term_id;
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <?php if ($term_url == 'xaberkub') { ?>
-                    <div class="text-des"><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                            echo '<p>
-                                                <span> EasyCUBE </span> to marka firmy Woodbau, która oferuje innowacyjne mocowania do szybkiego samodzielnego montażu altan, tarasów, patio, kawiarenek zewnętrznych oraz wszelkiego rodzaju konstrukcji. Naszym klientom oferujemy atrakcyjną i niedrogą przestrzeń rekreacyjną.
-                                            </p>
-                                            <p> <span> EasyCUBE </span> - będzie interesujący zarówno dla sektora biznesowego, jak i prywatnego.
-                                                <br> Kawiarnie letnie, strych przy elewacji kawiarni, plac zabaw, zadaszony teren na imprezy, taras, wiata garażowa i prawie każda powierzchnia handlowa, którą można zdemontować na koniec sezonu.
-                                            </p>
-                                            <p> Ze względu na swoją wszechstronność możesz stworzyć dowolny ciekawy i nietypowy projekt, który z pewnością przyciągnie uwagę! </p>
-                                            <p> Zalety konstrukcji <span> EasyCube </span>:
-                                                <br> - Wygodne opakowanie z kompletem uchwytów montażowych.
-                                                <br> - Pręt 100 x 100 mm x 3000mm (w zestawie)
-                                                <br> - Montaż konstrukcji nie wymaga specjalnego przygotowania <br> - Szybki montaż </p>';
-                        } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                            echo '<p>
-                                                <span>EasyCUBE</span> - это бренд от компании Woodbau, предлагающий инновационный крепеж для быстрой самостоятельной сборки беседок, террас, патио, летних кафе и разного рода конструкций. Мы предлагаем клиентам привлекательную и доступную зону отдыха.
-                                            </p>
-                                            <p><span>EasyCUBE</span> - будет интересен как для делового, так и для частного сектора.
-                                                <br>Летние кафе, мансарда у фасада кафе, детская площадка, крытая площадка для мероприятий, терраса, навес для авто да практически любое коммерческое пространство которое можно будет разобрать в конце сезона.
-                                            </p>
-                                            <p>Благодаря своей универсальности можно создавать любую интересную и необычные конструкцию которая обязательно привлечёт внимание!</p>
-                                            <p>Преимущества конструкций <span>EasyCube</span>:
-                                                <br>- Удобная упаковка с полным комплектом кронштейнов для монтажа.
-                                                <br>- Брус 100 х 100 мм х 3000мм (входит в комплект)
-                                                <br>- Не требуется специально подготовки для монтажа конструкции <br>- Быстрая сборка </p>';
-                        } else {
-                            echo '<p>
-                                                                            <span> EasyCUBE </span> ist eine Marke von Woodbau, die innovative Befestigungselemente für die schnelle Selbstmontage von Pavillons, Terrassen, Innenhöfen, Straßencafés und allen Arten von Konstruktionen bietet. Wir bieten unseren Kunden ein attraktives und bezahlbares Erholungsgebiet.
-                                                                        </p>
-                                                                        <p> <span> EasyCUBE </span> - wird sowohl für den geschäftlichen als auch für den privaten Bereich interessant sein.
-                                                                            <br> Sommercafés, ein Dachboden an der Caféfassade, ein Spielplatz, ein überdachter Veranstaltungsbereich, eine Terrasse, ein Carport und fast alle Gewerbeflächen, die zum Saisonende abgebaut werden können.
-                                                                        </p>
-                                                                        <p> Aufgrund seiner Vielseitigkeit können Sie jedes interessante und ungewöhnliche Design erstellen, das definitiv Aufmerksamkeit erregt! </p>
-                                                                        <p> Vorteile von <span> EasyCube </span>-Designs:
-                                                                            <br> - Praktische Verpackung mit einem kompletten Satz Montagehalterungen.
-                                                                            <br> - Stange 100 x 100 mm x 3000 mm (im Lieferumfang enthalten)
-                                                                            <br> - Für die Installation der Struktur ist keine besondere Vorbereitung erforderlich <br> - Schnelle Montage </p>';
-                        }; ?>
-                    </div>
-                <?php } ?>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h3><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                            echo 'Osobliwości';
-                        } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                            echo 'Особенности';
-                        } else {
-                            echo 'Besonderheiten';
-                        }; ?></h3>
-                    <span><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                            echo 'Osobliwości';
-                        } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                            echo 'Особенности';
-                        } else {
-                            echo 'Besonderheiten';
-                        }; ?></span>
+                    <h3>Особенности</h3>
+                    <span>Особенности</span>
                 </div>
             </div>
         </div>
@@ -127,7 +71,7 @@ $term_id = get_queried_object()->term_id;
         <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h3>Каталог</h3>
+                    <h2>Каталог</h2>
                 </div>
             </div>
         </div>
@@ -169,7 +113,7 @@ $term_id = get_queried_object()->term_id;
             ?>
 
             <?php if (!empty($posts)) : ?>
-                <div class="block-catalog">
+                <div class="block-catalog postrojki-iz-brusa">
                     <?php foreach ($posts as $post) : ?>
                         <?php
                         $price = get_field('price', $post->ID);

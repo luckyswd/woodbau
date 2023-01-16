@@ -1072,6 +1072,11 @@ footer ul li {
   margin-top: 24px;
 }
 
+#products .block-head h2 {
+  font-size: 48px;
+  line-height: 56px;
+}
+
 .texture-product-2 {
   position: absolute;
   top: 40%;
@@ -3569,7 +3574,7 @@ body .wood-arenda {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -3582,15 +3587,36 @@ body .wood-arenda {
   margin-bottom: 10px;
 }
 
+#products .postrojki-iz-brusa .catalog-item__characteristic {
+  grid-template-columns: 1fr 1fr;
+}
+
+#products .postrojki-iz-brusa .catalog-item__characteristic {
+  justify-content: flex-end;
+}
+
+#products .postrojki-iz-brusa .characteristic-value {
+  justify-content: flex-end;
+}
+
 .catalog-item__characteristic {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  align-items: center;
 }
 
 .characteristic-value {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+}
+
+.property-price span {
+  font-size: 30px;
+  color: var(--green-main);
+  font-weight: 700;
+  margin-right: 6px;
 }
 
 .catalog-item__planning {
@@ -4851,6 +4877,10 @@ body .wood-arenda {
 }
 
 @media (max-width: 992px) {
+  #products .block-head h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
 
   #products .products-wrapper {
     grid-template-columns: repeat(2, 1fr);
