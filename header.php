@@ -110,9 +110,9 @@ $term_url = get_query_var('term');
                         </ul>
                     </div>
                     <div class="top-phone">
-                            <a href="tel:+375293800323" target="_blank">+37529 380 03 23</a>
-                            <a href="tel:+375339130323" target="_blank">+37533 913 03 23</a>
-                            <a href="tel:+375173360323" target="_blank">+37517 336 03 23</a>
+                        <a href="tel:+375296955788" target="_blank">+37529 695 57 88</a>
+                        <a href="tel:+375293800323" target="_blank">+37529 380 03 23</a>
+                        <a href="tel:+375339130323" target="_blank">+37533 913 03 23</a>
                     </div>
                     <a href="#modal-popup" class="popup-modal btn-call">Заказать обратный звонок</a>
                 </div>
