@@ -100,14 +100,14 @@ $additionalPhotos = get_field('additional_photos');
             </div>
         </div>
         <div class="slider-info-tabs">
+            <?php if (!empty($ovenInfo)) : ?>
+                <h4 class="slider-info-tab-oven js-active-item" data-class="slider-info-oven">Печи</h4>
+            <?php endif; ?>
             <?php if (!empty($planningImage)) : ?>
-                <h4 class="slider-info-tab-planning js-active-item" data-class="slider-info-planning">Планировка</h4>
+                <h4 class="slider-info-tab-planning" data-class="slider-info-planning">Планировка</h4>
             <?php endif; ?>
             <?php if (!empty($woodInfo)) : ?>
-                <h4 class="slider-info-tab-wood js-active-item" data-class="slider-info-wood">Древесина</h4>
-            <?php endif; ?>
-            <?php if (!empty($ovenInfo)) : ?>
-                <h4 class="slider-info-tab-oven" data-class="slider-info-oven">Печи</h4>
+                <h4 class="slider-info-tab-wood" data-class="slider-info-wood">Древесина</h4>
             <?php endif; ?>
             <?php if (!empty($windowsInfo)) : ?>
                 <h4 class="slider-info-tab-windows" data-class="slider-info-windows">Окна</h4>
@@ -123,34 +123,8 @@ $additionalPhotos = get_field('additional_photos');
             <?php endif; ?>
         </div>
         <div class="slider-info-content">
-            <?php if (!empty($planningImage)) : ?>
-                <div class="slider-info-planning js-active-item">
-                    <?php if (!empty($planningImage)) : ?>
-                        <div class="planning-image">
-                            <img src="<?= $planningImage ?>" alt="Планировка">
-                        </div>
-                    <?php endif; ?>
-                </div>
-            <?php endif; ?>
-            <?php if (!empty($woodInfo)) : ?>
-                <div class="slider-info-wood js-active-item">
-                    <?php foreach ($woodInfo as $index => $woodInfoItem) : ?>
-                        <div class="wood-item <?= $woodInfoItem['image'] ? 'wood-item--with-image' : '' ?>">
-                            <div class="wood-item__text"><?= $woodInfoItem['text'] ?></div>
-                            <?php if ($woodInfoItem['image']) : ?>
-                                <a href="javascript:;"
-                                   data-fancybox="wood-image-<?= $index ?>"
-                                   data-src="<?= $woodInfoItem['image']['url'] ?>"
-                                   class="wood-item__image">
-                                    <img src="<?= $woodInfoItem['image']['url'] ?>" alt="<?= $woodInfoItem['image']['alt'] ?>">
-                                </a>
-                            <?php endif; ?>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
             <?php if (!empty($ovenInfo)) : ?>
-                <div class="slider-info-oven">
+                <div class="slider-info-oven js-active-item">
                     <?php foreach ($ovenInfo as $index => $ovenInfoItem) : ?>
                         <div class="oven-item">
                             <?php if (!empty($ovenInfoItem['title'])) : ?>
@@ -169,6 +143,32 @@ $additionalPhotos = get_field('additional_photos');
                                         </div>
                                     <?php endforeach; ?>
                                 </div>
+                            <?php endif; ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+            <?php if (!empty($planningImage)) : ?>
+                <div class="slider-info-planning">
+                    <?php if (!empty($planningImage)) : ?>
+                        <div class="planning-image">
+                            <img src="<?= $planningImage ?>" alt="Планировка">
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+            <?php if (!empty($woodInfo)) : ?>
+                <div class="slider-info-wood">
+                    <?php foreach ($woodInfo as $index => $woodInfoItem) : ?>
+                        <div class="wood-item <?= $woodInfoItem['image'] ? 'wood-item--with-image' : '' ?>">
+                            <div class="wood-item__text"><?= $woodInfoItem['text'] ?></div>
+                            <?php if ($woodInfoItem['image']) : ?>
+                                <a href="javascript:;"
+                                   data-fancybox="wood-image-<?= $index ?>"
+                                   data-src="<?= $woodInfoItem['image']['url'] ?>"
+                                   class="wood-item__image">
+                                    <img src="<?= $woodInfoItem['image']['url'] ?>" alt="<?= $woodInfoItem['image']['alt'] ?>">
+                                </a>
                             <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
