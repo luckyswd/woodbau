@@ -517,7 +517,7 @@ $('.collapsible').collapsible({
   accordion: false
 });
 
-let sliderPrice = document.querySelector('.slider-info__right-price span');
+let sliderPrice = document.querySelector('.slider-info__right-price .price');
 const switchers = document.querySelectorAll('.service-item-switcher');
 const sliderInfoTabs = document.querySelectorAll('.slider-info-tabs h4');
 const sliderInfoCharacteristics = document.querySelectorAll('.slider-info-content div');

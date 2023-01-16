@@ -1,38 +1,10 @@
 <?php
-$images_carbon = carbon_get_the_post_meta('code_catalog_photo');
-$code_catalog_time = carbon_get_the_post_meta('code_catalog_time');
-
-$subheadline = get_field('subheadline');
-$color_options = get_field('color_options');
-$production_time_header = get_field('production_time_header');
-$header_length_options = get_field('header_length_options');
-$length_options = get_field('length_options');
-$number_of_rooms_title = get_field('number_of_rooms_title');
-$number_of_rooms = get_field('number_of_rooms');
-$description = get_field('description');
-$form_top = get_field('form_top');
-$turnkey_configuration = get_field('turnkey_configuration');
-$turnkey_package_header = get_field('turnkey_package_header');
-
-$price = get_field('price');
-$characteristics = get_field('characteristics');
-$services = get_field('services');
-
-
-// получение массива дополнительных полей
 $values = get_post_meta(get_the_ID(), false);
 $term_model = get_the_terms(get_the_ID(), 'categories');
 $term_model_item = $term_model["0"]->slug;
-$catId = $term_model[0]->term_taxonomy_id;
-
-if ($term_model_item === 'postrojki-iz-brusa-ru') {
-    $images = get_field('gallery');
-} else {
-    $images = carbon_get_the_post_meta('code_catalog_photo');
-}
 
 $args = [
-  'post_type' => 'calculator',
+    'post_type' => 'calculator',
 ];
 
 $calculator = get_posts($args);
@@ -65,16 +37,57 @@ $contact_form_result_background_image = get_field('contact_form_result_backgroun
 $сurrency_type = get_field('сurrency_type', $id);
 $length_title = get_field('length_title', $id);
 $length_blocks = get_field('length_block', $id);
+$code_catalog_time = get_field('catalog_time', $id);
 
-if ($catId === 14 || $catId === 26 || $catId === 27 || $catId === 63) {
-  $showClassCalc = 'show-calc';
-} else {
-  $showClassCalc = '';
+if (empty($code_catalog_time)) {
+    $code_catalog_time = carbon_get_the_post_meta('code_catalog_time');
 }
-?>
 
+$subheadline = get_field('subheadline');
+$color_options = get_field('color_options');
+$production_time_header = get_field('production_time_header');
+$header_length_options = get_field('header_length_options');
+$length_options = get_field('length_options');
+$number_of_rooms_title = get_field('number_of_rooms_title');
+$number_of_rooms = get_field('number_of_rooms');
+$description = get_field('description');
+$form_top = get_field('form_top');
+$turnkey_configuration = get_field('turnkey_configuration');
+$turnkey_package_header = get_field('turnkey_package_header');
+$catId = '';
+
+foreach ($term_model as $term) {
+    if ($term->term_taxonomy_id == 27) {
+        $catId = $term->term_taxonomy_id;
+    }
+}
+
+$price = get_field('price');
+$characteristics = get_field('characteristics');
+$services = get_field('services');
+$dimensions = get_field('dimensions');
+
+if ($term_model_item === 'postrojki-iz-brusa-ru') {
+    $images = get_field('gallery');
+} else {
+    $images = carbon_get_the_post_meta('code_catalog_photo');
+}
+
+if ($catId === 27) {
+    $showClassCalc = 'show-calc';
+    $url_back =  get_home_url() .  '/sauny/#products';
+} else {
+    $showClassCalc = '';
+    $url_back =  get_home_url() .  '/categories/' . $term_model_item . '/#products';
+}
+
+?>
 <section class="slider-info">
     <div class="container">
+        <a href="<?= $url_back ?>" class="breadcrumbs btn btn-green">
+            Вернуться к каталогу
+        </a>
+
         <div class="slider-info__wrapper">
             <h1 class="slider-mobile-title"><?= the_title() ?></h1>
             <div class="slider-info__left">
@@ -101,7 +114,7 @@ if ($catId === 14 || $catId === 26 || $catId === 27 || $catId === 63) {
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-                <div thumbsSlider="" class="swiper mySwiper">
+                <div class="swiper mySwiper" style="margin-top: 10px">
                     <div class="swiper-wrapper">
                         <?php if (!empty($images)) : ?>
                             <?php foreach ($images as $image) {
@@ -124,7 +137,25 @@ if ($catId === 14 || $catId === 26 || $catId === 27 || $catId === 63) {
                 <h1><?= the_title() ?></h1>
                 <?php if ($term_model_item === 'postrojki-iz-brusa-ru') : ?>
                     <?php if (!empty($price)) : ?>
-                        <h2 class="slider-info__right-price"><span><?= $price ?></span> zł</h2>
+                        <h2 class="slider-info__right-price">
+                            <span>ЦЕНА:</span>
+                            <span class="price"><?= $price ?> </span> руб.
+                        </h2>
+                    <?php endif; ?>
+                    <?php if (!empty($dimensions)) : ?>
+                        <div class="slider-info__services">
+                            <h4>Размеры</h4>
+                            <?php foreach ($dimensions as $size) : ?>
+                                <?php if ($size['size_name']
+                                    && $size['size_price']) : ?>
+                                    <div class="service-item">
+                                        <div class="service-item-name"><?= $size['size_name'] ?></div>
+                                        <div class="service-item-switcher top"
+                                             data-price="<?= $size['size_price'] ?>"><span></span></div>
+                                    </div>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </div>
                     <?php endif; ?>
 
                     <?php if (!empty($services)) : ?>
@@ -135,11 +166,12 @@ if ($catId === 14 || $catId === 26 || $catId === 27 || $catId === 63) {
                                     && $service['service_price']) : ?>
                                     <div class="service-item">
                                         <div class="service-item-name"><?= $service['service_name'] ?></div>
-                                        <div class="service-item-switcher"
+                                        <div class="service-item-switcher bottom"
                                              data-price="<?= $service['service_price'] ?>"><span></span></div>
                                     </div>
                                 <?php endif; ?>
                             <?php endforeach; ?>
+                            <a style="width: max-content; margin-top: 20px" href="#modal-popup" class="btn btn-green popup-modal">Записаться на консультацию</a>
                         </div>
                     <?php endif; ?>
                 <?php else: ?>

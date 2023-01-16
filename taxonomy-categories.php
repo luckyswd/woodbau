@@ -133,7 +133,7 @@ $term_id = get_queried_object()->term_id;
                             <?php endif; ?>
                             <div class="catalog-item__bottom">
                                 <?php if (!empty($price)) : ?>
-                                    <h2 class="catalog-item__price">od <?= $price ?> zł</h2>
+                                    <h2 class="catalog-item__price">от <?= $price ?> руб.</h2>
                                 <?php endif; ?>
                                 <h4 class="catalog-item__headline">
                                     <?= $post->post_title ?>
