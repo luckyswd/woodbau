@@ -14,16 +14,9 @@ $form_top = get_field('form_top');
 $turnkey_configuration = get_field('turnkey_configuration');
 $turnkey_package_header = get_field('turnkey_package_header');
 
-
 $price = get_field('price');
 $characteristics = get_field('characteristics');
 $services = get_field('services');
-
-if ($term_model_item === 'postrojki-iz-brusa-ru') {
-    $images = get_field('gallery');
-} else {
-    $images = carbon_get_the_post_meta('code_catalog_photo');
-}
 
 
 // получение массива дополнительных полей
@@ -32,19 +25,18 @@ $term_model = get_the_terms(get_the_ID(), 'categories');
 $term_model_item = $term_model["0"]->slug;
 $catId = $term_model[0]->term_taxonomy_id;
 
+if ($term_model_item === 'postrojki-iz-brusa-ru') {
+    $images = get_field('gallery');
+} else {
+    $images = carbon_get_the_post_meta('code_catalog_photo');
+}
+
 $args = [
   'post_type' => 'calculator',
 ];
 
 $calculator = get_posts($args);
-$id;
-if (ICL_LANGUAGE_CODE == 'pl') {
-  $id = 2786;
-} elseif (ICL_LANGUAGE_CODE == 'ru') {
-  $id = 2787;
-} else {
-  $id = 2784;
-};
+$id = 2787;
 
 $delivery_conditions_title = get_field('delivery_conditions_title', $id);
 $delivery_conditions_blocks = get_field('delivery_conditions_block', $id);
