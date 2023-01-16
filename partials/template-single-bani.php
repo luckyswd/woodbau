@@ -7,7 +7,6 @@ $services = get_field('services');
 
 // Вкладки под товаром
 // Планировка
-$planningInfo = get_field('planning_info');
 $planningImage = get_field('planning_image');
 
 // Древесина
@@ -101,8 +100,8 @@ $additionalPhotos = get_field('additional_photos');
             </div>
         </div>
         <div class="slider-info-tabs">
-            <?php if (!empty($planningInfo)) : ?>
-                <h4 class="slider-info-tab-planning" data-class="slider-info-planning">Планировка</h4>
+            <?php if (!empty($planningImage)) : ?>
+                <h4 class="slider-info-tab-planning js-active-item" data-class="slider-info-planning">Планировка</h4>
             <?php endif; ?>
             <?php if (!empty($woodInfo)) : ?>
                 <h4 class="slider-info-tab-wood js-active-item" data-class="slider-info-wood">Древесина</h4>
@@ -124,14 +123,8 @@ $additionalPhotos = get_field('additional_photos');
             <?php endif; ?>
         </div>
         <div class="slider-info-content">
-            <?php if (!empty($planningInfo)) : ?>
-                <div class="slider-info-planning">
-                    <?php foreach ($planningInfo as $planningInfoItem) : ?>
-                        <div class="planning-item">
-                            <div class="planning-item__name"><?= $planningInfoItem['text'] ?></div>
-                            <a href="<?= $planningInfoItem['file'] ?>" target="_blank" class="planning-item__value">Посмотреть все характеристики</a>
-                        </div>
-                    <?php endforeach; ?>
+            <?php if (!empty($planningImage)) : ?>
+                <div class="slider-info-planning js-active-item">
                     <?php if (!empty($planningImage)) : ?>
                         <div class="planning-image">
                             <img src="<?= $planningImage ?>" alt="Планировка">

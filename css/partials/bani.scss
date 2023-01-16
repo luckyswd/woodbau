@@ -1,5 +1,28 @@
 @import "./variables";
 
+.slider-info-content {
+  ul {
+    line-height: 1.5em;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 22px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 0;
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: url(../../images/icons/check_green.svg) center/14px 14px no-repeat;
+      }
+    }
+  }
+}
+
 .properties {
   margin-bottom: 1.5em;
 
@@ -236,23 +259,8 @@
 }
 
 .planning {
-  &-item {
-    padding-bottom: 1em;
-    font-size: 20px;
-    line-height: 1.25em;
-  
-    &__name {
-      font-weight: 600;
-    }
-  
-    &__value {
-      font-size: 16px;
-    }
-  }
-
   &-image {
     width: 50%;
-    padding-top: 1em;
 
     img {
       max-width: 100%;
@@ -293,7 +301,9 @@
     }
 
     &__text {
-
+      & > *:not(:last-child) {
+        margin-bottom: 15px;
+      }
     }
 
     &__image {
@@ -414,24 +424,6 @@
 
     ul {
       padding-bottom: 20px;
-      line-height: 1.5em;
-      list-style: none;
-
-      li {
-        position: relative;
-        padding-left: 22px;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 5px;
-          left: 0;
-          display: block;
-          width: 15px;
-          height: 15px;
-          background: url(../../images/icons/check_green.svg) center/14px 14px no-repeat;
-        }
-      }
     }
   }
 }

@@ -142,7 +142,7 @@ if ( in_array($category, $customCategories) ) { //ID категории
                                 array(
                                   'taxonomy' => 'categories',
                                   'field'    => 'slug',
-                                  'terms'    => array( 'bani-ru', 'bani-bochki' )
+                                  'terms'    => 'bani-bochki'
                                 )
                             )
                         ));
@@ -151,13 +151,12 @@ if ( in_array($category, $customCategories) ) { //ID категории
                             while ($post_product->have_posts()) : $post_product->the_post();
                                 $url = get_permalink($post);
                                 $images = get_field('main_gallery');
-                                $time = get_field('production_time');
                                 $price = get_field('price');
                             ?>
                             <div class="project-item"
                                  style="background-image: url('<?php echo $images[0]['url']; ?>')">
                                 <h4><?php the_title(); ?></h4>
-                                <span><img src="<?= get_template_directory_uri(); ?>/images/icon-clock.png"><?= $time; ?></span>
+                                <span><img src="<?= get_template_directory_uri(); ?>/images/icon-clock.png">до 2 мес.</span>
                                 <span><img src="<?= get_template_directory_uri(); ?>/images/icon-tag.png">от <?= $price; ?> руб.</span>
                                 <div class="row">
                                     <div class="col-md-12">
