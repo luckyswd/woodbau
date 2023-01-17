@@ -12,6 +12,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-12">
                 <div class="block-head">
                     <h2>Каталог</h2>
+                    <span>Каталог</span>
                 </div>
             </div>
         </div>
@@ -47,7 +48,7 @@ $term_id = get_queried_object()->term_id;
         <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h3>Особенности</h3>
+                    <h2>Особенности</h2>
                     <span>Особенности</span>
                 </div>
             </div>

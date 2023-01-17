@@ -44,14 +44,9 @@ if (empty($categories)) {
                         $countProducts = count($products);
                         ?>
                         <div id="<?= $term_id ?>" class="block-products">
-                            <?php if (!empty($page_term_id)) : ?>
-                                <a href="<?= get_home_url() ?><?= Urls::CATEGORIES_BANI ?>#<?= $page_term_id ?>"
-                                   class="breadcrumbs btn btn-green">
-                                    Powrót do katalogu
-                                </a>
-                            <?php endif; ?>
                             <div class="products-headline">
-                                <<?=$tag?>>   <?= $category['headline'] ?? 'Katalog' ?>  </<?=$tag?>
+                                <h2><?= $category['headline'] ?? 'Каталог' ?></h2>
+                                <span> <?= $category['headline'] ?? 'Каталог' ?></span>
                             </div>
                         </div>
                         <?php if (!empty($products)) : ?>

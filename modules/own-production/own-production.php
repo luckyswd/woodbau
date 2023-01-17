@@ -15,7 +15,7 @@ $images = get_field('images');
         <div class="container">
             <div class="own-production-block">
                 <?php if (!empty($headline)) : ?>
-                    <h3><?= $headline ?></h3>
+                    <h2><?= $headline ?></h2>
                 <?php endif; ?>
                 <?php if (!empty($subheadline)) : ?>
                     <p><?= $subheadline ?></p>

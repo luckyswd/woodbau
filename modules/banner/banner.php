@@ -8,7 +8,12 @@ Mode: preview
 $headline = get_field('headline');
 $phone = get_field('phone');
 $button_name = get_field('button_name');
-$image = get_field('image');
+$video = get_field('video');
+
+if ($video) {
+    $dataVideo = explode('/', $video);
+    $videoName = end($dataVideo);
+}
 
 ?>
 <?php if (!is_admin()) : ?>
@@ -29,10 +34,11 @@ $image = get_field('image');
                         <a href="#modal-popup" class="btn btn-green popup-modal"> <?= $button_name ?> </a>
                     </div>
                     <div class="banner-right">
-                        <?php if (!empty($image)) : ?>
-                            <picture>
-                                <img loading="lazy" src="<?= $image['url'] ?>" alt="<?= $image['title'] ?>">
-                            </picture>
+                        <?php if (!empty($video)) : ?>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/<?=$videoName ?? '' ?>"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
                         <?php endif; ?>
                     </div>
                 </div>

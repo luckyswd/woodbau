@@ -57,7 +57,7 @@ $turnkey_package_header = get_field('turnkey_package_header');
 $catId = '';
 
 foreach ($term_model as $term) {
-    if ($term->term_taxonomy_id == 27) {
+    if ($term->term_taxonomy_id == 26) {
         $catId = $term->term_taxonomy_id;
     }
 }
@@ -73,9 +73,9 @@ if ($term_model_item === 'postrojki-iz-brusa-ru') {
     $images = carbon_get_the_post_meta('code_catalog_photo');
 }
 
-if ($catId === 27) {
+if ($catId === 26) {
     $showClassCalc = 'show-calc';
-    $url_back =  get_home_url() .  '/sauny/#products';
+    $url_back =  get_home_url() .  '/saunas/#products';
 } else {
     $showClassCalc = '';
     $url_back =  get_home_url() .  '/categories/' . $term_model_item . '/#products';

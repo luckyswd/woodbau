@@ -17,7 +17,7 @@ $btn_name = get_field('btn_name');
             <div class="exhibition-block">
                 <div class="block-left">
                     <?php if (!empty($headline)) : ?>
-                        <h3><?= $headline ?></h3>
+                        <h2><?= $headline ?></h2>
                     <?php endif; ?>
                     <?php if (!empty($subheadline)) : ?>
                         <p><?= $subheadline ?></p>
