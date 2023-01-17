@@ -39,7 +39,7 @@ get_header();
                           } else {
                             echo 'Bäder auf Bestellung';
                           }; ?></h4>
-                        <a href="<?php echo home_url(); ?>/saunas"><?php if (ICL_LANGUAGE_CODE == 'pl') {
+                        <a href="<?php echo home_url(); ?>/catalog/banya-bochka"><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'Beczka do kąpieli';
                           } elseif (ICL_LANGUAGE_CODE == 'ru') {
                             echo 'Баня бочка';
@@ -67,7 +67,7 @@ get_header();
                           } else {
                             echo 'Gewölbte Sauna';
                           }; ?></a>
-                        <a href="<?php echo home_url(); ?>/categories/bani" class="btn btn-green"><?php if (ICL_LANGUAGE_CODE == 'pl') {
+                        <a href="<?php echo home_url(); ?>/saunas" class="btn btn-green"><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'Cały katalog';
                           } elseif (ICL_LANGUAGE_CODE == 'ru') {
                             echo 'Весь каталог';
