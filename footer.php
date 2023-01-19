@@ -11,7 +11,7 @@
         <div class="col-md-6 offset-md-3">
             <div class="qestions-form">
                 <h4>Задайте интересующий вас вопрос <br>Наш менеджер ответит вам <span>через 15 минут</span></h4>
-				<? echo do_shortcode('[contact-form-7 id="2924" title="Footer Form RU"]'); ?>
+                <? echo do_shortcode('[contact-form-7 id="2924" title="Footer Form RU"]'); ?>
             </div>
         </div>
     </div>
@@ -20,6 +20,8 @@
 <?php
 $instagram = get_field('instagram', 'option');
 $phone = get_field('phone', 'option');
+$whatsapp = get_field('whatsapp', 'option');
+$viber = get_field('viber', 'option');
 ?>
 
 <footer>
@@ -27,7 +29,8 @@ $phone = get_field('phone', 'option');
         <div class="row">
             <div class="col-md-6">
                 <div class="top-logo">
-                    <a href="#"><img src="https://woodbau.by/wp-content/uploads/2022/06/cropped-WOODBAU.BY-LOGO.png"></a>
+                    <a href="#"><img
+                                src="https://woodbau.by/wp-content/uploads/2022/06/cropped-WOODBAU.BY-LOGO.png"></a>
                 </div>
             </div>
             <div class="col-md-3">
@@ -55,7 +58,7 @@ $phone = get_field('phone', 'option');
                     </li>
                     <li>
                         <a href="<?php echo home_url(); ?>/politika-konfidencialnosti/">Политика конфиденциальности</a>
-                    </li>				
+                    </li>
                 </ul>
             </div>
             <div class="col-md-3">
@@ -68,17 +71,18 @@ $phone = get_field('phone', 'option');
                     <p><span>Шоурум</span>Передавая 6/3<br/>Минск 220070</p>
                 </div>
                 <div class="top-phone">
-                    <a href="tel:+375293800323" target="_blank"><img src="/wp-content/themes/woodbau/images/whatsapp.png">+37529 380 03 23</a>
+                    <a href="tel:+375293800323" target="_blank"><img
+                                src="/wp-content/themes/woodbau/images/whatsapp.png">+37529 380 03 23</a>
                     <a href="tel:+375339130323" target="_blank">+37533 913 03 23</a>
                     <a href="tel:+375173360323" target="_blank">+37517 336 03 23</a>
-                </div>   
+                </div>
                 <div class="top-soc">
-                        <a href="https://www.facebook.com/WoodBau-Belarus-108393871882270" target="_blank">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-facebook.png"></a>
-                        <a href="https://www.instagram.com/woodbaubelarus/" target="_blank">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-instagram.png"></a>
-                        <a href="tel:+375339130323" target="_blank">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-whatsapp.png"></a>
+                    <a href="https://www.facebook.com/WoodBau-Belarus-108393871882270" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icon-facebook.png"></a>
+                    <a href="https://www.instagram.com/woodbaubelarus/" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icon-instagram.png"></a>
+                    <a href="tel:+375339130323" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icon-whatsapp.png"></a>
                 </div>
             </div>
         </div>
@@ -117,6 +121,27 @@ $phone = get_field('phone', 'option');
                         </picture>
                     </a>
                 <?php endif; ?>
+                <?php if (!empty($whatsapp['image'])) : ?>
+                    <a href="https://api.whatsapp.com/send?phone=<?= Helpers::getPhoneWithOutSymbols($whatsapp['phone_number']) ?>"
+                       target="_blank">
+                        <picture>
+                            <img src="<?= $whatsapp['image']['url'] ?? '' ?>"
+                                 alt="<?= $whatsapp['image']['alt'] ?: $whatsapp['image']['title'] ?? '' ?>"
+                                 width="33" height="33"
+                                 loading="lazy">
+                        </picture>
+                    </a>
+                <?php endif; ?>
+                <?php if (!empty($viber['image'])) : ?>
+                    <a href="viber://contact?number=%2B<?= $viber['link'] ?? '' ?>" target="_blank">
+                        <picture>
+                            <img src="<?= $viber['image']['url'] ?? '' ?>"
+                                 alt="<?= $viber['image']['alt'] ?: $viber['image']['title'] ?? '' ?>"
+                                 width="33" height="33"
+                                 loading="lazy">
+                        </picture>
+                    </a>
+                <?php endif; ?>
             </div>
         </div>
         <div class="online-consultant__main_image-open js-active-open">
@@ -143,12 +168,14 @@ $phone = get_field('phone', 'option');
     </div>
 
     <a href="#modal-popup" class="online-form popup-modal">
-        <div class="online-form-btn"> Консультант сайта </div>
+        <div class="online-form-btn"> Консультант сайта</div>
         <svg xmlns="http://www.w3.org/2000/svg" class="onicon-button__icon" width="64" height="64" viewBox="0 0 64 64">
             <g fill="none" fill-rule="evenodd">
-                <path fill="#D2D2D2" d="M32 61.75C15.57 61.75 2.25 48.43 2.25 32S15.57 2.25 32 2.25 61.75 15.57 61.75 32a29.611 29.611 0 0 1-4.391 15.564l3.09 10.397a2 2 0 0 1-2.488 2.487l-10.396-3.09A29.611 29.611 0 0 1 32 61.75z"></path>
+                <path fill="#D2D2D2"
+                      d="M32 61.75C15.57 61.75 2.25 48.43 2.25 32S15.57 2.25 32 2.25 61.75 15.57 61.75 32a29.611 29.611 0 0 1-4.391 15.564l3.09 10.397a2 2 0 0 1-2.488 2.487l-10.396-3.09A29.611 29.611 0 0 1 32 61.75z"></path>
                 <circle cx="32" cy="32" r="28.5" fill="#FFF"></circle>
-                <path fill="currentColor" d="M32 51c-10.493 0-19-8.507-19-19s8.507-19 19-19 19 8.507 19 19-8.507 19-19 19zm0-8c6.075 0 11-4.925 11-11s-4.925-11-11-11-11 4.925-11 11 4.925 11 11 11z"></path>
+                <path fill="currentColor"
+                      d="M32 51c-10.493 0-19-8.507-19-19s8.507-19 19-19 19 8.507 19 19-8.507 19-19 19zm0-8c6.075 0 11-4.925 11-11s-4.925-11-11-11-11 4.925-11 11 4.925 11 11 11z"></path>
             </g>
         </svg>
 
@@ -156,38 +183,38 @@ $phone = get_field('phone', 'option');
 </footer><!--popUp-->
 <div id="modal-popup" class="mfp-hide popup-modal-style">
     <div class="modal-popup-content">
-		<?php echo do_shortcode('[contact-form-7 id="2967" title="Modal Form RU"]'); ?>
+        <?php echo do_shortcode('[contact-form-7 id="2967" title="Modal Form RU"]'); ?>
     </div>
 </div>
 <script type="text/javascript">
-    $(function () {
-        $('.popup-modal').magnificPopup({
-            type: 'inline',
-            preloader: false,
-            focus: '#username',
-            //modal: true,
-        });
-        $(document).on('click', '.popup-modal-dismiss', function (e) {
-            e.preventDefault();
-            $.magnificPopup.close();
-        });
+  $(function () {
+    $('.popup-modal').magnificPopup({
+      type: 'inline',
+      preloader: false,
+      focus: '#username',
+      //modal: true,
     });
+    $(document).on('click', '.popup-modal-dismiss', function (e) {
+      e.preventDefault();
+      $.magnificPopup.close();
+    });
+  });
 </script>
 <script type="text/javascript">
-    $('.menu-burger').click(function () {
-        $("body").addClass('body-scroll').html();
-        $(".mobile-menu").addClass('active').html();
-    });
+  $('.menu-burger').click(function () {
+    $("body").addClass('body-scroll').html();
+    $(".mobile-menu").addClass('active').html();
+  });
 
-    $('.block-menu-close').click(function () {
-        $("body").removeClass('body-scroll').html();
-        $(".mobile-menu").removeClass('active').html();
-    });
+  $('.block-menu-close').click(function () {
+    $("body").removeClass('body-scroll').html();
+    $(".mobile-menu").removeClass('active').html();
+  });
 
-    $('.mobile-menu a').click(function () {
-        $("body").removeClass('body-scroll').html();
-        $(".mobile-menu").removeClass('active').html();
-    });
+  $('.mobile-menu a').click(function () {
+    $("body").removeClass('body-scroll').html();
+    $(".mobile-menu").removeClass('active').html();
+  });
 </script>
 
 <?php wp_footer(); ?>

@@ -31,8 +31,12 @@ $additionalContent = get_field('additional_content');
 $additionalPhotos = get_field('additional_photos');
 
 ?>
-
 <section class="slider-info">
+    <div class="container">
+        <div class="btn-back">
+            <a href="<?= get_home_url() ?>/saunas" class="btn btn-green">Вернуться на каталог бань</a>
+        </div>
+    </div>
     <div class="container">
         <div class="slider-info__wrapper">
             <h1 class="slider-mobile-title"><?= the_title() ?></h1>
