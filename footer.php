@@ -134,7 +134,7 @@ $viber = get_field('viber', 'option');
                 <?php endif; ?>
                 <?php if (!empty($viber['image'])) : ?>
 
-                    <a href="https://msngr.link/vi/<?=$phone['phone_number'] ?? '' ?>" target="_blank">
+                    <a href="https://msngr.link/vi/<?=$viber['phone_number'] ?? '' ?>" target="_blank">
                         <picture>
                             <img src="<?= $viber['image']['url'] ?? '' ?>"
                                  alt="<?= $viber['image']['alt'] ?: $viber['image']['title'] ?? '' ?>"
