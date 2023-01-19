@@ -122,7 +122,7 @@ $viber = get_field('viber', 'option');
                     </a>
                 <?php endif; ?>
                 <?php if (!empty($whatsapp['image'])) : ?>
-                    <a href="https://api.whatsapp.com/send?phone=<?= Helpers::getPhoneWithOutSymbols($whatsapp['phone_number']) ?>"
+                    <a href="https://wa.clck.bar/<?= Helpers::getPhoneWithOutSymbols($whatsapp['phone_number']) ?>"
                        target="_blank">
                         <picture>
                             <img src="<?= $whatsapp['image']['url'] ?? '' ?>"
@@ -133,7 +133,8 @@ $viber = get_field('viber', 'option');
                     </a>
                 <?php endif; ?>
                 <?php if (!empty($viber['image'])) : ?>
-                    <a href="viber://contact?number=%2B<?= $viber['link'] ?? '' ?>" target="_blank">
+
+                    <a href="https://msngr.link/vi/<?=$phone['phone_number'] ?? '' ?>" target="_blank">
                         <picture>
                             <img src="<?= $viber['image']['url'] ?? '' ?>"
                                  alt="<?= $viber['image']['alt'] ?: $viber['image']['title'] ?? '' ?>"
