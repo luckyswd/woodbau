@@ -642,14 +642,10 @@ html {
     padding-bottom: 20px;
 }
 
-#project .block-head {
-    text-align: left;
-}
-
 #project .block-head span {
-    text-align: left;
-    width: 1500px;
-    left: -30%;
+    width: 1070px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .project-item {
@@ -3473,15 +3469,11 @@ body .wood-arenda {
 }
 
 .catalog-form__btn input {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 23px;
-    line-height: 31px;
+    font-size: 14px;
+    line-height: 14px;
     color: #FFFFFF;
     border-radius: 100px;
     margin-bottom: 0;
-    background: linear-gradient(to top, #a36d19, #353c2d);
 }
 
 .fancybox__content>.carousel__button.is-close {
