@@ -225,7 +225,6 @@ const calculator = document.querySelector('.calculator');
 
 if (calculator !== null) {
     const html = document.querySelector('html');
-    html.style.overflow = 'unset';
 }
 
 const swiper = new Swiper(".mySwiper", {

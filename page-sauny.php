@@ -11,8 +11,8 @@ $term_id = get_queried_object()->term_id;
         <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h2>Katalog</h2>
-                    <span>Katalog</span>
+                    <h2>Projektant sauny</h2>
+                    <span>Projektant sauny</span>
                 </div>
             </div>
         </div>
