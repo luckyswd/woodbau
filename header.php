@@ -361,7 +361,7 @@ function checkHeaderIndexClass() {
             </section>
         <?php endif; ?>
     <?php }; ?>
-    <?php if ($currentUrl === Urls::CATEGORIES_BANI) : ?>
+    <?php if ($currentUrl === '/sauny/') : ?>
         <?php RenderBlock::renderBlockByName('acf/catalog-hero'); ?>
     <?php endif;?>
 </header>
