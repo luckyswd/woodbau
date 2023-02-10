@@ -38,6 +38,17 @@ $transition: all .3s ease-in-out;
     }
 }
 
+@mixin _680 {
+    @media (max-width: 680px) {
+        @content;
+    }
+}
+
+@mixin _640 {
+    @media (max-width: 640px) {
+        @content;
+    }
+}
 
 @mixin _480 {
     @media (max-width: 480px) {

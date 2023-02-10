@@ -57,34 +57,34 @@ $term_id = get_queried_object()->term_id;
             <div class="order-2 col-md-4 order-md-1">
                 <div class="why-item">
                     <span>1</span>
-                    <h4><?php echo carbon_get_term_meta(26, 'code_category_osob1_1') ?></h4>
-                    <h5><?php echo carbon_get_term_meta(26, 'code_category_osob1_2') ?></h5>
-                    <p><?php echo carbon_get_term_meta(26, 'code_category_osob1_3') ?></p>
+                    <h4><?php echo carbon_get_term_meta(27, 'code_category_osob1_1') ?></h4>
+                    <h5><?php echo carbon_get_term_meta(27, 'code_category_osob1_2') ?></h5>
+                    <p><?php echo carbon_get_term_meta(27, 'code_category_osob1_3') ?></p>
                 </div>
                 <div class="why-item">
                     <span>3</span>
-                    <h4><?php echo carbon_get_term_meta(26, 'code_category_osob3_1') ?></h4>
-                    <h5><?php echo carbon_get_term_meta(26, 'code_category_osob3_2') ?></h5>
-                    <p><?php echo carbon_get_term_meta(26, 'code_category_osob3_3') ?></p>
+                    <h4><?php echo carbon_get_term_meta(27, 'code_category_osob3_1') ?></h4>
+                    <h5><?php echo carbon_get_term_meta(27, 'code_category_osob3_2') ?></h5>
+                    <p><?php echo carbon_get_term_meta(27, 'code_category_osob3_3') ?></p>
                 </div>
             </div>
             <div class="order-1 col-md-4 order-md-2">
                 <div class="about-product-img">
-                    <img src="<?php echo carbon_get_term_meta(26, 'code_category_osob') ?>">
+                    <img src="<?php echo carbon_get_term_meta(27, 'code_category_osob') ?>">
                 </div>
             </div>
             <div class="order-3 col-md-4 order-md-3">
                 <div class="why-item">
                     <span>2</span>
-                    <h4><?php echo carbon_get_term_meta(26, 'code_category_osob2_1') ?></h4>
-                    <h5><?php echo carbon_get_term_meta(26, 'code_category_osob2_2') ?></h5>
-                    <p><?php echo carbon_get_term_meta(26, 'code_category_osob2_3') ?></p>
+                    <h4><?php echo carbon_get_term_meta(27, 'code_category_osob2_1') ?></h4>
+                    <h5><?php echo carbon_get_term_meta(27, 'code_category_osob2_2') ?></h5>
+                    <p><?php echo carbon_get_term_meta(27, 'code_category_osob2_3') ?></p>
                 </div>
                 <div class="why-item">
                     <span>4</span>
-                    <h4><?php echo carbon_get_term_meta(26, 'code_category_osob4_1') ?></h4>
-                    <h5><?php echo carbon_get_term_meta(26, 'code_category_osob4_2') ?></h5>
-                    <p><?php echo carbon_get_term_meta(26, 'code_category_osob4_3') ?></p>
+                    <h4><?php echo carbon_get_term_meta(27, 'code_category_osob4_1') ?></h4>
+                    <h5><?php echo carbon_get_term_meta(27, 'code_category_osob4_2') ?></h5>
+                    <p><?php echo carbon_get_term_meta(27, 'code_category_osob4_3') ?></p>
                 </div>
             </div>
         </div>

@@ -3,7 +3,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h3>Masz pytania?</h3>
+                    <h2>Masz pytania?</h2>
+                    <span>Masz pytania?</span>
                 </div>
             </div>
         </div>

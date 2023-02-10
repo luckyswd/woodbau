@@ -1,0 +1,429 @@
+@import "./variables";
+
+.slider-info-content {
+  ul {
+    line-height: 1.5em;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 22px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 0;
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: url(../../images/icons/check_green.svg) center/14px 14px no-repeat;
+      }
+    }
+  }
+}
+
+.properties {
+  margin-bottom: 1.5em;
+
+  &-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 0.4em;
+  }
+
+  .properties-items {
+    .property-item {
+      display: flex;
+      font-size: 18px;
+      overflow: hidden;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+  
+      &-name {
+        position: relative;
+        margin-right: auto;
+  
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: calc(100% + 3px);
+          display: block;
+          width: 100vw;
+          height: 1px;
+          border-bottom: 1px var(--green-main) dashed;
+        }
+      }
+  
+      &-value {
+          display: block;
+          background: white;
+          padding-left: 3px;
+          z-index: 2;
+      }
+    }
+  }
+}
+
+.order-form {
+
+  @include _992 {
+    display: flex;
+  }
+
+  @include _767 {
+    display: block;
+  }
+
+  &__fields {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+
+    @include _992 {
+      flex-basis: 66.666%;
+    }
+
+    @include _767 {
+      flex-basis: auto;
+    }
+
+    label {
+      flex-basis: 50%;
+      padding: 0 10px;
+      margin: 0;
+
+      @include _480 {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  &__button {
+    @include _992 {
+      flex-grow: 1;
+      padding-left: 20px;
+    }
+
+    @include _767 {
+      flex-grow: 0;
+      padding-left: 0;
+    }
+
+    input {
+      display: block;
+      padding: 12px 20px;
+      margin-bottom: 0;
+      font-family: 'Montserrat';
+      font-size: 18px;
+      line-height: 1;
+      border-radius: 30px;
+      color: white;
+      background-color: var(--green-main);
+
+      @include _767 {
+        margin-bottom: 0;
+      }
+  
+      &:hover {
+        background: #3f9360;
+        box-shadow: inset 4px 4px 8px 0px #13562d;
+      }
+    }
+  }
+
+  input[type=text],
+  input[type=tel] {
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 30px;
+    border: 2px solid var(--green-main);
+
+    &.wpcf7-not-valid {
+      border-color: #ff2727;
+    }
+  }
+
+  .ajax-loader {
+    display: none !important;
+  }
+
+  .wpcf7-not-valid-tip {
+    display: none;
+  }
+}
+
+.tab-inner-title {
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  background-color: var(--green-main);
+  border-radius: 5px;
+
+  @include _767 {
+    font-size: 18px;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  padding: 20px;
+
+  @include _767 {
+    padding: 10px 18px;
+  }
+
+  &-item {
+    flex-basis: 20%;
+
+    @include _992 {
+      flex-basis: 25%;
+    }
+
+    @include _767 {
+      flex-basis: 33.333%;
+    }
+
+    @include _640 {
+      flex-basis: 50%;
+    }
+
+    @include _480 {
+      flex-basis: 100%;
+    }
+
+    a {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+
+      @include _480 {
+        height: 252px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      margin-right: 0px;
+      object-fit: cover;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    span {
+      display: block;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.check-list {
+  padding-bottom: 30px;
+  line-height: 1.5em;
+  list-style: none;
+
+  @include _767 {
+    padding-bottom: 20px;
+  }
+
+  li {
+    position: relative;
+    padding-left: 22px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      display: block;
+      width: 15px;
+      height: 15px;
+      background: url(../../images/icons/check_green.svg) center/14px 14px no-repeat;
+    }
+  }
+}
+
+.planning {
+  &-image {
+    width: 50%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.wood {
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:nth-child(2n) {
+      .wood-item__text {
+        order: 1;
+
+        @include _767 {
+          order: initial;
+        }
+      }
+    }
+
+    &--with-image {
+      display: flex;
+      margin-left: -10px;
+      margin-right: -10px;
+
+      @include _767 {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      & > * {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    &__text {
+      & > *:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__image {
+      display: block;
+      flex-basis: 30%;
+      flex-shrink: 0;
+      max-height: 200px;
+
+      @include _992 {
+        flex-basis: 40%;
+        max-height: 220px;
+      }
+
+      @include _767 {
+        flex-basis: 50%;
+        max-height: 250px;
+        margin-top: 20px;
+      }
+
+      @include _640 {
+        flex-basis: 100%;
+      }
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.oven {
+  &-item {
+    &-title {
+
+    }
+
+    &-text {
+      padding: 0 20px;
+
+      @include _767 {
+        padding: 0 18px;
+      }
+    }
+
+    &-gallery {
+
+    }
+  }
+}
+
+.window {
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &-title {
+
+    }
+
+    &-text {
+      padding: 0 20px;
+
+      @include _767 {
+        padding: 0 18px;
+      }
+    }
+
+    &-gallery {
+    }
+  }
+}
+
+.door {
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &-title {
+
+    }
+
+    &-text {
+      padding: 0 20px;
+
+      @include _767 {
+        padding: 0 18px;
+      }
+    }
+
+    &-gallery {
+    }
+  }
+}
+
+.set-item {
+  &-list {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include _767 {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+}
+
+.additional-item {
+  &-content {
+    padding: 0 20px;
+
+    @include _767 {
+      padding: 0 18px;
+    }
+
+    ul {
+      padding-bottom: 20px;
+    }
+  }
+}
