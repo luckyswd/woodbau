@@ -34,7 +34,7 @@ $additionalPhotos = get_field('additional_photos');
 <section class="slider-info">
     <div class="container">
         <div class="btn-back">
-            <a href="<?= get_home_url() ?>/saunas" class="btn btn-green">Вернуться на каталог бань</a>
+            <a href="<?= get_home_url() ?>/saunas" class="btn btn-green">Powrót do katalogu</a>
         </div>
     </div>
     <div class="container">
@@ -63,7 +63,7 @@ $additionalPhotos = get_field('additional_photos');
                 <h1><?= the_title() ?></h1>
                 <?php if (!empty($properties)) : ?>
                     <div class="properties">
-                        <div class="properties-title">Характеристики</div>
+                        <div class="properties-title">Charakterystyka</div>
                         <div class="properties-items">
                             <?php foreach ($properties as $property) : ?>
                                 <?php if ($property['property_name'] && $property['property_value']) : ?>
@@ -81,7 +81,7 @@ $additionalPhotos = get_field('additional_photos');
                 <div class="slider-info__bottom-text">
                     <?php if (!empty($services)) : ?>
                         <div class="slider-info__services">
-                            <h4>Возможные услуги</h4>
+                            <h4>"Ewentualne usługi</h4>
                             <?php foreach ($services as $service) : ?>
                                 <?php if ($service['service_name'] && $service['service_price']) : ?>
                                     <div class="service-item">
@@ -94,36 +94,36 @@ $additionalPhotos = get_field('additional_photos');
                         </div>
                     <?php endif; ?>
                     <?php if (!empty($price)) : ?>
-                        <div class="slider-info__right-price">Цена: <span><?= $price ?></span> руб.</div>
+                        <div class="slider-info__right-price">Cena: <span><?= $price ?></span> zł.</div>
                     <?php endif; ?>
                 </div>
                 <div class="slider-info__bottom-form">
-                    <h4>Оформить заказ</h4>
-                    <?php echo do_shortcode('[contact-form-7 id="3252" title="Order form RU"]'); ?>
+                    <h4>Złóż zamówienie</h4>
+                    <?php echo do_shortcode('[contact-form-7 id="3677" title="Order Form PL"]'); ?>
                 </div>
             </div>
         </div>
         <div class="slider-info-tabs">
             <?php if (!empty($ovenInfo)) : ?>
-                <h4 class="slider-info-tab-oven js-active-item" data-class="slider-info-oven">Печи</h4>
+                <h4 class="slider-info-tab-oven js-active-item" data-class="slider-info-oven">Kuchenki</h4>
             <?php endif; ?>
             <?php if (!empty($planningImage)) : ?>
-                <h4 class="slider-info-tab-planning" data-class="slider-info-planning">Планировка</h4>
+                <h4 class="slider-info-tab-planning" data-class="slider-info-planning">Rozplanowanie</h4>
             <?php endif; ?>
             <?php if (!empty($woodInfo)) : ?>
-                <h4 class="slider-info-tab-wood" data-class="slider-info-wood">Древесина</h4>
+                <h4 class="slider-info-tab-wood" data-class="slider-info-wood">Drewno</h4>
             <?php endif; ?>
             <?php if (!empty($windowsInfo)) : ?>
-                <h4 class="slider-info-tab-windows" data-class="slider-info-windows">Окна</h4>
+                <h4 class="slider-info-tab-windows" data-class="slider-info-windows">Okienki</h4>
             <?php endif; ?>
             <?php if (!empty($doorsInfo)) : ?>
-                <h4 class="slider-info-tab-doors" data-class="slider-info-doors">Двери</h4>
+                <h4 class="slider-info-tab-doors" data-class="slider-info-doors">Drzwi</h4>
             <?php endif; ?>
             <?php if (!empty($setTitle)) : ?>
-                <h4 class="slider-info-tab-set" data-class="slider-info-set">Комплект</h4>
+                <h4 class="slider-info-tab-set" data-class="slider-info-set">Zestaw</h4>
             <?php endif; ?>
             <?php if (!empty($additionalTitle)) : ?>
-                <h4 class="slider-info-tab-additional" data-class="slider-info-additional">Дополнительно</h4>
+                <h4 class="slider-info-tab-additional" data-class="slider-info-additional">Dodatkowy</h4>
             <?php endif; ?>
         </div>
         <div class="slider-info-content">
