@@ -81,7 +81,7 @@ $additionalPhotos = get_field('additional_photos');
                 <div class="slider-info__bottom-text">
                     <?php if (!empty($services)) : ?>
                         <div class="slider-info__services">
-                            <h4>"Ewentualne usługi</h4>
+                            <h4>Ewentualne usługi</h4>
                             <?php foreach ($services as $service) : ?>
                                 <?php if ($service['service_name'] && $service['service_price']) : ?>
                                     <div class="service-item">
@@ -94,7 +94,7 @@ $additionalPhotos = get_field('additional_photos');
                         </div>
                     <?php endif; ?>
                     <?php if (!empty($price)) : ?>
-                        <div class="slider-info__right-price">Cena: <span><?= $price ?></span> zł.</div>
+                        <div class="slider-info__right-price">Cena: <span class="price"><?= $price ?></span> zł.</div>
                     <?php endif; ?>
                 </div>
                 <div class="slider-info__bottom-form">
@@ -105,7 +105,7 @@ $additionalPhotos = get_field('additional_photos');
         </div>
         <div class="slider-info-tabs">
             <?php if (!empty($ovenInfo)) : ?>
-                <h4 class="slider-info-tab-oven js-active-item" data-class="slider-info-oven">Kuchenki</h4>
+                <h4 class="slider-info-tab-oven js-active-item" data-class="slider-info-oven">Piecy</h4>
             <?php endif; ?>
             <?php if (!empty($planningImage)) : ?>
                 <h4 class="slider-info-tab-planning" data-class="slider-info-planning">Rozplanowanie</h4>
@@ -123,7 +123,7 @@ $additionalPhotos = get_field('additional_photos');
                 <h4 class="slider-info-tab-set" data-class="slider-info-set">Zestaw</h4>
             <?php endif; ?>
             <?php if (!empty($additionalTitle)) : ?>
-                <h4 class="slider-info-tab-additional" data-class="slider-info-additional">Dodatkowy</h4>
+                <h4 class="slider-info-tab-additional" data-class="slider-info-additional">Dodatki</h4>
             <?php endif; ?>
         </div>
         <div class="slider-info-content">
