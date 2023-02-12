@@ -94,7 +94,7 @@ $additionalPhotos = get_field('additional_photos');
                         </div>
                     <?php endif; ?>
                     <?php if (!empty($price)) : ?>
-                        <div class="slider-info__right-price">Цена: <span><?= $price ?></span> руб.</div>
+                        <div class="slider-info__right-price">Цена: <span class="price"><?= $price ?></span> руб.</div>
                     <?php endif; ?>
                 </div>
                 <div class="slider-info__bottom-form">
