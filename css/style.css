@@ -1732,7 +1732,7 @@ footer .top-logo:after {
 
 .order-items {
     display: grid;
-    grid-template-columns: repeat(5, 18.5%);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -1742,7 +1742,6 @@ footer .top-logo:after {
 
 .order {
     padding-top: 80px;
-    overflow-x: hidden;
 }
 
 .order__block-title {
@@ -1780,6 +1779,7 @@ footer .top-logo:after {
     /*     white-space: nowrap; */
     position: relative;
     z-index: 2;
+    width: 100%;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 900;
@@ -4373,10 +4373,6 @@ body .wood-arenda {
 
     .cooperation__main-broom {
         display: none;
-    }
-
-    .order-items {
-        grid-template-columns: repeat(3, 1fr);
     }
 
     .consultation__block-form {

@@ -23,10 +23,11 @@ get_header();
                                     echo $str; ?></p>
                                 <span>
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/icon-clock.png">
-                                    czas produkcji 3-4 tygodnie
+                                    czas realizacji 6-8 tygodnie
                                 </span>
-                                <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-tag.png">
-                                na zamówienie
+                                <span>
+									<img src="<?php echo get_template_directory_uri(); ?>/images/icon-tag.png">
+                                	cena indywidualna
                                 </span>
                                 <div class="row">
                                     <div class="col-md-12">
