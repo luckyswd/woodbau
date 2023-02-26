@@ -5208,6 +5208,10 @@ body .wood-arenda {
 }
 
 @media (max-width: 767px) {
+    .top-phone a {
+        font-size: 20px;
+        line-height: 1.5em;
+    }
 
     .barrel-bath__title {
         padding: 67px 0 40px;
