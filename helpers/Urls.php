@@ -12,4 +12,5 @@ class Urls
     public const CATEGORIES_SZKLARNIE = '/categories/szklarnie/';
     public const CATEGORIES_TANDIRY_I_KOCIOLKI = '/categories/tandiry-i-kociolki/';
     public const CATEGORIES_THERMO_DREWNO = '/categories/thermo-drewno/';
+    public const SAUNY = '/sauny/';
 }

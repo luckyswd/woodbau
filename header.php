@@ -218,7 +218,7 @@
                                             <h4>Sauna</h4>
                                             <span>od 12000 PLN</span>
                                         </div>
-                                        <a href="<?= Urls::CATEGORIES_BANI ?>" class="btn btn-green">Cały katalog</a>
+                                        <a href="<?= Urls::SAUNY ?>" class="btn btn-green">Cały katalog</a>
                                     </div>
                                     <div class="banner-slider-item">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/2222.png">
@@ -226,7 +226,7 @@
                                             <h4>Sauna</h4>
                                             <span>od 12000 PLN</span>
                                         </div>
-                                        <a href="<?= Urls::CATEGORIES_BANI ?>" class="btn btn-green">Cały katalog</a>
+                                        <a href="<?= Urls::SAUNY ?>" class="btn btn-green">Cały katalog</a>
                                     </div>
                                     <div class="banner-slider-item">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/3333.png">
@@ -234,7 +234,7 @@
                                             <h4>Sauna</h4>
                                             <span>od 12000 PLN</span>
                                         </div>
-                                        <a href="<?= Urls::CATEGORIES_BARBECUE ?>" class="btn btn-green">Cały katalog</a>
+                                        <a href="<?= Urls::SAUNY ?>" class="btn btn-green">Cały katalog</a>
                                     </div>
                                     <div class="banner-slider-item">
                                         <img src="<?php echo get_template_directory_uri(); ?>/images/4444.png">
@@ -242,7 +242,7 @@
                                             <h4>Sauna</h4>
                                             <span>od 12000 PLN</span>
                                         </div>
-                                        <a href="<?= Urls::CATEGORIES_BARBECUE ?>" class="btn btn-green">Cały katalog</a>
+                                        <a href="<?= Urls::SAUNY ?>" class="btn btn-green">Cały katalog</a>
                                     </div>
                                 </div>
                                 <script>
