@@ -54,8 +54,8 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 5,
-            "max": 5,
+            "min": 4,
+            "max": 4,
             "layout": "block",
             "button_label": "",
             "sub_fields": [
@@ -117,5 +117,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1637172603
+    "modified": 1677425297
 }

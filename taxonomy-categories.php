@@ -37,8 +37,7 @@ $categories = [
                             <p> Zalety konstrukcji <span> EasyCube </span>:
                                 <br> - Wygodne opakowanie z kompletem uchwytów montażowych.
                                 <br> - Pręt 100 x 100 mm x 3000mm (w zestawie)
-                                <br> - Montaż konstrukcji nie wymaga specjalnego przygotowania <br> - Szybki montaż
-                            </p>
+                                <br> - Montaż konstrukcji nie wymaga specjalnego przygotowania <br> - Szybki montaż </p>
                             ';
 
                         </div>
@@ -89,7 +88,7 @@ $categories = [
             </div>
         </div>
     </section>
-<?php else : ?>
+<?php else: ?>
     <?php include "modules/catalog-products/catalog-products.php" ?>
 <?php endif; ?>
 
@@ -109,53 +108,53 @@ $categories = [
         <div class="row">
             <div class="col-md-12">
                 <div class="project-slider owl-carousel owl-theme" id="owl-project-slider">
-                    <?php $post_portfolio = new WP_Query(array('post_type' => 'portfolio')); //ищем по типу поста
-                    ?>
+                    <?php $post_portfolio = new WP_Query(array('post_type' => 'portfolio')); //ищем по типу поста?>
                     <?php if ($post_portfolio->have_posts()) : ?>
                         <?php while ($post_portfolio->have_posts()) : $post_portfolio->the_post(); ?><?php $values = get_post_meta(get_the_ID()); ?>
-                        <div class="project-item" style="background-image: url('<?php echo $values['_code_portfolio_photo|code_portfolio_photo_item|0|0|value']['0']; ?>')">
-                            <h4><?php the_title(); ?></h4>
-                            <p><?php $str = mb_strimwidth($values['_code_portfolio_description']['0'], 0, 100, "...");
-                                echo $str; ?></p>
-                            <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-clock.png">czas produkcji 3-4 tygodnie</span>
-                            <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-tag.png">na prośbę</span>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <a href="<?php $url = get_permalink($post);
-                                                echo $url; ?>" class="btn btn-green">Wyglądać</a>
+                            <div class="project-item"
+                                 style="background-image: url('<?php echo $values['_code_portfolio_photo|code_portfolio_photo_item|0|0|value']['0']; ?>')">
+                                <h4><?php the_title(); ?></h4>
+                                <p><?php $str = mb_strimwidth($values['_code_portfolio_description']['0'], 0, 100, "...");
+                                    echo $str; ?></p>
+                                <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-clock.png">czas produkcji 3-4 tygodnie</span>
+                                <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-tag.png">na prośbę</span>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a href="<?php $url = get_permalink($post);
+                                        echo $url; ?>" class="btn btn-green">Wyglądać</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <?php endwhile; ?><?php else : ?>
+                        <?php endwhile; ?><?php else: ?>
                         <p>Нет контента или неправильно указан тип поста</p>
                     <?php endif; ?>
                     <?php wp_reset_query(); ?>
                 </div>
                 <script>
-                    $(document).ready(function() {
-                        var owl = $('#owl-project-slider');
-                        owl.owlCarousel({
-                            items: 2,
-                            dots: true,
-                            loop: true,
-                            nav: false,
-                            margin: 30,
-                            autoplay: true,
-                            autoplayTimeout: 3000,
-                            autoplayHoverPause: true,
-                            responsive: {
-                                0: {
-                                    items: 1
-                                },
-                                600: {
-                                    items: 1
-                                },
-                                1000: {
-                                    items: 2
-                                }
-                            },
-                        });
-                    })
+                  $(document).ready(function () {
+                    var owl = $('#owl-project-slider');
+                    owl.owlCarousel({
+                      items: 2,
+                      dots: true,
+                      loop: true,
+                      nav: false,
+                      margin: 30,
+                      autoplay: true,
+                      autoplayTimeout: 3000,
+                      autoplayHoverPause: true,
+                      responsive: {
+                        0: {
+                          items: 1
+                        },
+                        600: {
+                          items: 1
+                        },
+                        1000: {
+                          items: 2
+                        }
+                      },
+                    });
+                  })
                 </script>
             </div>
         </div>
@@ -249,7 +248,8 @@ $categories = [
                             <a href="<?php echo home_url(); ?>/categories/sauny-beczka">Sauna - beczka</a>
                             <a href="<?php echo home_url(); ?>/categories/sauny-kwadro">Sauna - kwadro</a>
                             <a href="<?php echo home_url(); ?>/categories/sauny-owalna">Sauna - owalna</a>
-                            <a href="<?php echo home_url(); ?>/sauny/#products" class="btn btn-green">Więcej szczegółów</a>
+                            <a href="<?php echo home_url(); ?>/sauny/#products"
+                               class="btn btn-green">Więcej szczegółów</a>
                         </div>
                     </div>
                     <div class="category-item">
@@ -259,7 +259,8 @@ $categories = [
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_THERMO_DREWNO ?>#products">Deska</a>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_THERMO_DREWNO ?>#products">Deska tarasowa</a>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_THERMO_DREWNO ?>#products">Deska tarasowa</a>
-                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_THERMO_DREWNO ?>#products" class="btn btn-green">Więcej szczegółów</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_THERMO_DREWNO ?>#products"
+                               class="btn btn-green">Więcej szczegółów</a>
                         </div>
                     </div>
                     <div class="category-item">
@@ -269,7 +270,8 @@ $categories = [
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_TANDIRY_I_KOCIOLKI ?>#products">Tandoor</a>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_TANDIRY_I_KOCIOLKI ?>#products">Kazań</a>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_TANDIRY_I_KOCIOLKI ?>#products">Kociołki</a>
-                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_TANDIRY_I_KOCIOLKI ?>#products" class="btn btn-green">Więcej szczegółów</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_TANDIRY_I_KOCIOLKI ?>#products"
+                               class="btn btn-green">Więcej szczegółów</a>
                         </div>
                     </div>
                     <div class="category-item">
@@ -278,7 +280,8 @@ $categories = [
                             <h4>Kompleks grillowy</h4>
                             <p>Zmontowany jako konstruktor w 20 minut</p>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BARBECUE ?>">Opis</a>
-                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BARBECUE ?>#products" class="btn btn-green">Więcej szczegółów</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BARBECUE ?>#products"
+                               class="btn btn-green">Więcej szczegółów</a>
                         </div>
                     </div>
                     <div class="category-item">
@@ -289,7 +292,8 @@ $categories = [
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BUDYNKI_DREWNIANE ?>#products">Altany</a>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BUDYNKI_DREWNIANE ?>#products">Budynki gospodarcze</a>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BUDYNKI_DREWNIANE ?>#products">Domy dla dzieci</a>
-                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BUDYNKI_DREWNIANE ?>#products" class="btn btn-green">Więcej szczegółów</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BUDYNKI_DREWNIANE ?>#products"
+                               class="btn btn-green">Więcej szczegółów</a>
                         </div>
                     </div>
                     <div class="category-item">
@@ -300,36 +304,37 @@ $categories = [
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DREWNIANE_AKCESORIA_DO_SAUNY ?>#vedra">Wiadra na wodę</a>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DREWNIANE_AKCESORIA_DO_SAUNY ?>#shaiki">Gangi i parowce</a>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DREWNIANE_AKCESORIA_DO_SAUNY ?>#abaj">Abażury do lamp</a>
-                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DREWNIANE_AKCESORIA_DO_SAUNY ?>#products" class="btn btn-green">Więcej szczegółów</a>
+                            <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DREWNIANE_AKCESORIA_DO_SAUNY ?>#products"
+                               class="btn btn-green">Więcej szczegółów</a>
                         </div>
                     </div>
                 </div>
             </div>
             <script>
-                $(document).ready(function() {
-                    var owl = $('#owl-category-slider');
-                    owl.owlCarousel({
-                        items: 3,
-                        dots: true,
-                        loop: true,
-                        nav: false,
-                        margin: 30,
-                        autoplay: true,
-                        autoplayTimeout: 3000,
-                        autoplayHoverPause: true,
-                        responsive: {
-                            0: {
-                                items: 1
-                            },
-                            600: {
-                                items: 1
-                            },
-                            1000: {
-                                items: 3
-                            }
-                        },
-                    });
-                })
+              $(document).ready(function () {
+                var owl = $('#owl-category-slider');
+                owl.owlCarousel({
+                  items: 3,
+                  dots: true,
+                  loop: true,
+                  nav: false,
+                  margin: 30,
+                  autoplay: true,
+                  autoplayTimeout: 3000,
+                  autoplayHoverPause: true,
+                  responsive: {
+                    0: {
+                      items: 1
+                    },
+                    600: {
+                      items: 1
+                    },
+                    1000: {
+                      items: 3
+                    }
+                  },
+                });
+              })
             </script>
         </div>
     </div>
@@ -337,3 +342,4 @@ $categories = [
 <?php
 get_footer();
 ?>
+

@@ -223,10 +223,6 @@ const msnry = new Masonry('.grid-masonry', {
 
 const calculator = document.querySelector('.calculator');
 
-if (calculator !== null) {
-    const html = document.querySelector('html');
-}
-
 const swiper = new Swiper(".mySwiper", {
     spaceBetween: 20,
     slidesPerView: 3,
@@ -292,35 +288,35 @@ new Swiper(".gallerySlider", {
     }
 });
 
-let sliderPrice = document.querySelector('.slider-info__right-price .price');
+let sliderPriceProduct = document.querySelector('.slider-info__right-price .price');
 const switchers = document.querySelectorAll('.service-item-switcher');
-const sliderInfoTabs = document.querySelectorAll('.slider-info-tabs h4');
-const sliderInfoCharacteristics = document.querySelectorAll('.slider-info-content div');
+const sliderInfoTabsProduct = document.querySelectorAll('.slider-info-tabs h4');
+const sliderInfoCharacteristicsProduct = document.querySelectorAll('.slider-info-content div');
 
 if (switchers !== null) {
     switchers.forEach((item) => {
         item.addEventListener('click', () => {
             item.classList.toggle('active-switch')
             if (item.classList.contains('active-switch')) {
-                sliderPrice.textContent = Number(sliderPrice.textContent) + Number(item.getAttribute('data-price'))
+                sliderPriceProduct.textContent = Number(sliderPriceProduct.textContent) + Number(item.getAttribute('data-price'))
             } else {
-                sliderPrice.textContent = Number(sliderPrice.textContent) - Number(item.getAttribute('data-price'))
+                sliderPriceProduct.textContent = Number(sliderPriceProduct.textContent) - Number(item.getAttribute('data-price'))
             }
         })
     })
 }
 
-if (sliderInfoTabs !== null) {
-    sliderInfoTabs.forEach((item) => {
+if (sliderInfoTabsProduct !== null) {
+    sliderInfoTabsProduct.forEach((item) => {
         item.addEventListener('click', () => {
 
             const dataClass = document.querySelector(`.${item.getAttribute('data-class')}`)
 
-            sliderInfoTabs.forEach((elem) => {
+            sliderInfoTabsProduct.forEach((elem) => {
                 elem.classList.remove('js-active-item')
             })
 
-            sliderInfoCharacteristics.forEach((elem) => {
+            sliderInfoCharacteristicsProduct.forEach((elem) => {
                 elem.classList.remove('js-active-item')
             })
 

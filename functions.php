@@ -2,6 +2,7 @@
 
 require_once 'helpers/Urls.php';
 require_once 'helpers/RenderBlock.php';
+require_once 'helpers/Helpers.php';
 
 ## Carbon Fields
 add_action('carbon_fields_register_fields', 'crb_register_custom_fields');
@@ -43,7 +44,7 @@ function wood_scripts_styles()
         $fileName = explode('/', $filePath);
         $fileName = end($fileName);
         $fileName = str_replace('.css', ' ', $fileName);
-        wp_register_style(trim($fileName),get_template_directory_uri() . $filePath, array(), '1.2', 'screen');
+        wp_register_style(trim($fileName),get_template_directory_uri() . $filePath, array(), '1.3.2', 'screen');
         wp_enqueue_style(trim($fileName));
     }
 
@@ -52,14 +53,14 @@ function wood_scripts_styles()
         $fileName = explode('/', $filePath);
         $fileName = end($fileName);
         $fileName = str_replace('.js', ' ', $fileName);
-        wp_enqueue_script(trim($fileName),get_template_directory_uri() . $filePath, array(), '1.0', true);
+        wp_enqueue_script(trim($fileName),get_template_directory_uri() . $filePath, array(), '1.1', true);
     }
 
     wp_enqueue_script('masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array(), '1.0', true);
     wp_enqueue_script('swiper_js', get_template_directory_uri() . '/js/swiper.js', array(), '1.0', true);
     wp_enqueue_script('mask', get_template_directory_uri() . '/js/jquery.mask.js', array(), '1.0', true);
     wp_enqueue_script('fancy', get_template_directory_uri() . '/js/fancybox.js', array(), '1.0', true);
-    wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
+    wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), '1.1.3', true);
     wp_localize_script('main', 'ajax', [
         'ajaxurl' => admin_url('admin-ajax.php'),
     ]);

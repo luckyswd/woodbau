@@ -34,7 +34,7 @@ $additionalPhotos = get_field('additional_photos');
 <section class="slider-info">
     <div class="container">
         <div class="btn-back">
-            <a href="<?= get_home_url() ?>/saunas" class="btn btn-green">Powrót do katalogu</a>
+            <a href="<?= get_home_url() ?>/sauny" class="btn btn-green">Powrót do katalogu</a>
         </div>
     </div>
     <div class="container">

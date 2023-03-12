@@ -1779,7 +1779,7 @@ footer .top-logo:after {
     /*     white-space: nowrap; */
     position: relative;
     z-index: 2;
-    width: 100%;
+	width: 100%;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 900;
@@ -5212,7 +5212,7 @@ body .wood-arenda {
         font-size: 20px;
         line-height: 1.5em;
     }
-
+	
     .barrel-bath__title {
         padding: 67px 0 40px;
     }

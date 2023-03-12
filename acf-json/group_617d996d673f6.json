@@ -385,14 +385,29 @@
     "location": [
         [
             {
-                "param": "post_type",
-                "operator": "==",
-                "value": "catalog"
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "categories:budynki-drewniane"
             },
             {
                 "param": "post_taxonomy",
                 "operator": "!=",
                 "value": "categories:budynki-drewniane"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "categories:sauny-beczka"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "categories:sauny-kwadro"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "categories:sauny-owalna"
             }
         ]
     ],
@@ -402,7 +417,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1663178023
+    "modified": 1676060956
 }

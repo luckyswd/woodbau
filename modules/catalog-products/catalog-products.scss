@@ -76,7 +76,7 @@
     }
 
     .catalog-item__characteristic {
-      flex-wrap: wrap;
+      grid-template-columns: 1fr;
     }
 
     .catalog-item__characteristics:last-child {
