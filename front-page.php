@@ -38,7 +38,7 @@ $slider_gallery = get_field('slider_gallery', $page_id);
                             <?php if ($advantage['image_advantage']) : ?>
                                 <div class="advantage__block-item-image">
                                     <picture>
-                                        <img loading="lazy" src="<?php echo $advantage['image_advantage']['url'] ?>" alt="">
+                                        <img loading="lazy" src="<?php echo $advantage['image_advantage']['sizes']['medium'] ?>" alt="">
                                     </picture>
                                 </div>
                             <?php endif; ?>
@@ -103,7 +103,7 @@ $slider_gallery = get_field('slider_gallery', $page_id);
                                    data-fancybox="gallery"
                                    data-caption="<?= $slide['description']; ?>">
                                     <picture>
-                                        <img loading="lazy" src="<?= $slide['url']; ?>" alt="slide">
+                                        <img loading="lazy" src="<?= $slide['sizes']['medium']; ?>" alt="slide">
                                     </picture>
                                 </a>
                             </div>

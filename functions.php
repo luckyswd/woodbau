@@ -417,7 +417,13 @@ function my_acf_block_render_callback($block)
 
 function dequeueStyleAndScripts() {
     if (!is_admin()) {
+        wp_dequeue_style('dashicons');
+        wp_dequeue_style('wp-block-library');
+        wp_dequeue_style('classic-theme-styles');
+
         wp_deregister_style('dashicons');
+        wp_deregister_style('wp-block-library');
+        wp_deregister_style('classic-theme-styles');
     }
 }
 

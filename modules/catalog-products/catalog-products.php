@@ -62,7 +62,7 @@ if (empty($categories)) {
                                             <?php if (!empty($gallery)) : ?>
                                                 <div class="catalog-item__image">
                                                     <picture>
-                                                        <img loading="lazy" src="<?= $gallery[0]['url'] ?>"
+                                                        <img loading="lazy" src="<?= $gallery[0]['sizes']['medium']  ?>"
                                                              alt="<?= $gallery[0]['title'] ?>">
                                                     </picture>
                                                 </div>
