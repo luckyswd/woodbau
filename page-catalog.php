@@ -14,7 +14,7 @@ get_header();
         <div class="row">
             <div class="col-md-4">
                 <div class="category-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-01.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-01.png.webp">
                     <div class="category-text">
                         <h4>Sauny na zamówienie</h4>
                         <a href="<?php echo home_url(); ?>/catalog/banya-bochka">Beczka do kąpieli</a>
@@ -27,7 +27,7 @@ get_header();
             </div>
             <div class="col-md-4">
                 <div class="category-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-04.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-04.png.webp">
                     <div class="category-text">
                         <h4>EasyCube</h4>
                         <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_EASYCUBE ?>">Z 3 markizami i hamakiem</a>
@@ -39,7 +39,7 @@ get_header();
             </div>
             <div class="col-md-4">
                 <div class="category-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-05.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-05.png.webp">
                     <div class="category-text">
                         <h4>Do gotowania żywności</h4>
                         <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_TANDIRY_I_KOCIOLKI ?>">Kazań</a>
@@ -50,7 +50,7 @@ get_header();
             </div>
             <div class="col-md-4">
                 <div class="category-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-03.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-03.png.webp">
                     <div class="category-text">
                         <h4>Budynki z drewna</h4>
                         <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BUDYNKI_DREWNIANE ?>">Małe domy</a>
@@ -63,7 +63,7 @@ get_header();
             </div>
             <div class="col-md-4">
                 <div class="category-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-11.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-11.png.webp">
                     <div class="category-text">
                         <h4>Akcesoria do sauny</h4>
                         <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DREWNIANE_AKCESORIA_DO_SAUNY ?>#mebel">Akcesoria i meble</a>
@@ -76,7 +76,7 @@ get_header();
             </div>
             <div class="col-md-4">
                 <div class="category-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-10.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-10.png.webp">
                     <div class="category-text">
                         <h4>Kabiny kempingowe</h4>
                         <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DOMKI_KEMPINGOWE ?>#model1">Projekt KD-1</a>

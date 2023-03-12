@@ -29,8 +29,15 @@ $phone = get_field('phone', 'option');
         <div class="row">
             <div class="col-md-6">
                 <div class="top-logo">
-                    <a href="#"><img
-                                src="https://woodbaupolska.pl/wp-content/uploads/2022/06/cropped-WOODBAU.PL-LOGO.png"></a>
+                    <a href="<?php echo home_url(); ?>">
+                        <?php
+                        $custom_logo_id = get_theme_mod('custom_logo');
+                        $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+                        if (has_custom_logo()) {
+                            echo '<img class="style-svg" src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '">';
+                        }
+                        ?>
+                    </a>
                 </div>
             </div>
             <div class="col-md-3">

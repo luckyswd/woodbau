@@ -166,8 +166,8 @@ $term_id = get_queried_object()->term_id;
                                 <h4><?php the_title(); ?></h4>
                                 <p><?php $str = mb_strimwidth($values['_code_portfolio_description']['0'], 0, 100, "...");
                                     echo $str; ?></p>
-                                <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-clock.png">czas produkcji 3-4 tygodnie</span>
-                                <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-tag.png">na prośbę</span>
+                                <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-clock.png.webp">czas produkcji 3-4 tygodnie</span>
+                                <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-tag.png.webp">na prośbę</span>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <a href="<?php $url = get_permalink($post);
@@ -289,7 +289,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-12">
                 <div class="category-slider owl-carousel owl-theme" id="owl-category-slider">
                     <div class="category-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-01.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-01.png.webp">
                         <div class="category-text">
                             <h4>Wanny na zamówienie</h4>
                             <a href="<?php echo home_url(); ?>/catalog/banya-bochka/#products">Beczka do kąpieli</a>
@@ -300,7 +300,7 @@ $term_id = get_queried_object()->term_id;
                         </div>
                     </div>
                     <div class="category-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-04.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-04.png.webp">
                         <div class="category-text">
                             <h4>EasyCube</h4>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_EASYCUBE ?>#products">Z 3 markizami i hamakiem</a>
@@ -310,7 +310,7 @@ $term_id = get_queried_object()->term_id;
                         </div>
                     </div>
                     <div class="category-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-07.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-07.png.webp">
                         <div class="category-text">
                             <h4>Dąb</h4>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_STOLY_DEBOWE ?>#products">Wymiary</a>
@@ -320,7 +320,7 @@ $term_id = get_queried_object()->term_id;
                         </div>
                     </div>
                     <div class="category-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-08.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-08.png.webp">
                         <div class="category-text">
                             <h4>Termodrewno</h4>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_THERMO_DREWNO ?>#products">Deska</a>
@@ -330,7 +330,7 @@ $term_id = get_queried_object()->term_id;
                         </div>
                     </div>
                     <div class="category-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-05.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-05.png.webp">
                         <div class="category-text">
                             <h4>Do gotowania żywności</h4>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_TANDIRY_I_KOCIOLKI ?>#products">Tandoor</a>
@@ -340,7 +340,7 @@ $term_id = get_queried_object()->term_id;
                         </div>
                     </div>
                     <div class="category-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-06.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-06.png.webp">
                         <div class="category-text">
                             <h4>Kompleks grillowy</h4>
                             <p>Zmontowany jako konstruktor w 20 minut</p>
@@ -349,7 +349,7 @@ $term_id = get_queried_object()->term_id;
                         </div>
                     </div>
                     <div class="category-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-03.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-03.png.webp">
                         <div class="category-text">
                             <h4>Budynki z minibarami</h4>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BUDYNKI_DREWNIANE ?>#products">Małe domy</a>
@@ -360,7 +360,7 @@ $term_id = get_queried_object()->term_id;
                         </div>
                     </div>
                     <div class="category-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-09.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-09.png.webp">
                         <div class="category-text">
                             <h4>Akcesoria do kąpieli</h4>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DREWNIANE_AKCESORIA_DO_SAUNY ?>#mebel">Akcesoria i meble</a>
@@ -371,7 +371,7 @@ $term_id = get_queried_object()->term_id;
                         </div>
                     </div>
                     <div class="category-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-10.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-10.png.webp">
                         <div class="category-text">
                             <h4>Kabiny kempingowe</h4>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DOMKI_KEMPINGOWE ?>#model1">Projekt KD-1</a>

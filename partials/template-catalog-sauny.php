@@ -117,10 +117,10 @@ $term = get_queried_object();
                                      style="background-image: url('<?php echo $images[0]['url']; ?>')">
                                     <h4><?php the_title(); ?></h4>
                                     <?php if (!empty($time)) : ?>
-                                        <span><img src="<?= get_template_directory_uri(); ?>/images/icon-clock.png"><?= $time; ?></span>
+                                        <span><img src="<?= get_template_directory_uri(); ?>/images/icon-clock.png.webp"><?= $time; ?></span>
                                     <?php endif; ?>
                                     <?php if (!empty($price)) : ?>
-                                        <span><img src="<?= get_template_directory_uri(); ?>/images/icon-tag.png">от <?= $price; ?> zl.</span>
+                                        <span><img src="<?= get_template_directory_uri(); ?>/images/icon-tag.png.webp">от <?= $price; ?> zl.</span>
                                     <?php endif; ?>
                                     <div class="row">
                                         <div class="col-md-12">

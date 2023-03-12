@@ -126,7 +126,7 @@ button:hover {
 }
 
 header {
-    background-image: url("../images/banner.png");
+    background-image: url("../images/banner.png.webp");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -832,7 +832,7 @@ html {
 
 /**/
 #qestions {
-    background-image: url("../images/banner-bottom.png");
+    background-image: url("../images/banner-bottom.png.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
@@ -920,7 +920,7 @@ footer:after {
     content: '';
     display: block;
     position: absolute;
-    background-image: url(../images/grass-black.png);
+    background-image: url(../images/grass-black.png.webp);
     background-repeat: repeat-x;
     width: 100%;
     height: 17px;
@@ -1006,73 +1006,6 @@ footer ul li {
     height: 52px;
     animation: webapico-anime 2s linear infinite;
     transform-origin: 47% 100%;
-}
-
-@keyframes webapico-anime {
-    0% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
-
-    15% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(-60deg);
-        background-size: cover;
-    }
-
-    20% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(-45deg);
-        background-size: cover;
-    }
-
-    25% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(-60deg);
-        background-size: cover;
-    }
-
-    30% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(-45deg);
-        background-size: cover;
-    }
-
-    50% {
-        background-image: url(../images/weba/webapico.png);
-        transform: rotate(0deg);
-        background-size: cover;
-    }
-
-    70% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
-
-    73% {
-        background-image: url(../images/weba/webapico2.png);
-        background-size: cover;
-    }
-
-    76% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
-
-    81% {
-        background-image: url(../images/weba/webapico2.png);
-        background-size: cover;
-    }
-
-    83% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
-
-    100% {
-        background-image: url(../images/weba/webapico.png);
-        background-size: cover;
-    }
 }
 
 /**/
@@ -2813,7 +2746,7 @@ body .wood-arenda {
 .second-section::after {
     content: '';
     position: absolute;
-    background-image: url('../images/img5.png');
+    background-image: url('../images/img5.png.webp');
     background-repeat: no-repeat;
     right: 0;
     z-index: -1;
@@ -2975,7 +2908,7 @@ body .wood-arenda {
     height: 178px;
     right: -92px;
     bottom: -92px;
-    background-image: url('../images/img6.png');
+    background-image: url('../images/img6.png.webp');
     background-repeat: no-repeat;
 }
 
@@ -2986,7 +2919,7 @@ body .wood-arenda {
     height: 395px;
     left: -467px;
     bottom: -178px;
-    background-image: url('../images/img7.png');
+    background-image: url('../images/img7.png.webp');
     background-repeat: no-repeat;
     z-index: -1;
 }
@@ -3093,7 +3026,7 @@ body .wood-arenda {
     left: 38px;
     width: 98px;
     height: 81px;
-    background-image: url('../images/img4.png');
+    background-image: url('../images/img4.png.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -5453,7 +5386,7 @@ body .wood-arenda {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        background-image: url("../images/banner.png");
+        background-image: url("../images/banner.png.webp");
         overflow-y: auto;
         height: 100vh;
         background-repeat: no-repeat;

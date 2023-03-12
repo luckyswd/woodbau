@@ -47,8 +47,8 @@ if ( in_array($category, $customCategories) ) { //ID категории
                             <div class="project-item"
                                  style="background-image: url('<?php echo $images[0]['url']; ?>')">
                                 <h4><?php the_title(); ?></h4>
-                                <span><img src="<?= get_template_directory_uri(); ?>/images/icon-clock.png">czas realizacji 6-8 tygodnie</span>
-                                <span><img src="<?= get_template_directory_uri(); ?>/images/icon-tag.png">от <?= $price; ?> zl.</span>
+                                <span><img src="<?= get_template_directory_uri(); ?>/images/icon-clock.png.webp">czas realizacji 6-8 tygodnie</span>
+                                <span><img src="<?= get_template_directory_uri(); ?>/images/icon-tag.png.webp">от <?= $price; ?> zl.</span>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <a href="<?= $url; ?>" class="btn btn-green">Wyglądać</a>

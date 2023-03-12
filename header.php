@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="facebook-domain-verification" content="rpm005ev9ew99k355smftjbnjdfqq8"/>
     <meta name="google-site-verification" content="rP2w038lnVflZPydQn1VcNQG1vt0jQ1BOAtppqDbAHw"/>
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png.webp" type="image/png">
     <title>Woodbau</title>
     <?php wp_head(); ?>
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
@@ -214,7 +214,7 @@ function checkHeaderIndexClass() {
                         <div class="col-md-5">
                             <div class="banner-slider owl-carousel owl-theme" id="owl-banner-slider">
                                 <div class="banner-slider-item">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/product-01.png">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/product-01.png.webp">
                                     <div class="banner-sale">
                                         <h4>Sauna</h4>
                                         <span>od 12000 PLN</span>
@@ -223,7 +223,7 @@ function checkHeaderIndexClass() {
                                        class="btn btn-green">Cały katalog</a>
                                 </div>
                                 <div class="banner-slider-item">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/2222.png">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/2222.png.webp">
                                     <div class="banner-sale">
                                         <h4>Sauna</h4>
                                         <span>od 12000 PLN</span>
@@ -232,7 +232,7 @@ function checkHeaderIndexClass() {
                                        class="btn btn-green">Cały katalog</a>
                                 </div>
                                 <div class="banner-slider-item">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/3333.png">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/3333.png.webp">
                                     <div class="banner-sale">
                                         <h4>Sauna</h4>
                                         <span>od 12000 PLN</span>
@@ -241,7 +241,7 @@ function checkHeaderIndexClass() {
                                        class="btn btn-green">Cały katalog</a>
                                 </div>
                                 <div class="banner-slider-item">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/4444.png">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/4444.png.webp">
                                     <div class="banner-sale">
                                         <h4>Sauna</h4>
                                         <span>od 12000 PLN</span>

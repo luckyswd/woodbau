@@ -22,11 +22,11 @@ get_header();
                                 <p><?php $str = mb_strimwidth($values['_code_portfolio_description']['0'], 0, 100, "...");
                                     echo $str; ?></p>
                                 <span>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon-clock.png">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon-clock.png.webp">
                                     czas realizacji 6-8 tygodnie
                                 </span>
                                 <span>
-									<img src="<?php echo get_template_directory_uri(); ?>/images/icon-tag.png">
+									<img src="<?php echo get_template_directory_uri(); ?>/images/icon-tag.png.webp">
                                 	cena indywidualna
                                 </span>
                                 <div class="row">

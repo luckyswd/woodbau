@@ -128,7 +128,7 @@ $slider_gallery = get_field('slider_gallery', $page_id);
                 <div class="col-md-4">
                     <div class="category-item">
                         <picture>
-                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/category-01.png">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/category-01.png.webp">
                         </picture>
                         <div class="category-text">
                             <h4>Sauny na zamówienie</h4>
@@ -142,7 +142,7 @@ $slider_gallery = get_field('slider_gallery', $page_id);
                 </div>
                 <div class="col-md-4">
                     <div class="category-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-03.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-03.png.webp">
                         <div class="category-text">
                             <h4>Budynki z drewna</h4>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_BUDYNKI_DREWNIANE ?>">Małe domy</a>
@@ -156,7 +156,7 @@ $slider_gallery = get_field('slider_gallery', $page_id);
                 </div>
                 <div class="col-md-4">
                     <div class="category-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-11.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/category-11.png.webp">
                         <div class="category-text">
                             <h4>Akcesoria do sauny</h4>
                             <a href="<?php echo home_url(); ?><?= Urls::CATEGORIES_DREWNIANE_AKCESORIA_DO_SAUNY ?>#mebel">Akcesoria i meble</a>
@@ -211,8 +211,8 @@ $slider_gallery = get_field('slider_gallery', $page_id);
                                     <h4><?php the_title(); ?></h4>
                                     <p><?php $str = mb_strimwidth($values['_code_portfolio_description']['0'], 0, 100, "...");
                                         echo $str; ?></p>
-                                    <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-clock.png">czas realizacji 6-8 tygodnie</span>
-                                    <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-tag.png">cena indywidualna</span>
+                                    <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-clock.png.webp">czas realizacji 6-8 tygodnie</span>
+                                    <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-tag.png.webp">cena indywidualna</span>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <a href="<?php $url = get_permalink($post);
