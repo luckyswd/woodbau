@@ -5,26 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="facebook-domain-verification" content="rpm005ev9ew99k355smftjbnjdfqq8"/>
     <meta name="google-site-verification" content="rP2w038lnVflZPydQn1VcNQG1vt0jQ1BOAtppqDbAHw"/>
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png.webp" type="image/png">
     <title>Woodbau</title>
     <?php wp_head(); ?>
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
-    <!-- sytle -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-grid.min.css?v=1.0.0">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/magnific-popup.css">
-    <!-- Owl Stylesheets -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/js/owl-carusel/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/js/owl-carusel/owl.theme.default.min.css">
-    <!-- Owl javascript -->
-    <script src="<?php echo get_template_directory_uri(); ?>/js/owl-carusel/owl.carousel.js"></script>
-    <!-- popup -->
-    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.magnific-popup.min.js"></script>
-    <!--Style-->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/fancybox.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/swiper.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?v=1.0.2">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/fonts.css">
 
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {

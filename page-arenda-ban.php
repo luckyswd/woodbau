@@ -318,32 +318,6 @@ $sixth_block = get_field('sixth_block');
           </div>
       </div>
   <?php endif; ?>
-  <?php if (!empty($sixth_block)) : ?>
-      <div class="sixth">
-          <div class="container">
-              <div class="row">
-                  <div class="col offset-xl-1">
-                    <?php if (!empty($sixth_block['headline'])) : ?>
-                        <div class="section-title"><?=$sixth_block['headline']?></div>
-                    <?php endif;?>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-12 col-xl-11 offset-xl-1">
-                    <?php if (!empty($sixth_block['gallery'])) : ?>
-                        <div class="grid grid-masonry">
-                          <?php foreach ($sixth_block['gallery'] as $image) : ?>
-                              <div class="grid-item grid-masonry-item grid-item--width2"><img
-                                          src="<?=$image['url']?>" alt="g1">
-                              </div>
-                          <?php endforeach;?>
-                        </div>
-                    <?php endif;?>
-                  </div>
-              </div>
-          </div>
-      </div>
-  <?php endif;?>
   <?php
   get_footer();
   ?>

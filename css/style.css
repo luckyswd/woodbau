@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
     padding: 0;
     margin: 0;
@@ -126,7 +123,7 @@ button:hover {
 }
 
 header {
-    background-image: url("../images/banner.png.webp");
+    background-image: url("../../images/banner.png.webp");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -832,7 +829,7 @@ html {
 
 /**/
 #qestions {
-    background-image: url("../images/banner-bottom.png.webp");
+    background-image: url("../../images/banner-bottom.png.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
@@ -920,7 +917,7 @@ footer:after {
     content: '';
     display: block;
     position: absolute;
-    background-image: url(../images/grass-black.png.webp);
+    background-image: url(../../images/grass-black.png.webp);
     background-repeat: repeat-x;
     width: 100%;
     height: 17px;
@@ -2616,30 +2613,30 @@ footer .top-logo:after {
 
 @font-face {
     font-family: 'Roboto Slab', serif;
-    src: url('../fonts/RobotoSlab-Regular.ttf');
+    src: url('../../fonts/RobotoSlab-Regular.ttf');
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Roboto Slab';
-    src: url('../fonts/RobotoSlab-Bold.ttf');
+    src: url('../../fonts/RobotoSlab-Bold.ttf');
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'Roboto Slab';
-    src: url('../fonts/RobotoSlab-Light.ttf');
+    src: url('../../fonts/RobotoSlab-Light.ttf');
     font-weight: 300;
 }
 
 @font-face {
     font-family: 'Spaceland';
-    src: url('../fonts/Spaceland-Ten.otf');
+    src: url('../../fonts/Spaceland-Ten.otf');
 }
 
 @font-face {
     font-family: 'Spaceland Oblique';
-    src: url('../fonts/Spaceland-TenOblique.otf');
+    src: url('../../fonts/Spaceland-TenOblique.otf');
 }
 
 body .wood-arenda {
@@ -2746,7 +2743,7 @@ body .wood-arenda {
 .second-section::after {
     content: '';
     position: absolute;
-    background-image: url('../images/img5.png.webp');
+    background-image: url('../../images/img5.png.webp');
     background-repeat: no-repeat;
     right: 0;
     z-index: -1;
@@ -2908,7 +2905,7 @@ body .wood-arenda {
     height: 178px;
     right: -92px;
     bottom: -92px;
-    background-image: url('../images/img6.png.webp');
+    background-image: url('../../images/img6.png.webp');
     background-repeat: no-repeat;
 }
 
@@ -2919,7 +2916,7 @@ body .wood-arenda {
     height: 395px;
     left: -467px;
     bottom: -178px;
-    background-image: url('../images/img7.png.webp');
+    background-image: url('../../images/img7.png.webp');
     background-repeat: no-repeat;
     z-index: -1;
 }
@@ -3026,7 +3023,7 @@ body .wood-arenda {
     left: 38px;
     width: 98px;
     height: 81px;
-    background-image: url('../images/img4.png.webp');
+    background-image: url('../../images/img4.png.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -5386,7 +5383,7 @@ body .wood-arenda {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        background-image: url("../images/banner.png.webp");
+        background-image: url("../../images/banner.png.webp");
         overflow-y: auto;
         height: 100vh;
         background-repeat: no-repeat;

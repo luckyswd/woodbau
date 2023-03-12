@@ -20,7 +20,8 @@ function style() {
   return gulp.src(
     [
       'modules/**/*.scss',
-      'css/partials/**/*',
+      'js/**/*.css',
+      'css/**/*',
     ]
   )
     .pipe(sass().on('error', sass.logError))
@@ -56,7 +57,8 @@ gulp.task('dev', function () {
   watchScripts()
   gulp.watch([
     'modules/**/*.scss',
-    'css/partials/**/*',
+    'js/**/*.css',
+    'css/**/*',
   ], watchStyles);
   gulp.watch([
     'modules/**/*.scss',
@@ -72,7 +74,8 @@ function watchStyles() {
   return gulp.src(
     [
       'modules/**/*.scss',
-      'css/partials/**/*'
+      'js/**/*.css',
+      'css/**/*',
     ]
   )
     .pipe(sass().on('error', sass.logError))

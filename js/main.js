@@ -215,12 +215,6 @@ function selectChoose(containerClass, itemsClass, itemClass) {
     }
 }
 
-const msnry = new Masonry('.grid-masonry', {
-    itemSelector: '.grid-masonry-item',
-    gutter: 15,
-    fitWidth: true,
-})
-
 const calculator = document.querySelector('.calculator');
 
 const swiper = new Swiper(".mySwiper", {
