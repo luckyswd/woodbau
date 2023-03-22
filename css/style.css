@@ -3043,7 +3043,7 @@ body .wood-arenda {
     width: 100%;
     position: relative;
     transition-property: transform;
-    height: 370px;
+    height: auto;
     border-radius: 20px;
     cursor: pointer;
 }
@@ -3051,7 +3051,9 @@ body .wood-arenda {
 .swiper-slide img {
     width: 100%;
     object-fit: cover;
-    height: 100%;
+    object-position: center;
+    height: auto;
+    max-height: 260px;
     border-radius: 20px;
 }
 
