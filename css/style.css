@@ -4360,7 +4360,8 @@ body .wood-arenda {
     }
 
     .advantage__block-item:nth-child(2) img {
-        max-width: 400px;
+        min-width: 400px;
+        height: 230px;
     }
 }
 
