@@ -255,15 +255,18 @@ $additionalPhotos = get_field('additional_photos');
                         <?php if (!empty($additionalContent)) : ?>
                             <div class="additional-item-content"><?= $additionalContent ?></div>
                         <?php endif; ?>
-                        <div class="additional-item-gallery gallery">
-                            <?php foreach ($additionalPhotos as $image) : ?>
-                                <div class="gallery-item">
-                                    <a href="javascript:;" data-fancybox="additional-photos" data-src="<?= $image['url'] ?>">
-                                        <img class="" src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
-                                    </a>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
+                        <?php if (!empty($additionalPhotos)) : ?>
+                            <div class="additional-item-gallery gallery">
+                                <?php foreach ($additionalPhotos as $image) : ?>
+                                    <div class="gallery-item">
+                                        <a href="javascript:;" data-fancybox="additional-photos"
+                                           data-src="<?= $image['url'] ?>">
+                                            <img class="" src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
+                                        </a>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             <?php endif; ?>
