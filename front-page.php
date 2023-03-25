@@ -96,7 +96,9 @@ $slider_gallery = get_field('slider_gallery', $page_id);
 			<a href="<?=$slide['url'];?>"
 			  data-fancybox="gallery"
 			  data-caption="<?= $slide['description'];?>">
-				<img src="<?=$slide['url'];?>" alt="slide">
+				<picture>
+					<img loading="lazy" src="<?= $slide['sizes']['medium']; ?>" alt="slide">
+				</picture>
 			</a>
 		 </div>
       	<? endforeach;?>

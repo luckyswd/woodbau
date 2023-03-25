@@ -366,14 +366,19 @@
     "location": [
         [
             {
-                "param": "post_type",
-                "operator": "==",
-                "value": "catalog"
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "categories:bani-bochki"
             },
             {
                 "param": "post_taxonomy",
                 "operator": "!=",
-                "value": "categories:bani-bochki"
+                "value": "categories:bani-quad"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "categories:bani-oval"
             }
         ]
     ],
@@ -385,5 +390,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1671985705
+    "modified": 1676060847
 }

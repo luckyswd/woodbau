@@ -1,9 +1,14 @@
 <!DOCTYPE html>
+<?
+	$keywords = get_field('keywords');
+?>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	 <meta name="keywords" content="Бани под заказ Беларусь,Бани под заказ Минск, Бани под заказ Гродно, Бани под заказ Брест, Аксесуары для бани, <?= $keywords; ?>">
     <meta name="facebook-domain-verification" content="j93ck7ca78e825lta9dptpnq7tcqj2" />
+	<meta name="google-site-verification" content="iuLsir4HHLiKXW8Q3ErGgiGAFGr8VBvQCTVDap1vgdE" />
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" type="image/png">
     <title>Woodbau</title>
     <?php wp_head(); ?>
@@ -22,7 +27,7 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/fancybox.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/swiper.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?v=1.1">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css">
 	
 	<!-- Google Tag Manager -->
@@ -49,10 +54,28 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=513695147573838&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
 		<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV7GRL6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+	
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(92891536, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/92891536" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 <?php
@@ -66,7 +89,8 @@ $term_url = get_query_var('term');
             <div class="row">
                 <div class="col-md-2">
                     <div class="top-text">
-                        <p><span>Шоурум</span>Передавая 6/3<br/>Минск 220070</p>
+                        <p><span>Офис и производство</span>ул. Передовая, 6/1<br/>г. Минск, 220070</p><br/>
+						<p><span>Шоурум</span>ТК Валерьяново<br/>ул. Логойская, 5а</p>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -96,7 +120,7 @@ $term_url = get_query_var('term');
                             <img src="<?php echo get_template_directory_uri(); ?>/images/icon-facebook.png"></a>
                         <a href="https://www.instagram.com/woodbaubelarus/" target="_blank">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/icon-instagram.png"></a>
-                        <a href="tel:+375339130323" target="_blank">
+                        <a href="tel:+375296955788" target="_blank">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/icon-whatsapp.png"></a>
                     </div>
                 </div>
@@ -111,8 +135,7 @@ $term_url = get_query_var('term');
                     </div>
                     <div class="top-phone">
                         <a href="tel:+375296955788" target="_blank">+37529 695 57 88</a>
-                        <a href="tel:+375293800323" target="_blank">+37529 380 03 23</a>
-                        <a href="tel:+375339130323" target="_blank">+37533 913 03 23</a>
+                        <a href="tel:+375173360323" target="_blank">+37517 336 03 23</a>
                     </div>
                     <a href="#modal-popup" class="popup-modal btn-call">Заказать обратный звонок</a>
                 </div>

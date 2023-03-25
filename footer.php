@@ -71,9 +71,7 @@ $viber = get_field('viber', 'option');
                     <p><span>Шоурум</span>Передавая 6/3<br/>Минск 220070</p>
                 </div>
                 <div class="top-phone">
-                    <a href="tel:+375293800323" target="_blank"><img
-                                src="/wp-content/themes/woodbau/images/whatsapp.png">+37529 380 03 23</a>
-                    <a href="tel:+375339130323" target="_blank">+37533 913 03 23</a>
+                    <a href="tel:+375296955788" target="_blank">+37529 695 57 88</a>
                     <a href="tel:+375173360323" target="_blank">+37517 336 03 23</a>
                 </div>
                 <div class="top-soc">
@@ -218,22 +216,6 @@ $viber = get_field('viber', 'option');
   });
 </script>
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-  (function(m,e,t,r,i,k,a){m[i]=m[i]function(){(m[i].a=m[i].a[]).push(arguments)};
-    m[i].l=1*new Date();
-    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-  ym(92370538, "init", {
-    clickmap:true,
-    trackLinks:true,
-    accurateTrackBounce:true,
-    webvisor:true
-  });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/92370538" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
 <?php wp_footer(); ?>
 </body></html>
