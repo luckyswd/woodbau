@@ -1179,7 +1179,8 @@ footer ul li {
 .popup-modal-style {
   margin: auto;
   padding: 60px;
-  width: 400px;
+  width: 100%;
+  max-width: 650px;
   position: relative;
   text-align: center;
   background: #f6f6f7;
@@ -1345,8 +1346,8 @@ footer .top-logo:after {
 }
 
 .single-content__left-page-title {
-  background: linear-gradient(180deg, #ADE739 -19%, #5A9600 124%);
-  box-shadow: 2px 2px 30px #9CC744;
+  background: #3f9360;
+  box-shadow: inset 4px 4px 8px 0px #13562d;
   border-radius: 100px;
   font-style: normal;
   font-weight: 800;
@@ -1820,6 +1821,14 @@ footer .top-logo:after {
   position: absolute;
   bottom: 20px;
   left: 20px;
+}
+
+.consultation,.single-content__left .popup-modal {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  max-width: max-content;
+  text-align: center;
 }
 
 .consultation__block-form button,
@@ -2404,7 +2413,7 @@ footer .top-logo:after {
   padding: 45px;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 80px;
+  margin-top: 20px;
 }
 
 .calculator-form-data {
@@ -2418,22 +2427,22 @@ footer .top-logo:after {
 }
 
 .data-item input {
-  padding: 25px;
+  padding: 15px 13px;
   background: rgb(146 141 141);
   color: #FFFFFF;
   font-style: normal;
   font-weight: bold;
-  font-size: 25px;
-  line-height: 30px;
-  border-radius: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  border-radius: 10px;
 }
 
 .data-item input::placeholder {
   color: #FFFFFF;
   font-style: normal;
   font-weight: bold;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .data-item:last-child {
@@ -2448,8 +2457,8 @@ footer .top-logo:after {
   line-height: 30px;
   margin-bottom: 15px;
   background: rgb(146 141 141);
-  border-radius: 20px;
-  padding: 25px;
+  border-radius: 10px;
+  padding: 15px 13px;
   display: flex;
   max-height: 40px;
 }
@@ -2471,11 +2480,26 @@ footer .top-logo:after {
   right: 0;
 }
 
+.calculator-form-select select {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 50%;
+  background: rgb(146 141 141);
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.calculator-form-select select option:first-child {
+  display: none;
+}
+
 .calculator-form-submit input {
   border-radius: 100px;
   font-weight: 800;
-  font-size: 23px;
-  line-height: 31px;
+  font-size: 18px;
+  line-height: 22px;
   color: #FFFFFF;
   padding: 20px;
   margin-bottom: 0;
@@ -4756,6 +4780,10 @@ body .wood-arenda {
     width: 100%;
     margin-right: 0;
     margin-bottom: 10px;
+  }
+
+  .calculator-form-select select {
+    max-width: 100%;
   }
 
   .item-col-3,

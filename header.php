@@ -89,8 +89,25 @@ $term_url = get_query_var('term');
             <div class="row">
                 <div class="col-md-2">
                     <div class="top-text">
-                        <p><span>Офис и производство</span>ул. Передовая, 6/1<br/>г. Минск, 220070</p><br/>
-						<p><span>Шоурум</span>ТК Валерьяново<br/>ул. Логойская, 5а</p>
+                        <p>
+                            <span>Офис и производство</span>
+                            ул. Передовая, 6/1
+                            <br/>
+                            г. Минск, 220070
+                            <br/>
+                            Пн-пт 09.00-18.00
+                        </p>
+                        <br/>
+                        <p>
+                            <span>Шоурум</span>
+                            ТК Валерьяново
+                            <br/>
+                            ул. Логойская, 5а
+                            <br/>
+                            Вт-сб 09.30-17.30
+                        </p>
+
+
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -194,7 +211,7 @@ $term_url = get_query_var('term');
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/product-01.png">
                                     <div class="banner-sale">
                                     	<h4>Бани</h4>
-                                    	<span>от 5000 р.</span>
+                                    	<span>от 2999 р.</span>
                                     	<p>за 10 дней</p>
                                     </div>
                                     <a href="./categories/bani/" class="btn btn-green">Весь каталог</a>
@@ -203,7 +220,7 @@ $term_url = get_query_var('term');
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/2222.png">
                                     <div class="banner-sale">
                                     	<h4>Бани</h4>
-                                    	<span>от 5000 р.</span>
+                                    	<span>от 2999 р.</span>
                                     	<p>за 10 дней</p>
                                     </div>
                                     <a href="./categories/barbekyu/" class="btn btn-green">Весь каталог</a>
@@ -212,7 +229,7 @@ $term_url = get_query_var('term');
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/3333.png">
                                     <div class="banner-sale">
                                     	<h4>Бани</h4>
-                                    	<span>от 5000 р.</span>
+                                    	<span>от 2999 р.</span>
                                     	<p>за 10 дней</p>
                                     </div>
                                     <a href="./categories/barbekyu/" class="btn btn-green">Весь каталог</a>
@@ -221,7 +238,7 @@ $term_url = get_query_var('term');
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/4444.png">
                                     <div class="banner-sale">
                                     	<h4>Бани</h4>
-                                    	<span>от 5000 р.</span>
+                                    	<span>от 2999 р.</span>
                                     	<p>за 10 дней</p>
                                     </div>
                                     <a href="./categories/barbekyu/" class="btn btn-green">Весь каталог</a>

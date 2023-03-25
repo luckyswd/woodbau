@@ -286,16 +286,7 @@ if ($catId === 26) {
     </div>
 </section>
 <section class="calculator <?= $showClassCalc ?>">
-    <h2 style="text-align: center;">
-
-        <?php if (ICL_LANGUAGE_CODE == 'pl') {
-            echo 'ZŁOŻ ZAMÓWIENIE';
-        } elseif (ICL_LANGUAGE_CODE == 'ru') {
-            echo 'Cобери заказ';
-        } else {
-            echo '';
-        }; ?>
-    </h2>
+    <h2 style="text-align: center;">Собери баню и узнай цену</h2>
     <div class="container">
         <div class="calculator__block">
             <div class="calculator__block-left">
@@ -619,9 +610,7 @@ if ($catId === 26) {
         </div>
         <div class="calculator-desc">
             <h3>
-                <? if (ICL_LANGUAGE_CODE == 'pl') { ?>
-                    Dziękuję bardzo. Wypełnij poniższe pola, aby wypełnić ankietę
-                <? } ?>
+                Куда отправить стоимость бани ?
             </h3>
         </div>
         <div class="calculator__result"
