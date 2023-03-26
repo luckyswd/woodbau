@@ -1,0 +1,23 @@
+name: 🚀 Deploy website
+on:
+  push:
+    branches: [ "BLR" ]
+jobs:
+  deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📩 Get latest code
+        uses: actions/checkout@v3
+
+      - name: npm install && build
+        run:  npm install && gulp prod
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: 93.125.99.69
+          username: girobelb
+          password: ${{ secrets.FTP_PASSWORD_BLR }}
+          local-dir: ./
+          server-dir: "./woodbau.by/wp-content/themes/woodbau/"
