@@ -44,7 +44,7 @@ function wood_scripts_styles()
         $fileName = explode('/', $filePath);
         $fileName = end($fileName);
         $fileName = str_replace('.css', ' ', $fileName);
-        wp_register_style(trim($fileName),get_template_directory_uri() . $filePath, array(), '1.3.2', 'screen');
+        wp_register_style(trim($fileName),get_template_directory_uri() . $filePath, array(), getRandomVersion(), 'screen');
         wp_enqueue_style(trim($fileName));
     }
 
@@ -53,7 +53,7 @@ function wood_scripts_styles()
         $fileName = explode('/', $filePath);
         $fileName = end($fileName);
         $fileName = str_replace('.js', ' ', $fileName);
-        wp_enqueue_script(trim($fileName),get_template_directory_uri() . $filePath, array(), '1.1', true);
+        wp_enqueue_script(trim($fileName),get_template_directory_uri() . $filePath, array(), getRandomVersion(), true);
     }
 
     wp_enqueue_script('masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array(), '1.0', true);
@@ -429,3 +429,8 @@ function dequeueStyleAndScripts() {
 
 add_action( 'wp_head', 'dequeueStyleAndScripts', 9999 );
 add_action( 'wp_enqueue_scripts', 'dequeueStyleAndScripts', 9999 );
+
+function getRandomVersion(): string
+{
+    return sprintf('1.%s.%s', rand(1, 99), rand(1, 99));
+}

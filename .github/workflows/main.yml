@@ -1,0 +1,23 @@
+name: 🚀 Deploy website
+on:
+  push:
+    branches: [ "PL" ]
+jobs:
+  deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📩 Get latest code
+        uses: actions/checkout@v3
+
+      - name: npm install && build
+        run:  npm install && gulp prod
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: serwer2360948.home.pl
+          username: ${{ secrets.FTP_HOSTNAME_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: "./public/wp-content/themes/woodbau/"
