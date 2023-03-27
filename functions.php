@@ -397,7 +397,11 @@ if (function_exists('acf_add_options_page')) {
 function getHasFile(
     string $path
 ): string {
-    $fullPath = sprintf('%s/dist/%s', __DIR__, $path);
+    $fullPath = sprintf('%s/dist/%s', get_template_directory(), $path);
+
+    if (!file_exists($fullPath)) {
+        return rand(1,999);
+    }
 
     return hash_file('md5', $fullPath) ?? '';
 }
