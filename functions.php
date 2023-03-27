@@ -308,7 +308,7 @@ function wood_scripts_styles()
         $fileName = explode('/', $filePath);
         $fileName = end($fileName);
         $fileName = str_replace('.css', ' ', $fileName);
-        wp_register_style(trim($fileName),get_template_directory_uri() . $filePath, array(), getHasFile('css/style.min.css'), 'screen');
+        wp_register_style(trim($fileName),get_template_directory_uri() . $filePath, array(),1, 'screen');
         wp_enqueue_style(trim($fileName));
     }
 
@@ -317,7 +317,7 @@ function wood_scripts_styles()
         $fileName = explode('/', $filePath);
         $fileName = end($fileName);
         $fileName = str_replace('.js', ' ', $fileName);
-        wp_enqueue_script(trim($fileName),get_template_directory_uri() . $filePath, array(), getHasFile('js/build-min.js'), true);
+        wp_enqueue_script(trim($fileName),get_template_directory_uri() . $filePath, array(), 1, true);
     }
 
     wp_enqueue_script('masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array(), '1.0', true);
