@@ -1073,17 +1073,7 @@ footer ul li {
   margin-top: 24px;
 }
 
-#products .block-head h2 {
-  font-size: 48px;
-  line-height: 56px;
-}
-
-#about-product .block-head h2 {
-  font-size: 48px;
-  line-height: 56px;
-}
-
-#qestions .block-head h2 {
+.block-head h2 {
   font-size: 48px;
   line-height: 56px;
 }
@@ -1790,8 +1780,19 @@ footer .top-logo:after {
   font-weight: normal;
   font-size: 24px;
   line-height: 28px;
-  margin-bottom: 50px;
+  margin-bottom: 24px;
   text-align: center;
+}
+
+.consultation_btn {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.consultation_btn a {
+  width: max-content;
 }
 
 .consultation__block-form {
@@ -4920,17 +4921,7 @@ body .wood-arenda {
 }
 
 @media (max-width: 992px) {
-  #products .block-head h2 {
-    font-size: 32px;
-    line-height: 36px;
-  }
-
-  #about-product .block-head h2 {
-    font-size: 32px;
-    line-height: 36px;
-  }
-
-  #qestions .block-head h2 {
+  .block-head h2 {
     font-size: 32px;
     line-height: 36px;
   }

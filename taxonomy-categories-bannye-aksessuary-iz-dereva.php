@@ -3,18 +3,7 @@ get_header();
 $term_url = get_query_var('term');
 $term_id = get_queried_object()->term_id;
 ?>
-<!--Получение свойсв-->
-<?php //echo carbon_get_term_meta($term_id, 'code_category_name') ?>
-<!-- Вывод продукции -->
-<?php //$post_catalog = new WP_Query(array('tax_query' => array(array('taxonomy' => 'categories', 'field' => 'slug', 'terms' => $term_url)),'paged' => $paged)); //ищем по типу поста?>
-<?php //if ($post_catalog->have_posts()) : ?>
-<!--    --><?php //while ($post_catalog->have_posts()) : $post_catalog->the_post(); ?>
-<!--        --><?php //$values = get_post_meta(get_the_ID()); ?>
-<!--        --><?php //dump($values); ?>
-<!--        --><?php //wp_reset_query(); ?>
-<!--    --><?php //endwhile; ?><!----><?php //else: ?>
-<?php //endif; ?>
-<?php //wp_reset_query(); ?>
+
 <section id="about-product">
     <div class="texture-product"><img src="<?php echo carbon_get_term_meta($term_id, 'code_category_texture_1') ?>">
     </div>
@@ -22,13 +11,13 @@ $term_id = get_queried_object()->term_id;
         <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h3><?php if (ICL_LANGUAGE_CODE == 'pl') {
+                    <h2><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'Osobliwości';
                         } elseif (ICL_LANGUAGE_CODE == 'ru') {
                             echo 'Особенности';
                         } else {
                             echo 'Besonderheiten';
-                        }; ?></h3>
+                        }; ?></h2>
                     <span><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'Osobliwości';
                         } elseif (ICL_LANGUAGE_CODE == 'ru') {
@@ -83,20 +72,8 @@ $term_id = get_queried_object()->term_id;
         <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h3><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                            echo 'Akcesoria i meble';
-                        } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                            echo 'Аксессуары и мебель';
-                        } else {
-                            echo 'Zubehör und Möbel ';
-                        }; ?></h3>
-                    <span><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                            echo 'Katalog';
-                        } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                            echo 'Каталог';
-                        } else {
-                            echo 'Katalog';
-                        }; ?></span>
+                    <h2>Аксессуары и мебель</h2>
+                    <span>Каталог</span>
                 </div>
             </div>
         </div>
@@ -104,51 +81,21 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/001.jpg')"></div>
-                    <h4><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                            echo 'Zagłówek, oparcie';
-                        } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                            echo 'Подголовник, спинка';
-                        } else {
-                            echo 'Kopfstütze, Rückenlehne ';
-                        }; ?></h4>
-                    <a href="#modal-popup" class="btn btn-green popup-modal"><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                            echo 'Zamówić';
-                        } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                            echo 'Заказать';
-                        } else {
-                            echo 'Bestellen';
-                        }; ?></a>
+                    <h4>Подголовник, спинка</h4>
+                    <a href="#modal-popup" class="btn btn-green popup-modal">Заказать</a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/002.jpg')"></div>
-                    <h4><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                            echo 'Tabliczka<br> Dąb lakierowany, olcha lakierowana';
-                        } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                            echo 'Табличка <br>Дуб под лаком, ольха под лаком';
-                        } else {
-                            echo 'Tabelle <br>Eiche lackiert, Erle lackiert';
-                        }; ?></h4>
-                    <a href="#modal-popup" class="btn btn-green popup-modal"><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                            echo 'Zamówić';
-                        } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                            echo 'Заказать';
-                        } else {
-                            echo 'Bestellen';
-                        }; ?></a>
+                    <h4>Табличка <br>Дуб под лаком, ольха под лаком</h4>
+                    <a href="#modal-popup" class="btn btn-green popup-modal">Заказать</a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/003.jpg')"></div>
-                    <h4><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                            echo 'Zagłówek, podnóżek';
-                        } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                            echo 'Подголовник, подставка для ног';
-                        } else {
-                            echo 'Kopfstütze, Fußstütze';
-                        }; ?></h4>
+                    <h4>Подголовник, подставка для ног</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal"><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'Zamówić';
                         } elseif (ICL_LANGUAGE_CODE == 'ru') {
@@ -560,7 +507,7 @@ $term_id = get_queried_object()->term_id;
         <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h3><?php if (ICL_LANGUAGE_CODE == 'pl') {
+                    <h2><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'Wiadra prysznicowe 
                     ';
                         } elseif (ICL_LANGUAGE_CODE == 'ru') {
@@ -568,7 +515,7 @@ $term_id = get_queried_object()->term_id;
                         } else {
                             echo 'Eimer 
                     ';
-                        }; ?></h3>
+                        }; ?></h2>
                     <span><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'KATALOG';
                         } elseif (ICL_LANGUAGE_CODE == 'ru') {
@@ -721,14 +668,14 @@ $term_id = get_queried_object()->term_id;
         <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h3><?php if (ICL_LANGUAGE_CODE == 'pl') {
+                    <h2><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'Wiadro cebrzyk i parowce
                     ';
                         } elseif (ICL_LANGUAGE_CODE == 'ru') {
                             echo 'Шайки и запарники';
                         } else {
                             echo 'Sauna- und Quastkübel ';
-                        }; ?></h3>
+                        }; ?></h2>
                     <span><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'KATALOG
                     ';
@@ -955,13 +902,13 @@ $term_id = get_queried_object()->term_id;
         <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h3><?php if (ICL_LANGUAGE_CODE == 'pl') {
+                    <h2><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'Abażury dla Lampy';
                         } elseif (ICL_LANGUAGE_CODE == 'ru') {
                             echo 'Абажуры для светильников';
                         } else {
                             echo 'Lampenschirme für Leuchten';
-                        }; ?></h3>
+                        }; ?></h2>
                     <span><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'KATALOG';
                         } elseif (ICL_LANGUAGE_CODE == 'ru') {
@@ -1170,13 +1117,13 @@ $term_id = get_queried_object()->term_id;
         <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h3><?php if (ICL_LANGUAGE_CODE == 'pl') {
+                    <h2><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'Zrealizowane projekty';
                         } elseif (ICL_LANGUAGE_CODE == 'ru') {
                             echo 'Реализованные проекты';
                         } else {
                             echo 'Fertige Projekte';
-                        }; ?></h3>
+                        }; ?></h2>
                     <span><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'Zrealizowane projekty';
                         } elseif (ICL_LANGUAGE_CODE == 'ru') {
@@ -1279,13 +1226,13 @@ $term_id = get_queried_object()->term_id;
         <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h3><?php if (ICL_LANGUAGE_CODE == 'pl') {
+                    <h2><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'Dlaczego my?';
                         } elseif (ICL_LANGUAGE_CODE == 'ru') {
                             echo 'Почему мы?';
                         } else {
                             echo 'Warum wir?';
-                        }; ?></h3>
+                        }; ?></h2>
                     <span><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'Dlaczego my?';
                         } elseif (ICL_LANGUAGE_CODE == 'ru') {
@@ -1503,13 +1450,13 @@ $term_id = get_queried_object()->term_id;
         <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h3><?php if (ICL_LANGUAGE_CODE == 'pl') {
+                    <h2><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'Może jesteś zainteresowany?';
                         } elseif (ICL_LANGUAGE_CODE == 'ru') {
                             echo 'Может вас заинтересует?';
                         } else {
                             echo 'Vielleicht interessieren Sie sich für?';
-                        }; ?></h3>
+                        }; ?></h2>
                     <span><?php if (ICL_LANGUAGE_CODE == 'pl') {
                             echo 'Katalog';
                         } elseif (ICL_LANGUAGE_CODE == 'ru') {
