@@ -63,7 +63,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/001.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/001.jpg.webp')"></div>
                     <h4>Zagłówek, oparcie</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -71,7 +71,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/002.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/002.jpg.webp')"></div>
                     <h4>Tabliczka<br> Dąb lakierowany, olcha lakierowana</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -79,7 +79,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/003.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/003.jpg.webp')"></div>
                     <h4>Zagłówek, podnóżek</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -87,7 +87,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/004.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/004.jpg.webp')"></div>
                     <h4>Zagłówek anatomiczny, olcha, zebra</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -95,7 +95,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/005.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/005.jpg.webp')"></div>
                     <h4> PL </span></h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -103,7 +103,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/007.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/007.jpg.webp')"></div>
                     <h4>Wieszak z półką na 6 haczyków</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -111,7 +111,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/008.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/008.jpg.webp')"></div>
                     <h4>Wieszak z półką na 4 haczyków</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -119,7 +119,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/009.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/009.jpg.webp')"></div>
                     <h4>Prosty wieszak na ubrania na 7/6/4/3 sztuki</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -127,7 +127,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/010.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/010.jpg.webp')"></div>
                     <h4>Wieszak na ubrania typu wachlarzowego</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -135,7 +135,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/011.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/011.jpg.webp')"></div>
                     <h4>Wieszak z obrotowymi hakami na 6 i 4 haczyki.</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -143,7 +143,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/012.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/012.jpg.webp')"></div>
                     <h4>Żaluzja wentylacyjna, żaluzje olcha</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -151,7 +151,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/013.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/013.jpg.webp')"></div>
                     <h4>Żaluzja wentylacyjna, mała olcha</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -159,7 +159,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/014.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/014.jpg.webp')"></div>
                     <h4>Mata do siedzenia, olcha</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -167,7 +167,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">Zamówić
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/015.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/015.jpg.webp')"></div>
                     <h4>Mata do leżania, 2/1,5 m olcha</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -175,7 +175,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/016.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/016.jpg.webp')"></div>
                     <h4>Półka prosta</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -183,7 +183,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/017.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/017.jpg.webp')"></div>
                     <h4>Półka z lustrem</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -191,7 +191,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/018.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/018.jpg.webp')"></div>
                     <h4> Półka sześciokątna<br>Duża/średnia/mała</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -199,7 +199,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/019.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/019.jpg.webp')"></div>
                     <h4>Drzwi
                         <br>olcha - lipa: 1,9x0,7m, 1,8x0,7m
                         <br>olcha: 2 x 0,7m, 1,9 x 0,8m,
@@ -211,7 +211,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/020.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/020.jpg.webp')"></div>
                     <h4>Drzwi w kolorze szczotkowanego brązu z pionowym przeszkleniem
                         <br>olcha-lipa: 1,9x0,7m, 1,8x0,7m
                         <br>olcha: 2x0,7m, 1,9x0,7m, 1,8x0,7m, 1,7x0,7m
@@ -222,7 +222,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/021.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/021.jpg.webp')"></div>
                     <h4>Okno fińskie
                         <br>Szyba przezroczysta 30x30, 30x40, 40x40, 40x50, 50x50, 50x60, 60x60</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
@@ -231,7 +231,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/022.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/022.jpg.webp')"></div>
                     <h4>Mata podłogowa, olcha
                         <br>1,2х0,5m 1х0,5m 0,8х0,5m
                     </h4>
@@ -241,7 +241,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/023.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/023.jpg.webp')"></div>
                     <h4>Okno klasyczne z okładziną</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -260,7 +260,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/024.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/024.jpg.webp')"></div>
                     <h4>Wiadro prysznicowe olcha
                         <br>12/16/20 l, wkładka z tworzywa sztucznego
                         <br>16/20 l wkładka stal nierdzewna
@@ -271,7 +271,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/025.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/025.jpg.webp')"></div>
                     <h4>Wiadro prysznicowe ciemny dąb
                         <br>16/20 l, wkładka z tworzywa sztucznego
                         <br>12/16/20 l, wkładka ze stali nierdzewnej
@@ -282,7 +282,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/026.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/026.jpg.webp')"></div>
                     <h4>Wiadro prysznicowe, olcha lipa
                         <br>16/20 l, wkładka z tworzywa sztucznego
                         <br>16 l, wkładka ze stali nierdzewnej
@@ -293,7 +293,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/027.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/027.jpg.webp')"></div>
                     <h4>Wiadro prysznicowe z jasnego dębu
                         <br>16 l, wkładka ze stali nierdzewnej
                         <br>12/16/20 l, wkładka z tworzywa sztucznego
@@ -304,7 +304,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/028.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/028.jpg.webp')"></div>
                     <h4>Wiadro prysznicowe  Zebra, Dąb
                         <br>16 l,  wkładka ze stali nierdzewnej/ wkładka z tworzywa sztucznego
                         <br>Wiadro cebrzyk i parowce
@@ -326,7 +326,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/030.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/030.jpg.webp')"></div>
                     <h4>Chochla, olcha
                         <br>150 ml
                     </h4>
@@ -336,7 +336,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/031.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/031.jpg.webp')"></div>
                     <h4>Wiadro cebrzyk , olcha
                         <br>3/5/9l wkładka stal nierdzewna
                         <br>4/8/12l Wkładka z tworzywa sztucznego
@@ -347,7 +347,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/032.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/032.jpg.webp')"></div>
                     <h4>Wiadro cebrzyk , olcha/lipa zebra
                         <br>3l Wkładka stal nierdzewna
                         <br>4l Wkładka tworzywo sztuczne
@@ -358,7 +358,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/033.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/033.jpg.webp')"></div>
                     <h4>Wiadro cebrzyk, olcha Uchwyt - lina
                         <br>5l wkładka stal nierdzewna
                         <br>12l Wkład z tworzywa sztucznego
@@ -369,7 +369,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/034.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/034.jpg.webp')"></div>
                     <h4>Pokrywa do parowca olcha
                         <br>12/16 l, wkładka ze stali nierdzewnej/tworzywa sztucznego
                     </h4>
@@ -379,7 +379,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/035.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/035.jpg.webp')"></div>
                     <h4>Parowiec  olcha, uchwyt z liny
                         <br>20l Wkładka tworzywo sztuczne
                     </h4>
@@ -389,7 +389,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/036.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/036.jpg.webp')"></div>
                     <h4>Pokrywa do parowca Ciemny dąb
                         <br>16/20 l wkładka z tworzywa sztucznego
                         <br>12/16/20 l wkładka stal nierdzewna
@@ -400,7 +400,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/037.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/037.jpg.webp')"></div>
                     <h4>Parownik ciemny dąb
                         <br>16 / 20 l, wkładka z tworzywa sztucznego
                         <br>12 / 16 / 20 L, wkładka ze stali nierdzewnej
@@ -422,7 +422,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/040.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/040.jpg.webp')"></div>
                     <h4>Abażur, olcha
                         <br>Wąskie listwy
                     </h4>
@@ -432,7 +432,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/041.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/041.jpg.webp')"></div>
                     <h4>Abażur, zebra
                         <br>Wąskie listwy
                     </h4>
@@ -442,7 +442,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/042.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/042.jpg.webp')"></div>
                     <h4>Abażur, zebra
                         <br>Szerokie listwy
                     </h4>
@@ -452,7 +452,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/043.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/043.jpg.webp')"></div>
                     <h4>Abażur, olcha
                         <br>3 szyby
                     </h4>
@@ -462,7 +462,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/044.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/044.jpg.webp')"></div>
                     <h4>Abażur z solą himalajską na 3/5/6 płytek</h4>
                     <a href="#modal-popup" class="btn btn-green popup-modal">Zamówić</a>
                 </div>
@@ -470,7 +470,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/045.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/045.jpg.webp')"></div>
                     <h4>Abażur, olcha
                         <br>Prosty
                     </h4>
@@ -480,7 +480,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/046.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/046.jpg.webp')"></div>
                     <h4>Abażur, olcha
                         <br>Finlandia
                     </h4>
@@ -490,7 +490,7 @@ $term_id = get_queried_object()->term_id;
             <div class="col-md-3">
                 <div class="product-item">
                     <div class="product-item-img"
-                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/047.jpg')"></div>
+                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/aksessyary/047.jpg.webp')"></div>
                     <h4>Abażur
                         <br>z solą himalajską na płytkach 6/10
                     </h4>
