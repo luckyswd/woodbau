@@ -1,10 +1,10 @@
 @import "../../css/partials/variables";
 
 .exhibition-module {
-  margin: 100px 0;
+  margin: 6px 0;
 
   @include _992 {
-    margin: 60px 0;
+    margin: 40px 0;
   }
 
   .exhibition-block {
