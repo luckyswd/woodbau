@@ -104,7 +104,7 @@ $slider_gallery = get_field('slider_gallery', $page_id);
         </div>
     </section>
 
-    <?php require_once 'modules/category/category.php' ?>
+    <?php require_once 'partials/category.php' ?>
 
     <section class="consultation" style="background-image: url(<?php echo $background_image ?>)">
         <div class="consultation__block">
@@ -125,6 +125,8 @@ $slider_gallery = get_field('slider_gallery', $page_id);
             </div>
         </div>
     </section>
+
+    <?php RenderBlock::renderBlockByName('acf/exhibition'); ?>
 
     <section id="project">
         <div class="container">

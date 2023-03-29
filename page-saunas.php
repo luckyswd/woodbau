@@ -93,7 +93,6 @@ $term_id = get_queried_object()->term_id;
 
 <?php RenderBlock::renderBlockByName('acf/own-production'); ?>
 <?php RenderBlock::renderBlockByName('acf/banner'); ?>
-<?php RenderBlock::renderBlockByName('acf/exhibition'); ?>
 
 <?php
 get_footer();

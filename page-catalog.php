@@ -1,7 +1,7 @@
 <?php
 get_header();
 
-require_once 'modules/category/category.php';
+require_once 'partials/category.php';
 ?>
 
 <?php
