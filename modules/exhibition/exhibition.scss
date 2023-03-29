@@ -1,11 +1,7 @@
 @import "../../css/partials/variables";
 
 .exhibition-module {
-  margin: 6px 0;
-
-  @include _992 {
-    margin: 40px 0;
-  }
+  margin: 40px 0;
 
   .exhibition-block {
     display: grid;
