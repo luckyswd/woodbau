@@ -207,6 +207,7 @@ header {
 }
 
 .top-soc a img {
+  width: 32px;
   opacity: .7;
   transition: .2s ease-in-out;
 }
