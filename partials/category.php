@@ -16,7 +16,7 @@
                 <div class="category-item">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/category-01.png">
                     <div class="category-text">
-                        <h4>Бани под заказ</h4>
+                        <h4>Бани</h4>
                         <a href="<?php echo home_url(); ?>/catalog/banya-bochka">Баня бочка</a>
                         <a href="<?php echo home_url(); ?>/catalog/banya-kvadro">Баня-квадро</a>
                         <a href="<?php echo home_url(); ?>/catalog/banya-ovalnaya">Баня овальная</a>
@@ -67,7 +67,7 @@
                 <div class="category-item">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/category-11.png">
                     <div class="category-text">
-                        <h4>Аксессуары для сада</h4>
+                        <h4>Аксессуары</h4>
                         <a href="<?php echo home_url(); ?>/categories/bannye-aksessuary-iz-dereva/#mebel">Аксессуары и мебель</a>
                         <a href="<?php echo home_url(); ?>/categories/bannye-aksessuary-iz-dereva/#vedra">Обливные ведра</a>
                         <a href="<?php echo home_url(); ?>/categories/bannye-aksessuary-iz-dereva/#shaiki">Шайки и запарники</a>
