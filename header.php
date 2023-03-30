@@ -133,12 +133,12 @@ $term_url = get_query_var('term');
                 </div>
                 <div class="col-md-2">
 					<div class="top-soc">
-                        <a href="https://www.facebook.com/WoodBau-Belarus-108393871882270" target="_blank">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-facebook.png"></a>
+                        <a href="https://www.facebook.com/Woodbauby/" target="_blank">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-facebook-new.svg"></a>
                         <a href="https://www.instagram.com/woodbaubelarus/" target="_blank">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-instagram.png"></a>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-instagram-new.svg"></a>
                         <a href="tel:+375296955788" target="_blank">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-whatsapp.png"></a>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-whatsapp-new.svg"></a>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -189,7 +189,7 @@ $term_url = get_query_var('term');
                                 <h1><?php if (ICL_LANGUAGE_CODE == 'pl') {
                                     echo 'Mamy wszystko do Twojego domu, wsi <br>i ogrodu';
                                   } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                    echo 'У нас есть все <br>для вашего дома, <br>загородного участка <br>и сада';
+                                    echo 'Производим Бани по немецким стандартам <br>Рассрочка от компании 5 мес.';
                                   } else {
                                     echo 'Wir haben alles für Ihr Zuhause, Ihre Landschaft und Ihren Garten';
                                   }; ?></h1>
@@ -208,40 +208,31 @@ $term_url = get_query_var('term');
                         <div class="col-md-5">
                             <div class="banner-slider owl-carousel owl-theme" id="owl-banner-slider">
                                 <div class="banner-slider-item">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/product-01.png">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/product-01-new.png">
                                     <div class="banner-sale">
                                     	<h4>Бани</h4>
                                     	<span>от 2999 р.</span>
                                     	<p>за 10 дней</p>
                                     </div>
-                                    <a href="./categories/bani/" class="btn btn-green">Весь каталог</a>
+                                    <a href="/saunas/" class="btn btn-green">Весь каталог</a>
                                 </div>
                                 <div class="banner-slider-item">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/2222.png">
                                     <div class="banner-sale">
-                                    	<h4>Бани</h4>
-                                    	<span>от 2999 р.</span>
+                                    	<h4>Садовые домики</h4>
+                                    	<span>от 3788 р.</span>
                                     	<p>за 10 дней</p>
                                     </div>
-                                    <a href="./categories/barbekyu/" class="btn btn-green">Весь каталог</a>
+                                    <a href="/categories/postrojki-iz-brusa-ru/" class="btn btn-green">Весь каталог</a>
                                 </div>
 								<div class="banner-slider-item">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/3333.png">
                                     <div class="banner-sale">
-                                    	<h4>Бани</h4>
-                                    	<span>от 2999 р.</span>
+                                    	<h4>Аксессуары</h4>
+                                    	<!-- <span>от 50 р.</span> -->
                                     	<p>за 10 дней</p>
                                     </div>
-                                    <a href="./categories/barbekyu/" class="btn btn-green">Весь каталог</a>
-                                </div>
-								<div class="banner-slider-item">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/4444.png">
-                                    <div class="banner-sale">
-                                    	<h4>Бани</h4>
-                                    	<span>от 2999 р.</span>
-                                    	<p>за 10 дней</p>
-                                    </div>
-                                    <a href="./categories/barbekyu/" class="btn btn-green">Весь каталог</a>
+                                    <a href="/categories/bannye-aksessuary-iz-dereva/" class="btn btn-green">Весь каталог</a>
                                 </div>
                             </div>
                             <script>
