@@ -1786,6 +1786,7 @@ footer .top-logo:after {
 }
 
 .consultation_btn {
+  margin-top: 20px;
   display: flex;
   gap: 16px;
   align-items: center;

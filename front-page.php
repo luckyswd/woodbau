@@ -111,19 +111,23 @@ $slider_gallery = get_field('slider_gallery', $page_id);
         <div class="consultation__block">
             <?php if ($title_consultation) : ?>
                 <div class="consultation__block-title">
-                    <?php echo $title_consultation ?>
+                    <?= $title_consultation; ?>
                 </div>
             <?php endif; ?>
 
             <?php if ($description_consultation) : ?>
                 <div class="consultation__block-description">
-                    <?php echo $description_consultation ?>
+                    <?= $description_consultation; ?>
                 </div>
             <?php endif; ?>
-            <?= $form_consultation; ?>
+
+            <?php if ($form_consultation) : ?>
+                <?= $form_consultation; ?>
+            <?php endif; ?>
+
             <div class="consultation_btn">
                 <a href="/catalog/banya-bochka/" class="btn btn-green">Собрать баню</a>
-                <a href="#modal-popup" class="popup-modal btn btn-green">Заказать обратный звонок</a>
+                <!-- <a href="#modal-popup" class="popup-modal btn btn-green">Заказать обратный звонок</a> -->
             </div>
         </div>
     </section>
