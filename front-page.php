@@ -139,20 +139,8 @@ $slider_gallery = get_field('slider_gallery', $page_id);
             <div class="row">
                 <div class="col-md-12">
                     <div class="block-head">
-                        <h3><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'Zrealizowane projekty';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'Реализованные проекты';
-                            } else {
-                                echo 'Fertige Projekte';
-                            }; ?></h3>
-                        <span><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'Zrealizowane projekty';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'Реализованные проекты';
-                            } else {
-                                echo 'Fertige Projekte';
-                            }; ?></span>
+                        <h3>Реализованные проекты</h3>
+                        <span>Реализованные проекты</span>
                     </div>
                 </div>
             </div>
@@ -168,31 +156,12 @@ $slider_gallery = get_field('slider_gallery', $page_id);
                                     <h4><?php the_title(); ?></h4>
                                     <p><?php $str = mb_strimwidth($values['_code_portfolio_description']['0'], 0, 100, "...");
                                         echo $str; ?></p>
-                                    <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-clock.png"><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                            echo 'czas produkcji 3-4 tygodnie';
-                                        } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                            echo 'сроки производства 3-4 недели';
-                                        } else {
-                                            echo 'Produktionszeit 3-4 Wochen';
-                                        }; ?></span>
-                                    <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-tag.png"><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                            echo 'na prośbę';
-                                        } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                            echo 'по запросу';
-                                        } else {
-                                            echo 'auf Anfrage';
-                                        }; ?></span>
+                                    <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-clock.png">сроки производства 3-4 недели</span>
+                                    <span><img src="<?php echo get_template_directory_uri(); ?>/images/icon-tag.png">по запросу</span>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <a href="<?php $url = get_permalink($post);
-                                            echo $url; ?>" class="btn btn-green"><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                                    echo 'Wyglądać';
-                                                } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                                    echo 'Посмотреть';
-                                                } else {
-                                                    echo 'Suchen';
-                                                }; ?>
-                                            </a>
+                                            echo $url; ?>" class="btn btn-green">Посмотреть</a>
                                         </div>
                                     </div>
                                 </div>
@@ -243,20 +212,8 @@ $slider_gallery = get_field('slider_gallery', $page_id);
             <div class="row">
                 <div class="col-md-12">
                     <div class="block-head">
-                        <h3><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'Dlaczego my?';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'Почему мы?';
-                            } else {
-                                echo 'Warum wir?';
-                            }; ?></h3>
-                        <span><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'Dlaczego my?';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'Почему мы?';
-                            } else {
-                                echo 'Warum wir?';
-                            }; ?></span>
+                        <h3>Почему мы?</h3>
+                        <span>Почему мы?</span>
                     </div>
                 </div>
             </div>
@@ -264,157 +221,49 @@ $slider_gallery = get_field('slider_gallery', $page_id);
                 <div class="col-md-4">
                     <div class="why-item">
                         <span>1</span>
-                        <h4><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'Stwórzmy';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'Создадим';
-                            } else {
-                                echo 'Lass uns erstellen';
-                            }; ?></h4>
-                        <h5><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'wyjątkowy projekt dla Ciebie';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'уникальный проект для вас';
-                            } else {
-                                echo 'ein einzigartiges Projekt für dich';
-                            }; ?></h5>
-                        <p><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'Architekci, inżynierowie, projektanci i budowniczowie współpracują z nami od 10 lat';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'С нами 10 лет работают архитекторы, инженеры, дизайнеры и строители';
-                            } else {
-                                echo 'Alle Produktionsschritte, von der Planung und Design bis zum Saunaaufbau, werden direkt vom Hersteller abgewickelt, so dass Sie die Ware in kürzester Zeit und in bester Qualität erhalten';
-                            }; ?></p>
+                        <h4>Создадим</h4>
+                        <h5>уникальный проект для вас</h5>
+                        <p>С нами 10 лет работают архитекторы, инженеры, дизайнеры и строители</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="why-item">
                         <span>2</span>
-                        <h4><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'Wykonajmy!';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'Выполним';
-                            } else {
-                                echo 'LASS UNS LIEFERN';
-                            }; ?></h4>
-                        <h5><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'zrobimy to w jak najkrótszym czasie';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'выполним в самые короткие сроки';
-                            } else {
-                                echo 'Notwendige Ausrüstung';
-                            }; ?></h5>
-                        <p><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'Od projektu i projektu po budowę obiektu wszystkie etapy produkcji realizowane są bezpośrednio przez samego producenta, co pozwala na otrzymanie towaru w możliwie najkrótszym czasie i w najlepszej jakości';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'От дизайна и проектирования до возведения объекта все этапы производства выполняются непосредственно самим призводителем, что позволяет вам получить товар в кротчайшие сроки и наилучшим качеством';
-                            } else {
-                                echo 'Optimales Preis-Leistung- Verhältnis ohne Zwischenhändler, nur Direktlieferungen ab Werk';
-                            }; ?></p>
+                        <h4>Выполним</h4>
+                        <h5>выполним в самые короткие сроки</h5>
+                        <p>От дизайна и проектирования до возведения объекта все этапы производства выполняются непосредственно самим призводителем, что позволяет вам получить товар в кротчайшие сроки и наилучшим качеством</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="why-item">
                         <span>3</span>
-                        <h4><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'Dostarczymy';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'Доставим';
-                            } else {
-                                echo 'Wir werden liefern';
-                            }; ?></h4>
-                        <h5><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'niezbędny sprzęt';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'необходимое оборудование';
-                            } else {
-                                echo 'notwendige Ausrüstung';
-                            }; ?></h5>
-                        <p><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'Optymalny stosunek ceny do jakości bez pośredników, tylko bezpośrednie dostawy z fabryk';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'Оптимальное соотношение цены и качества без посредников, только прямые поставки с заводов';
-                            } else {
-                                echo 'Optimales Verhältnis von Preis und Qualität ohne Zwischenhändler, nur Direktlieferungen ab Werk';
-                            }; ?></p>
+                        <h4>Доставим</h4>
+                        <h5>необходимое оборудование</h5>
+                        <p>Оптимальное соотношение цены и качества без посредников, только прямые поставки с заводов</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="why-item">
                         <span>4</span>
-                        <h4><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'Połączmy się';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'Подключим';
-                            } else {
-                                echo 'Lass uns verbinden';
-                            }; ?></h4>
-                        <h5><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'i skonfigurować całą komunikację';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'и настроим все коммуникации';
-                            } else {
-                                echo 'Wir richten die gesamte Kommunikation ein.';
-                            }; ?></h5>
-                        <p><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'Wszystkie przedmioty przekazujemy na czas, całkowicie gotowe do pracy, udzielamy instrukcji obsługi';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'Все объекты сдаем точно в срок полностью готовыми к работе, производим инструктаж по эксплуатации';
-                            } else {
-                                echo 'Wir übergeben alle Objekte just in time, komplett einsatzbereit, geben Einweisung in die Bedienung.';
-                            }; ?></p>
+                        <h4>Подключим</h4>
+                        <h5>и настроим все коммуникации</h5>
+                        <p>Все объекты сдаем точно в срок полностью готовыми к работе, производим инструктаж по эксплуатации</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="why-item">
                         <span>5</span>
-                        <h4><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'Katalog';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'Каталог';
-                            } else {
-                                echo 'Katalog';
-                            }; ?></h4>
-                        <h5><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'szeroka gama projektów';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'Большой выбор проектов';
-                            } else {
-                                echo 'vielfältige Projekte';
-                            }; ?></h5>
-                        <p><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'Duży wybór gotowych projektów. Możemy również opracować dla Ciebie indywidualny projekt';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'Большой выбор готовых проектов. Также можем разработать для вас индивидуальный проект';
-                            } else {
-                                echo 'Große Auswahl an fertigen Projekten. Wir können auch ein individuelles Projekt für Sie entwickeln';
-                            }; ?></p>
+                        <h4>Каталог</h4>
+                        <h5>Большой выбор проектов</h5>
+                        <p>Большой выбор готовых проектов. Также можем разработать для вас индивидуальный проект</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="why-item">
                         <span>6</span>
-                        <h4><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'damy gwarancje';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'дадим гарантии';
-                            } else {
-                                echo 'WIR GEBEN GARANTIEN';
-                            }; ?></h4>
-                        <h5><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'wyjątkowy projekt dla Ciebie';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'уникальный проект для вас';
-                            } else {
-                                echo 'Ein einzigartiges Projekt für Sie! ';
-                            }; ?></h5>
-                        <p><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                echo 'wyjątkowy projekt dla Ciebie Z nami od 10 lat współpracujemy z architektami, inżynierami, projektantami i budowniczymi';
-                            } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                echo 'С нами 10 лет работают архитекторы, инженеры, дизайнеры и строители';
-                            } else {
-                                echo 'Wir arbeiten seit 10 Jahren mit Architekten, Ingenieuren, Designern und Bauherren zusammen';
-                            }; ?></p>
+                        <h4>дадим гарантии</h4>
+                        <h5>уникальный проект для вас</h5>
+                        <p>С нами 10 лет работают архитекторы, инженеры, дизайнеры и строители</p>
                     </div>
                 </div>
             </div>
