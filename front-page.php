@@ -92,7 +92,7 @@ $slider_gallery = get_field('slider_gallery', $page_id);
                                data-fancybox="gallery"
                                data-caption="<?= $slide['description']; ?>">
                                 <picture>
-                                    <img loading="lazy" src="<?= $slide['sizes']['medium']; ?>" alt="slide">
+                                    <img loading="lazy" src="<?= $slide['url']; ?>" alt="slide">
                                 </picture>
                             </a>
                         </div>

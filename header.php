@@ -186,13 +186,7 @@ $term_url = get_query_var('term');
                     <div class="row">
                         <div class="col-md-7">
                             <div class="banner-text">
-                                <h1><?php if (ICL_LANGUAGE_CODE == 'pl') {
-                                    echo 'Mamy wszystko do Twojego domu, wsi <br>i ogrodu';
-                                  } elseif (ICL_LANGUAGE_CODE == 'ru') {
-                                    echo 'Производим Бани по немецким стандартам <br>Рассрочка от компании 5 мес.';
-                                  } else {
-                                    echo 'Wir haben alles für Ihr Zuhause, Ihre Landschaft und Ihren Garten';
-                                  }; ?></h1>
+                                <h1>Производим Бани по немецким стандартам <br>Рассрочка от компании <br>5 мес.</h1>
                             </div>
                             <div class="banner-ade">
                                 <div class="row">
