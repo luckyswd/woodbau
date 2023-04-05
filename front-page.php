@@ -11,6 +11,7 @@ $procedure_order = get_field('procedure_order', $page_id);
 $button_name = get_field('button_name', $page_id);
 
 $title_consultation = get_field('title_consultation', $page_id);
+$form_consultation = get_field('form', $page_id);
 $description_consultation = get_field('description_consultation', $page_id);
 $background_image = get_field('background_image', $page_id);
 $slider_gallery = get_field('slider_gallery', $page_id);
@@ -119,6 +120,7 @@ $slider_gallery = get_field('slider_gallery', $page_id);
                     <?php echo $description_consultation ?>
                 </div>
             <?php endif; ?>
+            <?= $form_consultation; ?>
             <div class="consultation_btn">
                 <a href="/catalog/banya-bochka/" class="btn btn-green">Собрать баню</a>
                 <a href="#modal-popup" class="popup-modal btn btn-green">Заказать обратный звонок</a>
