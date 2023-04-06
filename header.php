@@ -223,7 +223,7 @@ $term_url = get_query_var('term');
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/header/aksessuary-kacheli.png">
                                     <div class="banner-sale">
                                     	<h4>Аксессуары</h4>
-                                    	<!-- <span>от 50 р.</span> -->
+                                    	<span>от 120 р.</span>
                                     	<p>за 10 дней</p>
                                     </div>
                                     <a href="/categories/bannye-aksessuary-iz-dereva/" class="btn btn-green">Весь каталог</a>
