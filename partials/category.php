@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="category-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-01.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/banya.png">
                     <div class="category-text">
                         <h4>Бани</h4>
                         <a href="<?php echo home_url(); ?>/catalog/banya-bochka">Баня бочка</a>
@@ -52,7 +52,7 @@
 <!--            </div>-->
             <div class="col-md-4">
                 <div class="category-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-03.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/sadovyi-domik.png">
                     <div class="category-text">
                         <h4>Постройки из минибруса</h4>
                         <a href="<?php echo home_url(); ?>/categories/postrojki-iz-brusa/">Домики</a>
@@ -65,7 +65,7 @@
             </div>
             <div class="col-md-4">
                 <div class="category-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/category-11.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/aksessuary-stul.png">
                     <div class="category-text">
                         <h4>Аксессуары</h4>
                         <a href="<?php echo home_url(); ?>/categories/bannye-aksessuary-iz-dereva/#mebel">Аксессуары и мебель</a>
