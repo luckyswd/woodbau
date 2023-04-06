@@ -28,7 +28,7 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/swiper.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?disabledCache=<?= rand(0,99) ?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?v=1.2">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css?v=1.1">
 	
 	<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
