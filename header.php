@@ -220,7 +220,7 @@ $term_url = get_query_var('term');
                                     <a href="/categories/postrojki-iz-brusa-ru/" class="btn btn-green">Весь каталог</a>
                                 </div>
 								<div class="banner-slider-item">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/header/aksessuary-stul.png">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/header/aksessuary-kacheli.png">
                                     <div class="banner-sale">
                                     	<h4>Аксессуары</h4>
                                     	<!-- <span>от 50 р.</span> -->
