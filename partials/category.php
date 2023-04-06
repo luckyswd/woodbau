@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12">
                 <div class="category-item">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/banya.png">
                     <div class="category-text">
@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-<!--            <div class="col-md-4">-->
+<!--            <div class="col-lg-4 col-md-12">-->
 <!--                <div class="category-item">-->
 <!--                    <img src="--><?php //echo get_template_directory_uri(); ?><!--/images/category-04.png">-->
 <!--                    <div class="category-text">-->
@@ -39,7 +39,7 @@
 <!--                </div>-->
 <!--            </div>-->
 
-<!--            <div class="col-md-4">-->
+<!--            <div class="col-lg-4 col-md-12">-->
 <!--                <div class="category-item">-->
 <!--                    <img src="--><?php //echo get_template_directory_uri(); ?><!--/images/category-05.png">-->
 <!--                    <div class="category-text">-->
@@ -50,7 +50,7 @@
 <!--                    </div>-->
 <!--                </div>-->
 <!--            </div>-->
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12">
                 <div class="category-item">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/sadovyi-domik.png">
                     <div class="category-text">
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12">
                 <div class="category-item">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/aksessuary-stul.png">
                     <div class="category-text">
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-<!--            <div class="col-md-4">-->
+<!--            <div class="col-lg-4 col-md-12">-->
 <!--                <div class="category-item">-->
 <!--                    <img src="--><?php //echo get_template_directory_uri(); ?><!--/images/category-10.png">-->
 <!--                    <div class="category-text">-->
