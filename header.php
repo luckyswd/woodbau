@@ -27,7 +27,7 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/fancybox.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/swiper.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?disabledCache=<?= rand(0,99) ?>">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?v=1.1">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?v=1.2">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css">
 	
 	<!-- Google Tag Manager -->
