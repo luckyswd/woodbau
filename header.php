@@ -211,7 +211,7 @@ $term_url = get_query_var('term');
                                     <a href="/saunas/" class="btn btn-green">Весь каталог</a>
                                 </div>
                                 <div class="banner-slider-item">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/header/sadovyi-domik.png">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/sadovyi-domik.png">
                                     <div class="banner-sale">
                                     	<h4>Садовые домики</h4>
                                     	<span>от 3788 р.</span>
@@ -220,7 +220,7 @@ $term_url = get_query_var('term');
                                     <a href="/categories/postrojki-iz-brusa-ru/" class="btn btn-green">Весь каталог</a>
                                 </div>
 								<div class="banner-slider-item">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/header/aksessuary-kacheli.png">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/images/aksessuary-kacheli.png">
                                     <div class="banner-sale">
                                     	<h4>Аксессуары</h4>
                                     	<span>от 120 р.</span>
