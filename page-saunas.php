@@ -4,15 +4,13 @@ $term_url = get_query_var('term');
 $term_id = get_queried_object()->term_id;
 ?>
 
-<?php RenderBlock::renderBlockByName('acf/catalog-products'); ?>
-
 <section id="products">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="block-head">
-                    <h2>Каталог</h2>
-                    <span>Каталог</span>
+                    <h2>Конструктор</h2>
+                    <span>Конструктор</span>
                 </div>
             </div>
         </div>
@@ -43,6 +41,9 @@ $term_id = get_queried_object()->term_id;
         </div>
     </div>
 </section>
+
+<?php RenderBlock::renderBlockByName('acf/catalog-products'); ?>
+
 <section id="about-product">
     <div class="container">
         <div class="row">

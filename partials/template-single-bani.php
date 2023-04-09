@@ -98,7 +98,7 @@ $additionalPhotos = get_field('additional_photos');
                     <?php endif; ?>
                 </div>
                 <div class="slider-info__bottom-form">
-                    <h4>Оформить заказ</h4>
+                    <h4>Получить прайс лист</h4>
                     <?php echo do_shortcode('[contact-form-7 id="3252" title="Order form RU"]'); ?>
                 </div>
             </div>

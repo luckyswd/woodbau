@@ -171,7 +171,22 @@ if ($catId === 26) {
                                     </div>
                                 <?php endif; ?>
                             <?php endforeach; ?>
-                            <a style="width: max-content; margin-top: 20px" href="#modal-popup" class="btn btn-green popup-modal">Записаться на консультацию</a>
+                            <a style="width: max-content; margin-top: 20px" href="#modal-popup" class="btn btn-green popup-modal">Получить прайс лист</a>
+                            <?php if (!empty($characteristics)) : ?>
+                                <div style="margin-top: 20px" class="properties">
+                                    <div class="properties-title">Характеристики</div>
+                                    <div class="properties-items">
+                                        <?php foreach ($characteristics as $characteristic) : ?>
+                                            <?php if ($characteristic['characteristic_name'] && $characteristic['characteristic_value']) : ?>
+                                                <div class="property-item">
+                                                    <div class="property-item-name"><?= $characteristic['characteristic_name'] ?></div>
+                                                    <div class="property-item-value"><?= $characteristic['characteristic_value'] ?></div>
+                                                </div>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     <?php endif; ?>
                 <?php else: ?>
@@ -248,33 +263,29 @@ if ($catId === 26) {
         </div>
         <?php if ($term_model_item === 'postrojki-iz-brusa-ru') : ?>
             <div class="slider-info-tabs">
+                <?php if (!empty($description)) : ?>
+                    <h4 class="slider-info-tab-description js-active-item" data-class="slider-info-description">Описание</h4>
+                <?php endif; ?>
                 <?php if (!empty($characteristics)) : ?>
-                    <h4 class="slider-info-tab-characteristics js-active-item" data-class="slider-info-characteristics">
+                    <h4 class="slider-info-tab-characteristics" data-class="slider-info-characteristics">
                         Характеристики</h4>
                 <?php endif; ?>
-                <?php if (!empty($description)) : ?>
-                    <h4 class="slider-info-tab-description" data-class="slider-info-description">Описание</h4>
-                <?php endif; ?>
             </div>
-            <div class="slider-info-content">
+            <div class="slider-info-content properties">
+                <?php if (!empty($description)) : ?>
+                    <div class="slider-info-description js-active-item"><?= $description ?></div>
+                <?php endif; ?>
                 <?php if (!empty($characteristics)) : ?>
-                    <div class="slider-info-characteristics js-active-item">
+                    <div class="slider-info-characteristics properties-items">
                         <?php foreach ($characteristics as $characteristic) : ?>
-                            <div class="characteristic-item">
-                                <?php if (!empty($characteristic)) : ?>
-                                    <div class="description-characteristic-name"><?= $characteristic['characteristic_name'] ?>
-                                        :
-                                    </div>
-                                <?php endif; ?>
-                                <?php if (!empty($characteristic)) : ?>
-                                    <div class="description-characteristic-value"><?= $characteristic['characteristic_value'] ?></div>
-                                <?php endif; ?>
-                            </div>
+                            <?php if ($characteristic['characteristic_name'] && $characteristic['characteristic_value']) : ?>
+                                <div class="property-item">
+                                    <div class="property-item-name"><?= $characteristic['characteristic_name'] ?></div>
+                                    <div class="property-item-value"><?= $characteristic['characteristic_value'] ?></div>
+                                </div>
+                            <?php endif; ?>
                         <?php endforeach; ?>
                     </div>
-                <?php endif; ?>
-                <?php if (!empty($description)) : ?>
-                    <div class="slider-info-description"><?= $description ?></div>
                 <?php endif; ?>
             </div>
         <?php else: ?>
