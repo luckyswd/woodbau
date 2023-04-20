@@ -15,29 +15,43 @@ $term_id = get_queried_object()->term_id;
             </div>
         </div>
         <div class="row">
-            <?php $post_catalog = new WP_Query(
-                array(
-                    'tax_query' => array(
-                        array(
-                            'taxonomy' => 'categories',
-                            'field' => 'slug',
-                            'terms' => 'bani-ru'
-                        ))
-                , 'posts_per_page' => '99')
-            ) ?>
-            <?php if ($post_catalog->have_posts()) : ?><?php while ($post_catalog->have_posts()) : $post_catalog->the_post(); ?><?php $values = get_post_meta(get_the_ID()); ?>
-                <div class="col-md-3">
-                    <div class="product-item">
-                        <div class="product-item-img"
-                             style="background-image: url('<?php echo $values['_code_catalog_photo|code_catalog_photo_item|0|0|value']['0']; ?>')"></div>
-                        <h4><?php the_title(); ?></h4>
-                        <a href="<?php $url = get_permalink($post);
-                        echo $url; ?>" class="btn btn-green">Подробнее
-                        </a>
-                    </div>
+            <div class="col-md-3">
+                <div class="product-item">
+                    <div class="product-item-img"
+                         style="background-image: url('<?= wp_get_upload_dir()['baseurl'] . '/2023/04/photo_2023-04-19_22-31-27-2.jpg' ?>')"></div>
+                    <h4>Баня-бочка</h4>
+                    <a href="/catalog/banya-bochka/" class="btn btn-green">Подробнее
+                    </a>
                 </div>
-                <?php wp_reset_query(); ?><?php endwhile; ?><?php else: ?><?php endif; ?>
-            <?php wp_reset_query(); ?>
+            </div>
+            <div class="col-md-3">
+                <div class="product-item">
+                    <div class="product-item-img"
+                         style="background-image: url('<?= wp_get_upload_dir()['baseurl'] . '/2023/04/photo_2023-04-19_22-31-27.jpg' ?>')"></div>
+                    <h4>Баня-Квадро</h4>
+                    <a href="/catalog/banya-kvadro/" class="btn btn-green">Подробнее
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="product-item">
+                    <div class="product-item-img"
+                         style="background-image: url('<?= wp_get_upload_dir()['baseurl'] . '/2023/04/photo_2023-04-19_22-31-27-3.jpg' ?>')"></div>
+                    <h4>Баня овальная</h4>
+                    <a href="/catalog/banya-ovalnaya/" class="btn btn-green">Подробнее
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-item">
+                    <div class="product-item-img"
+                         style="background-image: url('<?= wp_get_upload_dir()['baseurl'] . '/2023/04/photo_2023-04-19_22-31-27-4.jpg' ?>')"></div>
+                    <h4>Арочная баня</h4>
+                    <a href="/catalog/arochnaya-banya/" class="btn btn-green">Подробнее
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
