@@ -72,7 +72,7 @@ $viber = get_field('viber', 'option');
                 </div>
                 <div class="top-phone">
                     <a href="tel:+375296955788" target="_blank">+37529 695 57 88</a>
-                    <a href="tel:+375173360323" target="_blank">+37517 336 03 23</a>
+                    <a href="tel:+375447090467" target="_blank">37544 709 04 67</a>
                 </div>
                 <div class="top-soc">
                     <a href="https://www.facebook.com/WoodBau-Belarus-108393871882270" target="_blank">

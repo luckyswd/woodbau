@@ -152,7 +152,7 @@ $term_url = get_query_var('term');
                     </div>
                     <div class="top-phone">
                         <a href="tel:+375296955788" target="_blank">+37529 695 57 88</a>
-                        <a href="tel:+375173360323" target="_blank">+37517 336 03 23</a>
+                        <a href="tel:+375447090467" target="_blank">37544 709 04 67</a>
                     </div>
                     <a href="#modal-popup" class="popup-modal btn-call">Заказать обратный звонок</a>
                 </div>
