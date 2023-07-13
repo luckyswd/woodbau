@@ -158,8 +158,8 @@ if ($catId === 26) {
                         </div>
                     <?php endif; ?>
 
-                    <?php if (!empty($services)) : ?>
-                        <div class="slider-info__services">
+                    <div class="slider-info__services">
+                        <?php if (!empty($services)) : ?>
                             <h4>Возможные услуги</h4>
                             <?php foreach ($services as $service) : ?>
                                 <?php if ($service['service_name']
@@ -171,24 +171,24 @@ if ($catId === 26) {
                                     </div>
                                 <?php endif; ?>
                             <?php endforeach; ?>
-                            <a style="width: max-content; margin-top: 20px" href="#modal-popup" class="btn btn-green popup-modal">Получить прайс лист</a>
-                            <?php if (!empty($characteristics)) : ?>
-                                <div style="margin-top: 20px" class="properties">
-                                    <div class="properties-title">Характеристики</div>
-                                    <div class="properties-items">
-                                        <?php foreach ($characteristics as $characteristic) : ?>
-                                            <?php if ($characteristic['characteristic_name'] && $characteristic['characteristic_value']) : ?>
-                                                <div class="property-item">
-                                                    <div class="property-item-name"><?= $characteristic['characteristic_name'] ?></div>
-                                                    <div class="property-item-value"><?= $characteristic['characteristic_value'] ?></div>
-                                                </div>
-                                            <?php endif; ?>
-                                        <?php endforeach; ?>
-                                    </div>
+                        <?php endif; ?>
+                        <a style="width: max-content; margin-top: 20px" href="#modal-popup" class="btn btn-green popup-modal">Получить прайс лист</a>
+                        <?php if (!empty($characteristics)) : ?>
+                            <div style="margin-top: 20px" class="properties">
+                                <div class="properties-title">Характеристики</div>
+                                <div class="properties-items">
+                                    <?php foreach ($characteristics as $characteristic) : ?>
+                                        <?php if ($characteristic['characteristic_name'] && $characteristic['characteristic_value']) : ?>
+                                            <div class="property-item">
+                                                <div class="property-item-name"><?= $characteristic['characteristic_name'] ?></div>
+                                                <div class="property-item-value"><?= $characteristic['characteristic_value'] ?></div>
+                                            </div>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
                                 </div>
-                            <?php endif; ?>
-                        </div>
-                    <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 <?php else: ?>
                     <?php if (!empty($subheadline)) : ?>
                         <div class="attr-subheadline"><?= $subheadline ?></div>
